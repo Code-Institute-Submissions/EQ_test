@@ -1,0 +1,43 @@
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+:root { 
+  --color-1: #021859;
+  --color-2: #010A26;
+  --color-3: #011640;
+  --color-4: #F0F2A0;
+  --color-5: #F2955E;
+  --color-6:white;
+
+}   /*--VARIABLES -I found the need to use variables as I was experimenting with 
+    different tones of grey and pink - learnt with Kevin Powel's youtube video 
+    "CSS Variables - An introduction to CSS custom properties" https://www.youtube.com/watch?v=PHO6TBq_auI"--*/
+
+
+body {
+height: 100vh;
+}
+
+#header-callout-container {
+  
+  /*-- copied template from Chris Coyier at https://css-tricks.com/perfect-full-page-background-image/  --*/
+  background: url("../images/bulb-resized.jpg") no-repeat bottom center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 400px;
+}
+
+header {
+
+}
+
+footer {
+    
+}
