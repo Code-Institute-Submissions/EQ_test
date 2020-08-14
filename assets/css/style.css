@@ -32,10 +32,15 @@ height: 100vh;
   -o-background-size: cover;
   background-size: cover;
   height: 400px;
+  color: var(--color-4);
 }
 
 header {
+    color: var(--color-4);
+}
 
+#callout-container {
+    background-color: red;
 }
 
 footer {
