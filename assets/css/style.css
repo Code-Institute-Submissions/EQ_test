@@ -22,10 +22,21 @@ body {
 height: 100vh;
 }
 
-#header-callout-container {
-  
-  /*-- copied template from Chris Coyier at https://css-tricks.com/perfect-full-page-background-image/  --*/
-  background: url("../images/bulb-resized.jpg") no-repeat bottom center
+#header-callout-image-container {
+  background-color: pink;
+}
+
+#header-container {
+    color: var(--color-4);
+}
+
+#callout-container {
+    color: purple;
+}
+
+#image-container {
+     /*-- copied template from Chris Coyier at https://css-tricks.com/perfect-full-page-background-image/  --*/
+  background: url("../images/brain.jpg") no-repeat top center
     fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -33,15 +44,7 @@ height: 100vh;
   background-size: cover;
   height: 400px;
   color: var(--color-4);
-}
-
-header {
-    color: var(--color-4);
-}
-
-#callout-container {
-    background-color: red;
-}
+}  
 
 footer {
     
