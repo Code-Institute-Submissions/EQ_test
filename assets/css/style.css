@@ -23,7 +23,7 @@ height: 100vh;
 }
 
 #header-callout-image-container {
-  background-color: #2E5959;
+  background-color: var(--color-1);
 }
 
 #header-container {
@@ -31,7 +31,7 @@ height: 100vh;
 }
 
 #callout-container {
-    color: green;
+    color: white;
 }
 
 #image-container{
