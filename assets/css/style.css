@@ -6,7 +6,7 @@
 }
 
 :root { 
-  --color-1: #021859;
+  --color-1: #2E5959;
   --color-2: #010A26;
   --color-3: #011640;
   --color-4: #F0F2A0;
@@ -23,7 +23,7 @@ height: 100vh;
 }
 
 #header-callout-image-container {
-  background-color: pink;
+  background-color: #2E5959;
 }
 
 #header-container {
@@ -31,21 +31,16 @@ height: 100vh;
 }
 
 #callout-container {
-    color: purple;
+    color: green;
 }
 
-#image-container {
-     /*-- copied template from Chris Coyier at https://css-tricks.com/perfect-full-page-background-image/  --*/
-  background: url("../images/brain.jpg") no-repeat top center
-    fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 400px;
-  color: var(--color-4);
-}  
+#image-container{
+    background-image: url("../images/brain-white.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 700px;
+}
 
 footer {
-    
+  
 }
