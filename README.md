@@ -15,4 +15,5 @@ This test is based on Daniel Goleman work about brain and behavioral sciences. T
 ### 5. [Deployment](#deployment)
 ### 6. [Credits](#credits)
 list of websites used for inspiration:  
+    --https://www.w3schools.com/css/css_background_shorthand.asp  
     -- 
