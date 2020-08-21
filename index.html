@@ -11,41 +11,49 @@
 	<title>EQ test</title>
 </head>
 
-<body>
+<body class="container-fluid">
+    <div class="row" id="margins-container">
+        <div class="col-1"></div>
+        <div class="col-10">
+                <div class="row mb-3">
+                    <div class="col-11"></div>
+                    <div class="col-1">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                language
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">English</a>
+                                <a class="dropdown-item" href="#">Portuguese</a>                        
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="row mb-5">
+                    <div class="col" id="callout-container">
+                        <h4>Test your EMOTIONAL</h4>
+                        <h1>Intelligence</h1>
 
-	<div class="container-fluid" id="header-callout-image-container">
-		<div class="row">
-			<div class="col ">
-				<ul>
-					<li>Home</li>
-					<li>about</li>
-					<li></li>
-				</ul>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-1"></div>
-			<div class="col-10" id="callout-container">
-				<h4>Test your EMOTIONAL</h4>
-				<h1>Intelligence</h1>
-
-				<hr class="hr-home">
-				<p>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident
-					sequi explicabo nemo itaque! Nesciunt, quidem! Magnam reprehenderit
-					alias veniam! Beatae, aperiam deleniti! Autem nostrum dicta tempore
-					saepe vel rerum perferendis.
-				</p>
-			</div>
-			<div class="col-1"></div>
-		</div>
-		<div class="row">
-            <div class="col-1"></div>
-			<div class="col" id="image-container"></div>
-            <div class="col-1"></div>
-		</div>
-	</div>
-
+                        <hr class="hr-home">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident
+                            sequi explicabo nemo itaque! Nesciunt, quidem! Magnam reprehenderit
+                            alias veniam! Beatae, aperiam deleniti! Autem nostrum dicta tempore
+                            saepe vel rerum perferendis.
+                        </p>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col">
+                        <button class="btn btn-danger" id="test-button">What is my EQ?</button>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col" id="image-container"></div>
+                </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
 	<!--source scripts-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

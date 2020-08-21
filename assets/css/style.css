@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 * {
   padding: 0;
@@ -10,7 +11,7 @@
   --color-2: #010A26;
   --color-3: #011640;
   --color-4: #F6F8F9;
-  --color-5: #F2955E;
+  --color-5: #D66A52;
   --color-6: white;
 
 }   /*--VARIABLES -I found the need to use variables as I was experimenting with 
@@ -18,20 +19,28 @@
     "CSS Variables - An introduction to CSS custom properties" https://www.youtube.com/watch?v=PHO6TBq_auI"--*/
 
 
-body {
+body.container-fluid {
 height: 100vh;
+padding: 0;
 }
 
 hr.hr-home {
  border: 1px solid var(--color-4);
 }
 
-#header-callout-image-container {
-  background-color: var(--color-1);
-  padding:15px 45px;
-}
+#margins-container {
+    background-color: var(--color-1);
+    padding:15px 45px;
+    font-family: "Open Sans", sans-serif;
+    }
+
 
 #header-container {
+    color: var(--color-4);
+}
+
+#dropdownMenuButton {
+    background: transparent;
     color: var(--color-4);
 }
 
@@ -46,6 +55,10 @@ hr.hr-home {
     background-position: center bottom;
     height: 600px;
     background-size: cover;
+}
+
+#test-button {
+    font-size: 2rem;
 }
 
 footer {
