@@ -1,63 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/2ba69951ac.js"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-	<script src="https://kit.fontawesome.com/2ba69951ac.js" crossorigin="anonymous"></script>
+    <title>EQ test</title>
+  </head>
 
-	<title>EQ test</title>
-</head>
-
-<body class="container-fluid">
+  <body class="container-fluid">
     <div class="row" id="margins-container">
-        <div class="col-1"></div>
-        <div class="col-10">
-                <div class="row mb-3">
-                    <div class="col-11"></div>
-                    <div class="col-1">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                language
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">English</a>
-                                <a class="dropdown-item" href="#">Portuguese</a>                        
-                            </div>
-                        </div>
-                    </div>                   
+      <div class="col-1"></div>
+      <div class="col-10" id="content-container">
+        <div id="header-callout-image-container">
+            <div class="row mb-3">
+            <div class="col"></div>
+            <div class="col-4 col-md-2">
+                <div class="dropdown">
+                <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                >
+                    language
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">English</a>
+                    <a class="dropdown-item" href="#">Portuguese</a>
                 </div>
-                <div class="row mb-5">
-                    <div class="col" id="callout-container">
-                        <h4>Test your EMOTIONAL</h4>
-                        <h1>Intelligence</h1>
+                </div>
+            </div>
+            </div>
+            <div class="row mb-5">
+            <div class="col callout-container">
+                <h4>Test your EMOTIONAL</h4>
+                <h1>Intelligence</h1>
 
-                        <hr class="hr-home">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident
-                            sequi explicabo nemo itaque! Nesciunt, quidem! Magnam reprehenderit
-                            alias veniam! Beatae, aperiam deleniti! Autem nostrum dicta tempore
-                            saepe vel rerum perferendis.
-                        </p>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col">
-                        <button class="btn btn-danger" id="test-button">What is my EQ?</button>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col" id="image-container"></div>
-                </div>
+                <hr class="hr-home" />
+                <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Provident sequi explicabo nemo itaque! Nesciunt, quidem! Magnam
+                reprehenderit alias veniam! Beatae, aperiam deleniti! Autem
+                nostrum dicta tempore saepe vel rerum perferendis.
+                </p>
+            </div>
+            </div>
+            <div class="row mb-5">
+            <div class="col">
+                <button class="btn btn-danger" id="test-button">
+                What is my EQ?
+                </button>
+            </div>
+            </div>
+            <div class="row mb-5">
+            <div class="d-none d-md-block col-md-12 image-container"></div>
+            </div>
         </div>
-        <div class="col-1"></div>
+        <div class="row mb-3">
+          <div class="col callout-container">
+            <h2>Achieve Success</h2>
+            <hr class="hr-home" />
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-4 container-fluid">
+            <img src="assets/images/brain.jpg" alt="#" id="profile-img" />
+            <h4>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </h4>
+          </div>
+          <div class="col-4">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+              cupiditate fugit explicabo non velit praesentium? Impedit tenetur
+              mollitia blanditiis vero quod quaerat voluptatum quidem quibusdam
+              amet tempore, soluta modi incidunt?
+            </p>
+          </div>
+          <div class="col-4">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+              ex dolor tempora neque laudantium, suscipit est quisquam omnis
+              provident iste! Repellendus omnis quam doloremque aperiam repellat
+              cumque architecto aut alias?
+            </p>
+          </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col">
+                <hr class="hr-home">
+                <img src="assets/images/iqeq_960x428.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+      </div>
+      <div class="col-1"></div>
     </div>
-	<!--source scripts-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-</body>
-
+    <!--source scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
 </html>
