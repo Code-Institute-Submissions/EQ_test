@@ -11,7 +11,8 @@ This test is based on Daniel Goleman work about brain and behavioral sciences. T
 ### 1. [UX](#ux)
 ### 2. [Features](#features)
 ### 3. [Technologies Applied](#technologies-applied)
-### 4. [Tests](#tests) 
+### 4. [Tests](#tests)  
+    -- used inspect tool from google chrome and firefox web engines as both allow to inspect different size devices
 ### 5. [Deployment](#deployment)
 ### 6. [Credits](#credits)
 list of websites used for inspiration:  

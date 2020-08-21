@@ -17,56 +17,81 @@
   </head>
 
   <body class="container-fluid">
+    <!--Container defining layout for content defining margins-->
     <div class="row" id="margins-container">
       <div class="col-1"></div>
+
+      <!--Area containing all page content-->
       <div class="col-10" id="content-container">
-        <div id="header-callout-image-container">
-            <div class="row mb-3">
+        <!--Header Callout and Image Container-->
+        <div class="mb-3" id="header-callout-image-container">
+          <!--NAVBAR with dropdown button-->
+          <div class="row mb-3">
             <div class="col"></div>
             <div class="col-4 col-md-2">
-                <div class="dropdown">
+              <!--dropdown button-->
+              <div class="dropdown">
                 <button
-                    class="btn btn-secondary dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                 >
-                    language
+                  language
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">English</a>
-                    <a class="dropdown-item" href="#">Portuguese</a>
+                  <a class="dropdown-item" href="#">English</a>
+                  <a class="dropdown-item" href="#">Portuguese</a>
                 </div>
-                </div>
+              </div>
             </div>
-            </div>
-            <div class="row mb-5">
-            <div class="col callout-container" id="callout-container-1">
-                <h4>Test your EMOTIONAL</h4>
-                <h1>Intelligence</h1>
+          </div>
 
-                <hr class="hr-home" id="hr-1" />
-                <p>
+          <!--Callout Container top of page-->
+          <div class="row mb-3">
+
+            <!--Headers-->
+            <div class="col callout-container" id="callout-container-1">
+              <h5>Test your EMOTIONAL</h5>
+              <h1 mb-3>Intelligence</h1>
+
+              <hr class="hr-home" id="hr-1" />
+
+              <!--description of Emotional Intelligence-->
+              <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Provident sequi explicabo nemo itaque! Nesciunt, quidem! Magnam
                 reprehenderit alias veniam! Beatae, aperiam deleniti! Autem
                 nostrum dicta tempore saepe vel rerum perferendis.
-                </p>
+              </p>
             </div>
-            </div>
-            <div class="row mb-5">
+          </div>
+
+          <!--TEST Button-->
+          <div class="row mb-3">
             <div class="col">
-                <button class="btn btn-danger" id="test-button">
+              <button id="test-button" onclick="myFunction()">
                 What is my EQ?
-                </button>
+              </button>
             </div>
+          </div>
+
+          <!--Image below callout box for medium size devices and above 
+          (hidden for small devices, same picture appearing as callout background instead-->
+          <div class="row mb-5">
+            <div class="d-none d-md-block col-md-12 image-container">
+                <img
+                src="assets/images/men_1436x700.jpg"
+                class="img-fluid"
+                alt="Responsive image"
+                />
             </div>
-            <div class="row mb-5">
-            <div class="d-none d-md-block col-md-12 image-container"></div>
-            </div>
+          </div>
         </div>
+
+        <!--second callout container to add info about life coaching-->
         <div class="row mb-3">
           <div class="col callout-container">
             <h2>Achieve Success</h2>
@@ -98,15 +123,26 @@
           </div>
         </div>
         <div class="row mb-5">
-            <div class="col">
-                <hr class="hr-home">
-                <img src="assets/images/iqeq_960x428.jpg" class="img-fluid" alt="Responsive image">
-            </div>
+          <div class="col">
+            <hr class="hr-home" />
+            <img
+              src="assets/images/iqeq_960x428.jpg"
+              class="img-fluid"
+              alt="Responsive image"
+            />
+          </div>
         </div>
       </div>
       <div class="col-1"></div>
     </div>
     <!--source scripts-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
