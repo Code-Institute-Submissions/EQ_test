@@ -15,6 +15,7 @@
   --color-6: white;
   --color-7: #E02214;
   --color-8: #D96685;
+  --color-9: #CBD0D3;  
 } /*--VARIABLES -I found the need to use variables as I was experimenting with 
     different tones of grey and pink - learnt with Kevin Powel's youtube video 
     "CSS Variables - An introduction to CSS custom properties" https://www.youtube.com/watch?v=PHO6TBq_auI"--*/
@@ -98,32 +99,6 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
   transform: scale(1.1);
 }
 
-/*button#test-button {
-    background-color: yellow;
-    color: var(--color-4);
-    transition: 0.25s;
-    font-size: 1.5rem;
-    padding: 0.5rem 0.7rem;
-}
-#test-button:hover { 
-    border-color: var(--color-7) solid 1px;
-    background-color: green;
-    color: var(--color-5);
-}*/
-
-  /*background-color: var(--color-4);
-  font-size: 2rem;*/
-
-/*#test-button:hover {
-    background-color: #3e8e41;
-}
-
-#test-button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}*/
-
 #profile-img {
   border-radius: 50%;
   max-width: 100px;
@@ -141,6 +116,20 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 }
 
 footer {
+    background-color: var(--color-9);
+    color: var(--color-1);
+    
+}
+
+.list-inline > li,
+.list-inline li a {
+    display: inline;
+    font-size: 0.7rem;
+    color: var(--color-1);
+}
+
+.social-links {
+
 }
 
 /* Extra small devices (portrait phones, less than 576px)
