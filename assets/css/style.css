@@ -10,10 +10,11 @@
   --color-1: #2e5959;
   --color-2: #010a26;
   --color-3: #011640;
-  --color-4: #f6f8f9;
+  --color-4: #E6DBDA;
   --color-5: #d66a52;
   --color-6: white;
-  --color-7: #592202;
+  --color-7: #E02214;
+  --color-8: #D96685;
 } /*--VARIABLES -I found the need to use variables as I was experimenting with 
     different tones of grey and pink - learnt with Kevin Powel's youtube video 
     "CSS Variables - An introduction to CSS custom properties" https://www.youtube.com/watch?v=PHO6TBq_auI"--*/
@@ -58,31 +59,57 @@ hr.hr-home {
   padding: 0;
 }
 
-/*.image-container {
-  background-image: url("../images/men_1024x802.jpg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  height: 600px;
-  background-size: cover;
-  margin: 0 15px;
-  padding: 0;
-  object-fit: cover;
-}*/
+/*--button hover grow shadow code had been 
+copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=1100 and adapted to this project--*/
+.button-container {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
 
+.test-button {
+  padding: .5rem .7rem;
+  background-color: var(--color-7);
+  color: var(--color-4);
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
 
+/* Grow Shadow */
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
-#test-button {
-    background-color: var(--color-5);
+/*button#test-button {
+    background-color: yellow;
     color: var(--color-4);
     transition: 0.25s;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0.5rem 0.7rem;
 }
 #test-button:hover { 
     border-color: var(--color-7) solid 1px;
-    background-color: transparent;
+    background-color: green;
     color: var(--color-5);
-}
+}*/
 
   /*background-color: var(--color-4);
   font-size: 2rem;*/
@@ -148,7 +175,7 @@ footer {
   #hr-1 {
     display: none;
   }
-  #test-button {
+  button #test-button {
     font-size: 1rem;
   }
 }
