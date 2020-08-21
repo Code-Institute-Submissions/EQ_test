@@ -110,19 +110,26 @@ footer {
 /* Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) { 
     #header-callout-image-container {
-    background-image: url("../images/men_1024x802.jpg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    height: 400px;
-    background-size: cover;
-    padding: 0;
-    margin: -15px -15px 0;
-    font-size: 60%;
+        background-image: url("../images/men_1024x802.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        height: 400px;
+        background-size: cover;
+        padding: 0;
+        margin: -15px -60px 0;
+        font-size: 60%;
+    }
+    #callout-container-1,
+    #test-button {
+        margin: 0 150px 0 60px;
+    }
+    #hr-1 {
+        display: none;
     }
  }
 
-// Medium devices (tablets, less than 992px)
+/* Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { ... }
 
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... }
+ Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }*/
