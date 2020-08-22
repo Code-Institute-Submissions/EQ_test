@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/test-form.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,6 +13,12 @@
       src="https://kit.fontawesome.com/2ba69951ac.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 
     <title>EQ test</title>
   </head>
@@ -51,7 +58,6 @@
 
           <!--Callout Container top of page-->
           <div class="row mb-3">
-
             <!--Headers-->
             <div class="col callout-container" id="callout-container-1">
               <h5>Test your EMOTIONAL</h5>
@@ -72,9 +78,17 @@
           <!--TEST Button-->
           <div class="row mb-3">
             <div class="col button-container">
-              <button class="test-button hvr-grow-shadow" id="test-button">
+              <button class="test-button hvr-grow-shadow" id="myBtn">
                 What is my EQ?
               </button>
+            </div>
+
+            <div id="myModal" class="modal">
+              <!--Modal content-->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>some text in the modal...</p>
+              </div>
             </div>
           </div>
 
@@ -82,11 +96,11 @@
           (hidden for small devices, same picture appearing as callout background instead-->
           <div class="row mb-5">
             <div class="d-none d-md-block col-md-12 image-container">
-                <img
+              <img
                 src="assets/images/men_1436x700.jpg"
                 class="img-fluid"
                 alt="Responsive image"
-                />
+              />
             </div>
           </div>
         </div>
@@ -99,7 +113,7 @@
           </div>
         </div>
         <div class="row mb-5">
-          <div class="col-md-4 container-fluid">
+          <div class="d-none d-md-block col-md-4 container-fluid">
             <img src="assets/images/brain.jpg" alt="#" id="profile-img" />
             <h4>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -126,60 +140,53 @@
           <div class="col">
             <hr class="hr-home" />
             <img
-              src="assets/images/iqeq_960x428.jpg"
+              src="assets/images/iqeq_1136x446.jpg"
               class="img-fluid mb-3"
               alt="Responsive image"
             />
-            <form class="m"><input type="text"><input type="submit" value="Submit">form</form>
+            <form class="m">
+              <input type="text" /><input type="submit" value="Submit" />form
+            </form>
             <hr class="hr-home" />
           </div>
         </div>
       </div>
-      <div class="col-1"></div>    
+      <div class="col-1"></div>
     </div>
     <footer>
-        <div class="container-fluid ">
-            <div class="row">
-                <div class="col-1"></div>
-                <div class="col-5">
-                    <ul class="list-inline">
-                        <li class="mr-2">Home</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-                <div class="col-5">    
-                    <ul class="list-inline social-links justify-content-end">
-                        <li class="list-inline-item ml-3 mr-2">
-							<a target="_blank" href="https://www.instagram.com/">
-								<i class="fa fa-instagram" aria-hidden="true"></i>
-								<span class="sr-only">Instagram</span>
-							</a>						
-                        </li>
-                       <li class="list-inline-item mr-2">
-							<a target="_blank" href="https://www.youtube.com/">
-								<i class="fa fa-youtube" aria-hidden="true"></i>
-								<span class="sr-only">YouTube</span>
-							</a>
-						</li>
-                        <li class="list-inline-item">
-							<a target="_blank" href="https://twitter.com/">
-								<i class="fa fa-twitter" aria-hidden="true"></i>
-								<span class="sr-only">Twitter</span>
-							</a>
-						</li>
-                    </ul>
-                </div>
-                <div class="col-1"></div>
-            </div>    
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-5">
+            <p>&copy Vera Leitao</p>
+          </div>
+          <div class="col-5">
+            <ul class="list-inline social-links justify-content-end">
+              <li class="list-inline-item ml-3 mr-2">
+                <a target="_blank" href="https://www.instagram.com/">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <span class="sr-only">Instagram</span>
+                </a>
+              </li>
+              <li class="list-inline-item mr-2">
+                <a target="_blank" href="https://www.youtube.com/">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                  <span class="sr-only">YouTube</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a target="_blank" href="https://twitter.com/">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-1"></div>
         </div>
+      </div>
     </footer>
     <!--source scripts-->
-
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-    ></script>
     <script></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
