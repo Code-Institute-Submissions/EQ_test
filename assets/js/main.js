@@ -3,8 +3,8 @@
 $(document).ready(function(){
     $("#myBtn").click(function () {
         $(".bg-modal").removeClass("hide");
-        $("#nextBtn").css("display", "none");
-        $("#resultsBtn").css("display", "none");
+        $("#nextBtn").addClass("hide");
+        $("#resultsBtn").addClass("hide");
     });
 });
 
@@ -18,5 +18,11 @@ $("#startBtn").click(function() {
         $("#rulesContainer").addClass("hide");
         $("#questionContainer").removeClass("hide");
         $("#startBtn").addClass("hide");
+        $("#nextBtn").removeClass("hide");
 });
-    
+
+//continue Test
+
+$("#nextBtn").click(function() {
+        console.log("ive been clicked")
+});

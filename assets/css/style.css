@@ -186,8 +186,7 @@ button.btn:hover {
     font-size: 0.7rem;
 }
 
-.hide,
-.btn.hide {
+.hide {
     display: none !important;
 }
 
