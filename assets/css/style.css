@@ -86,25 +86,6 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 }
 
 
-.buttonColor {
-  background-color: var(--color-4);
-  color: var(--color-5);
-}
-
-button.btn {
-  background-color: var(--color-3);
-  border: 1px solid var(--color-3);
-  border-radius: 4px;
-  color: var(--color-2);
-  font-weight: 600;
-  padding: 3px 4px;
-  
-}
-
-button.btn:hover {
-  color: var(--color-9);
-  box-shadow: 0 0 10px 2px var(--color-1);
-}
 
 /* Grow Shadow */
 .hvr-grow-shadow {
@@ -185,6 +166,25 @@ footer p,
   transform: rotate(45deg);
   cursor: pointer;
   font-size: 42px;
+}
+
+button.btn {
+  background-color: var(--color-3);
+  border: 1px solid var(--color-3);
+  border-radius: 4px;
+  color: var(--color-2);
+  font-weight: 600;
+  padding: 3px 4px;
+  
+}
+
+button.btn:hover {
+  color: var(--color-9);
+  box-shadow: 0 0 10px 2px var(--color-1);
+}
+
+.hide {
+    display: none;
 }
 
 /* Extra small devices (portrait phones, less than 576px)
