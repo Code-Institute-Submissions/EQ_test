@@ -6,16 +6,22 @@
   margin: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --color-1: #2e5959;
   --color-2: #010a26;
   --color-3: #011640;
-  --color-4: #E6DBDA;
+  --color-4: #e6dbda;
   --color-5: #d66a52;
   --color-6: white;
-  --color-7: #E02214;
-  --color-8: #D96685;
-  --color-9: #CBD0D3;  
+  --color-7: #e02214;
+  --color-8: #d96685;
+  --color-9: #cbd0d3;
 } /*--VARIABLES -I found the need to use variables as I was experimenting with 
     different tones of grey and pink - learnt with Kevin Powel's youtube video 
     "CSS Variables - An introduction to CSS custom properties" https://www.youtube.com/watch?v=PHO6TBq_auI"--*/
@@ -70,7 +76,7 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 }
 
 .test-button {
-  padding: .5rem .7rem;
+  padding: 0.5rem 0.7rem;
   background-color: var(--color-7);
   color: var(--color-4);
   display: inline-block;
@@ -79,9 +85,24 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
   border-radius: 0.5rem;
 }
 
+.btn-grid {
+    display: grid;
+    grid-template-columns:repeat(2,auto);
+    gap: 10px;
+    margin: 10px 0;
+}
+
 .buttonColor {
-    background-color: var(--color-4);
-    color: var(--color-5);
+  background-color: var(--color-4);
+  color: var(--color-5);
+}
+
+.btn {
+    background-color: var(--color-8);
+    border-radius: 2px;
+    padding: 2px 4px;
+    color: var(--color-4);
+    outline: none;
 }
 
 /* Grow Shadow */
@@ -99,7 +120,9 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
   -webkit-transition-property: box-shadow, transform;
   transition-property: box-shadow, transform;
 }
-.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+.hvr-grow-shadow:hover,
+.hvr-grow-shadow:focus,
+.hvr-grow-shadow:active {
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -122,57 +145,55 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 }
 
 footer {
-    background-color: var(--color-9);
-    color: var(--color-1);    
+  background-color: var(--color-9);
+  color: var(--color-1);
 }
 
 footer p,
 .list-inline > li,
 .list-inline li a {
-    display: inline;
-    font-size: 0.9rem;
-    color: var(--color-1);
+  display: inline;
+  font-size: 0.9rem;
+  color: var(--color-1);
 }
 
 /*--EQ test Modals--*/
 
 .bg-modal {
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-1);
-    position: fixed;      
-    top: 0;
-    justify-content:center;
-    align-items: center;
-    display: none;
-    overflow-y: hidden;
-    padding: 15px; /* Avoid width reflow - overflow and padding code taken 
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-1);
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: hidden;
+  padding: 15px; /* Avoid width reflow - overflow and padding code taken 
                         from https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ to fix scroll bug when modal is open*/
-    }
+}
 
-.modal-content{
-    background-color: var(--color-4);
-    border-radius: 8px;
-    border: 2px;
-    border-color: black;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    margin: 40px 100px;
-    box-shadow: 0 0 10px 2px;
-    width: 800px;
-    max-width: 80%;
-    
+.modal-content {
+  background-color: var(--color-4);
+  border-radius: 8px;
+  border: 2px;
+  border-color: black;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  margin: 40px 100px;
+  box-shadow: 0 0 10px 2px;
+  width: 800px;
+  max-width: 80%;
 }
 
 .close {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    transform: rotate(45deg);
-    cursor: pointer;
-    font-size: 42px;
-    
+  position: absolute;
+  top: 0;
+  right: 20px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  font-size: 42px;
 }
 
 /* Extra small devices (portrait phones, less than 576px)
@@ -198,7 +219,7 @@ footer p,
     padding: 0;
     margin: -15px -60px 45px;
     font-size: 65%;
-    overflow:hidden;
+    overflow: hidden;
   }
   #callout-container-1,
   #myBtn {
