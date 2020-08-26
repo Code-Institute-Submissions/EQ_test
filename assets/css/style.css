@@ -15,7 +15,7 @@
 :root {
   --color-1: #2e5959;
   --color-2: #010a26;
-  --color-3: #1B3D3D;
+  --color-3: #CBD0D3;
   --color-4: #e6dbda;
   --color-5: #d66a52;
   --color-6: white;
@@ -85,12 +85,6 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
   border-radius: 0.5rem;
 }
 
-.btn-grid {
-  display: grid;
-  grid-template-columns: repeat(10, auto);
-  gap: 10px;
-  margin: 10px 0;
-}
 
 .buttonColor {
   background-color: var(--color-4);
@@ -98,15 +92,17 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 }
 
 button.btn {
-  background-color: var(--color-9);
-  border: 1px solid var(--color-9);
+  background-color: var(--color-3);
+  border: 1px solid var(--color-3);
   border-radius: 4px;
-  color: var(--color-4);
+  color: var(--color-2);
+  font-weight: 600;
+  padding: 3px 4px;
   
 }
 
 button.btn:hover {
-  color: var(--color-4);
+  color: var(--color-9);
   box-shadow: 0 0 10px 2px var(--color-1);
 }
 
@@ -139,18 +135,8 @@ button.btn:hover {
   margin-bottom: 30px;
 }
 
-#iqeq-img {
-  background-image: url("../images/iqeq_960x428.jpg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  height: 200px;
-  background-size: cover;
-  margin: 15px;
-  padding: 0;
-}
-
 footer {
-  background-color: var(--color-9);
+  background-color: var(--color-3);
   color: var(--color-1);
 }
 
