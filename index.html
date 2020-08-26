@@ -18,24 +18,26 @@
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-
+    <script defer type="text/javascript" src="assets/js/main.js"></script>
     <title>EQ test</title>
   </head>
 
   <body class="container-fluid">
-    <!--Container defining layout for content defining margins-->
+    
     <div class="row" id="margins-container">
       <div class="col-1"></div>
 
       <!--Area containing all page content-->
       <div class="col-10" id="content-container">
+        
         <!--Header Callout and Image Container-->
         <div class="mb-3" id="header-callout-image-container">
+          
           <!--NAVBAR with dropdown button-->
           <div class="row mb-3">
             <div class="col"></div>
             <div class="col-4 col-md-2">
+              
               <!--dropdown button-->
               <div class="dropdown">
                 <button
@@ -81,15 +83,7 @@
               <button class="test-button hvr-grow-shadow" id="myBtn">
                 What is my EQ?
               </button>
-            </div>
-
-            <div id="myModal" class="modal">
-              <!--Modal content-->
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>some text in the modal...</p>
-              </div>
-            </div>
+            </div>            
           </div>
 
           <!--Image below callout box for medium size devices and above 
@@ -144,15 +138,18 @@
               class="img-fluid mb-3"
               alt="Responsive image"
             />
-            <form class="m">
-              <input type="text" /><input type="submit" value="Submit" />form
-            </form>
+            
+        <!--Contact Form-->
+                   
+
             <hr class="hr-home" />
           </div>
         </div>
       </div>
       <div class="col-1"></div>
     </div>
+
+    <!--footer-->
     <footer>
       <div class="container-fluid">
         <div class="row">
@@ -186,8 +183,21 @@
         </div>
       </div>
     </footer>
+
+    <!--EQ test modals-->
+    <div class="bg-modal">
+        <div class="modal-content modal-md-lg mx-auto mt-5">
+            <div class="close">+</div>
+            <i class="far fa-comment-dots"></i><br>
+            <h4>Explaining How The Test Works</h4>
+            <hr>
+            <p>here it goes the explanation,<br> bla bla bla</p>
+            <button id="startBtn">start</button>
+        </div>
+    </div>
+    
     <!--source scripts-->
-    <script></script>
+      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
