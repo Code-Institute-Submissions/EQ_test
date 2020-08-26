@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/test-form.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,44 +13,215 @@
       src="https://kit.fontawesome.com/2ba69951ac.js"
       crossorigin="anonymous"
     ></script>
-
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script defer type="text/javascript" src="assets/js/main.js"></script>
     <title>EQ test</title>
   </head>
 
-  <body>
-  
-    <div class="container-fluid" id="header-callout-image-container">
-      <div class="row">
-        <div class="col ">      
-            <ul>
-            <li>Home</li>
-            <li>about</li>
-            <li></li>
-            </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col" id="callout-container">
-            <h4>Test your EMOTIONAL</h4>
-            <h1>Intelligence</h1>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident
-                sequi explicabo nemo itaque! Nesciunt, quidem! Magnam reprehenderit
-                alias veniam! Beatae, aperiam deleniti! Autem nostrum dicta tempore
-                saepe vel rerum perferendis.
-            </p>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col" id="image-container">
-                image
+  <body class="container-fluid">
+    <div class="row" id="margins-container">
+      <div class="col-1"></div>
+
+      <!--Area containing all page content-->
+      <div class="col-10" id="content-container">
+        <!--Header Callout and Image Container-->
+        <div class="mb-3" id="header-callout-image-container">
+          <!--NAVBAR with dropdown button-->
+          <div class="row mb-3">
+            <div class="col"></div>
+            <div class="col-4 col-md-2">
+              <!--dropdown button-->
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  language
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">English</a>
+                  <a class="dropdown-item" href="#">Portuguese</a>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!--Callout Container top of page-->
+          <div class="row mb-3">
+            <!--Headers-->
+            <div class="col callout-container" id="callout-container-1">
+              <h5>Test your EMOTIONAL</h5>
+              <h1 mb-3>Intelligence</h1>
+
+              <hr class="hr-home" id="hr-1" />
+
+              <!--description of Emotional Intelligence-->
+              <p>
+                A way to determine you Emotional inteligence on you current
+                moment, it is important to evaluate each parameters determined
+                by Daniel Goleman (.........). By testing personal and social
+                competences, it is possible to determine your best qualities and
+                what downfall are prevnting you from progressing.
+              </p>
+            </div>
+          </div>
+
+          <!--TEST Button-->
+          <div class="row mb-3">
+            <div class="col button-container">
+              <button class="test-button hvr-grow-shadow" id="myBtn">
+                What is my EQ?
+              </button>
+            </div>
+          </div>
+
+          <!--Image below callout box for medium size devices and above 
+          (hidden for small devices, same picture appearing as callout background instead-->
+          <div class="row mb-5">
+            <div class="d-none d-md-block col-md-12 image-container">
+              <img
+                src="assets/images/men_1436x700.jpg"
+                class="img-fluid"
+                alt="Responsive image"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--second callout container to add info about life coaching-->
+        <div class="row mb-3">
+          <div class="col callout-container" id="callout-container-2">
+            <h2>Achieve Success</h2>
+            <hr class="hr-home" />
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="d-none d-md-block col-md-4 container-fluid">
+            <img src="assets/images/brain.jpg" alt="#" id="profile-img" />
+            <h4>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </h4>
+          </div>
+          <div class="col-md-4 mb-2">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+              cupiditate fugit explicabo non velit praesentium? Impedit tenetur
+              mollitia blanditiis vero quod quaerat voluptatum quidem quibusdam
+              amet tempore, soluta modi incidunt?
+            </p>
+          </div>
+          <div class="d-none d-md-block col-md-4">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+              ex dolor tempora neque laudantium, suscipit est quisquam omnis
+              provident iste! Repellendus omnis quam doloremque aperiam repellat
+              cumque architecto aut alias?
+            </p>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col">
+            <hr class="hr-home" />
+            <img
+              src="assets/images/iqeq_1136x446.jpg"
+              class="img-fluid mb-3"
+              alt="Responsive image"
+            />
+
+            <!--Contact Form-->
+
+            <hr class="hr-home" />
+          </div>
+        </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
+
+    <!--footer-->
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-5">
+            <p>&copy Vera Leitao</p>
+          </div>
+          <div class="col-5">
+            <ul class="list-inline social-links justify-content-end">
+              <li class="list-inline-item ml-3 mr-2">
+                <a target="_blank" href="https://www.instagram.com/">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <span class="sr-only">Instagram</span>
+                </a>
+              </li>
+              <li class="list-inline-item mr-2">
+                <a target="_blank" href="https://www.youtube.com/">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                  <span class="sr-only">YouTube</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a target="_blank" href="https://twitter.com/">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
+    </footer>
+
+    <!--EQ test modals-->
+    <div class="bg-modal">
+      <div class="modal-content modal-md-lg mx-auto">
+        <div class="close">+</div>
+        <div id="questionContainer" class="hide">
+            <div id="question">Question</div>
+            <div id="answerButtons" class="btn-grid">
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn">10</button>
+            </div>
+        </div>
+        <!--<i class="far fa-comment-dots"></i><br />
+        <h4>Explaining How The Test Works</h4>
+        <hr />
+        <p>
+          here it goes the explanation,<br />
+          This test is divided into questions within the personal competences
+          and questions within social competences. For each question chose a
+          number from 1 to 10 where 1 represents that at this moment you do not
+          behave this way at all, and 10 will indicate that at this moment you
+          identify fully with this behavior.<br />
+          This test is mostly helpfull if you use it at different times in your
+          life and keep a record of results as to compare the differences that
+          had occured.
+        </p>-->
+        <div class="controls">
+        <button id="startBtn" class="start-btn btn">Start</button>
+        <button id="nextBtn" class="next-btn btn hide">Next</button>
         </div>
       </div>
     </div>
 
     <!--source scripts-->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>

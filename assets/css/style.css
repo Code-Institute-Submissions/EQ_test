@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
 * {
   padding: 0;
@@ -5,42 +6,240 @@
   margin: 0;
 }
 
-:root { 
-  --color-1: #2E5959;
-  --color-2: #010A26;
-  --color-3: #011640;
-  --color-4: #F0F2A0;
-  --color-5: #F2955E;
-  --color-6:white;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-}   /*--VARIABLES -I found the need to use variables as I was experimenting with 
+:root {
+  --color-1: #2e5959;
+  --color-2: #010a26;
+  --color-3: #1B3D3D;
+  --color-4: #e6dbda;
+  --color-5: #d66a52;
+  --color-6: white;
+  --color-7: #e02214;
+  --color-8: #d96685;
+  --color-9: #365D8A;
+} /*--VARIABLES -I found the need to use variables as I was experimenting with 
     different tones of grey and pink - learnt with Kevin Powel's youtube video 
     "CSS Variables - An introduction to CSS custom properties" https://www.youtube.com/watch?v=PHO6TBq_auI"--*/
 
-
-body {
-height: 100vh;
+body.container-fluid {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
 }
 
-#header-callout-image-container {
+hr.hr-home {
+  border: 1px solid var(--color-4);
+  margin-bottom: 30px;
+}
+
+#margins-container {
   background-color: var(--color-1);
+  padding: 15px 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+#content-container {
+  padding: 0;
+  margin: 0;
 }
 
 #header-container {
-    color: var(--color-4);
+  color: var(--color-4);
 }
 
-#callout-container {
-    color: white;
+#dropdownMenuButton {
+  background: transparent;
+  color: var(--color-4);
+  font-size: 0.7rem;
 }
 
-#image-container{
-    background-image: url("../images/brain-white.jpg");
-    background-repeat: no-repeat;
-    background-position: right top;
-    height: 700px;
+.dropdown-item {
+  font-size: 0.9rem;
+}
+
+.callout-container {
+  color: white;
+  padding: 0;
+}
+
+/*--button hover grow shadow code had been 
+copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=1100 and adapted to this project--*/
+.button-container {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.test-button {
+  padding: 0.5rem 0.7rem;
+  background-color: var(--color-7);
+  color: var(--color-4);
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.buttonColor {
+  background-color: var(--color-4);
+  color: var(--color-5);
+}
+
+button.btn {
+  background-color: var(--color-9);
+  border: 1px solid var(--color-9);
+  border-radius: 4px;
+  color: var(--color-4);
+  
+}
+
+button.btn:hover {
+  color: var(--color-4);
+  box-shadow: 0 0 10px 2px var(--color-1);
+}
+
+/* Grow Shadow */
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover,
+.hvr-grow-shadow:focus,
+.hvr-grow-shadow:active {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#profile-img {
+  border-radius: 50%;
+  max-width: 100px;
+  margin-bottom: 30px;
+}
+
+#iqeq-img {
+  background-image: url("../images/iqeq_960x428.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 200px;
+  background-size: cover;
+  margin: 15px;
+  padding: 0;
 }
 
 footer {
-  
+  background-color: var(--color-9);
+  color: var(--color-1);
 }
+
+footer p,
+.list-inline > li,
+.list-inline li a {
+  display: inline;
+  font-size: 0.9rem;
+  color: var(--color-1);
+}
+
+/*--EQ test Modals--*/
+
+.bg-modal {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-1);
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: hidden;
+  padding: 15px; /* Avoid width reflow - overflow and padding code taken 
+                        from https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ to fix scroll bug when modal is open*/
+}
+
+.modal-content {
+  background-color: var(--color-4);
+  border-radius: 8px;
+  border: 2px;
+  border-color: black;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  margin: 40px 100px;
+  box-shadow: 0 0 10px 2px;
+  width: 800px;
+  max-width: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  font-size: 42px;
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    #header-callout-image-container {
+    background-image: url("../images/men_1024x802.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 400px;
+    background-size: cover;
+    padding: 0; 
+    }
+ }*/
+
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+  #header-callout-image-container {
+    background-image: url("../images/men_1024x802.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 400px;
+    background-size: cover;
+    padding: 0;
+    margin: -15px -60px 45px;
+    font-size: 65%;
+    overflow: hidden;
+  }
+  #callout-container-1,
+  #myBtn {
+    margin: 0 150px 0px 60px;
+  }
+  #hr-1 {
+    display: none;
+  }
+  button #myBtn {
+    font-size: 1rem;
+  }
+}
+
+/* Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+ Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }*/
