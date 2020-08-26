@@ -15,13 +15,13 @@
 :root {
   --color-1: #2e5959;
   --color-2: #010a26;
-  --color-3: #011640;
+  --color-3: #1B3D3D;
   --color-4: #e6dbda;
   --color-5: #d66a52;
   --color-6: white;
   --color-7: #e02214;
   --color-8: #d96685;
-  --color-9: #cbd0d3;
+  --color-9: #365D8A;
 } /*--VARIABLES -I found the need to use variables as I was experimenting with 
     different tones of grey and pink - learnt with Kevin Powel's youtube video 
     "CSS Variables - An introduction to CSS custom properties" https://www.youtube.com/watch?v=PHO6TBq_auI"--*/
@@ -86,10 +86,10 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 }
 
 .btn-grid {
-    display: grid;
-    grid-template-columns:repeat(2,auto);
-    gap: 10px;
-    margin: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  gap: 10px;
+  margin: 10px 0;
 }
 
 .buttonColor {
@@ -97,12 +97,17 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
   color: var(--color-5);
 }
 
-.btn {
-    background-color: var(--color-8);
-    border-radius: 2px;
-    padding: 2px 4px;
-    color: var(--color-4);
-    outline: none;
+button.btn {
+  background-color: var(--color-9);
+  border: 1px solid var(--color-9);
+  border-radius: 4px;
+  color: var(--color-4);
+  
+}
+
+button.btn:hover {
+  color: var(--color-4);
+  box-shadow: 0 0 10px 2px var(--color-1);
 }
 
 /* Grow Shadow */
