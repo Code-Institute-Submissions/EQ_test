@@ -12,7 +12,7 @@ This test is based on Daniel Goleman work about brain and behavioral sciences. T
     ####color theme
     after chosing the images for the home page, I used Adobe Color to extract colour scheme matching the image on the first callout container.  
         -- colours used:  
-        <img src="assets/images/color-scheme.jpeg"> 
+<img src="assets/images/color-scheme.jpeg"> 
             
 ### 2. [Features](#features)
 ### 3. [Technologies Applied](#technologies-applied)
