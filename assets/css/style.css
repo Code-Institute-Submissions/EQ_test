@@ -39,7 +39,7 @@ hr.hr-home {
 
 #margins-container {
   background-color: var(--color-1);
-  padding: 15px 0;
+  padding-top: 15px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -139,7 +139,6 @@ footer p,
   top: 0;
   justify-content: center;
   align-items: center;
-  display: none;
   overflow-y: hidden;
   padding: 15px; /* Avoid width reflow - overflow and padding code taken 
                         from https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ to fix scroll bug when modal is open*/
@@ -183,8 +182,13 @@ button.btn:hover {
   box-shadow: 0 0 10px 2px var(--color-1);
 }
 
-.hide {
-    display: none;
+#rulesContainer p {
+    font-size: 0.7rem;
+}
+
+.hide,
+.btn.hide {
+    display: none !important;
 }
 
 /* Extra small devices (portrait phones, less than 576px)

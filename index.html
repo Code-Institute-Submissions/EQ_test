@@ -186,13 +186,28 @@
     </footer>
 
     <!--EQ test modals-->
-    <div class="bg-modal">
+    <div class="bg-modal hide">
       <div class="modal-content modal-md-lg mx-auto">
         <div class="close">+</div>
         <div id="questionContainer" class="hide">
           <div id="question">Question</div>
           <div id="answerButtons" class="container">
-            <div class="row justify-content-around mb-2">
+            <form id="testForm">
+                <select name="test answer" id="testAnswer">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+                </select>
+            </form>
+            <!--div class="row justify-content-around mb-2">
               <button class="btn col-2">1</button>
               <button class="btn col-2">2</button>
               <button class="btn col-2">3</button>
@@ -205,28 +220,30 @@
               <button class="btn col-2">8</button>
               <button class="btn col-2">9</button>
               <button class="btn col-2">10</button>
-            </div>
+            </div-->
           </div>
         </div>
-        <!--<i class="far fa-comment-dots"></i><br />
-        <h4>Explaining How The Test Works</h4>
-        <hr />
-        <p>
-          here it goes the explanation,<br />
-          This test is divided into questions within the personal competences
-          and questions within social competences. For each question chose a
-          number from 1 to 10 where 1 represents that at this moment you do not
-          behave this way at all, and 10 will indicate that at this moment you
-          identify fully with this behavior.<br />
-          This test is mostly helpfull if you use it at different times in your
-          life and keep a record of results as to compare the differences that
-          had occured.
-        </p>-->
+        <!--Rules Container-->
+        <div class="container" id="rulesContainer">
+          <i class="far fa-comment-dots"></i><br />
+          <h4>How It Works</h4>
+          <hr />
+          <p>
+            There are 9 questions related to
+            <strong>Personal competencies</strong> and 9 questions related to
+            <strong>Social competencies</strong>.<br />
+            Chose a number from 1 to 10, where 1 means the sentence is the
+            furthest from your current behaviour, and 10 is the closest from
+            your behaviour.
+          </p>
+        </div>
         <div class="controls container">
-          <div class="row justify-content-center">
-            <button id="startBtn" class="start-btn btn">Start</button>
-            <button id="nextBtn" class="next-btn btn hide">Next</button>
-            <button id="resultsBtn" class="results-btn btn hide">Next</button>
+          <div class="row">
+            <div class="col">
+              <button id="startBtn" class="start-btn btn">Start</button>
+              <button id="nextBtn" class="next-btn btn">Next</button>
+              <button id="resultsBtn" class="results-btn btn">Results</button>
+            </div>
           </div>
         </div>
       </div>
