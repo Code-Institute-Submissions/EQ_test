@@ -188,6 +188,17 @@ button.btn:hover {
 }
 
 
+#quizMessage {
+    background-color: var(--color-5);
+    border-radius: 6px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding: 2px;
+    color: var(--color-4);
+}
+
+
 /* Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
     #header-callout-image-container {

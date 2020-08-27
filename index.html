@@ -190,10 +190,12 @@
       <div class="modal-content modal-md-lg mx-auto">
         <div class="close">+</div>
         <div id="questionContainer">
-          <div id="question">Question</div>
+          <div id="myCompetencyType"></div>
+          <div id="myQuestionNumber"></div>
+          <div id="myQuestion"></div>
           <div id="answerButtons" class="container">
             <form id="testForm">
-                <select name="test answer" id="testAnswer">
+                <select name="test answer" id="testAnswer" required>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -208,6 +210,7 @@
                 </select>
             </form>
           </div>
+          <div id="testMessage"></div>
         </div>
         <!--Rules Container-->
         <div class="container" id="rulesContainer">
