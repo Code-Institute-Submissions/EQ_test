@@ -191,10 +191,31 @@
         <div class="close">+</div>
         <div id="questionContainer">
           <div id="myCompetencyType" class="mb-2"></div>
-          <hr>
+          <hr />
           <div id="myQuestion" class="mb-3"></div>
           <div id="answerButtons" class="container">
-            <form id="testForm" class="mb-4">
+            <div class="input-group mb-3" id="testForm">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01"
+                  >1-10</label
+                >
+              </div>
+              <select class="custom-select" id="inputGroupSelect01" required>
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+                <option value="6">Six</option>
+                <option value="7">Seven</option>
+                <option value="8">Eight</option>
+                <option value="9">Nine</option>
+                <option value="10">Ten</option>
+                
+              </select>
+            </div>
+            <!--form id="testForm" class="mb-4">
                 <select name="test answer" id="testAnswer">
                     <option value="" disabled selected hidden>Choose value</option>
                     <option value="1">1</option>
@@ -209,9 +230,8 @@
                     <option value="10">10</option>
 
                 </select>
-            </form>
+            </form-->
           </div>
-          
         </div>
         <!--Rules Container-->
         <div class="container" id="rulesContainer">

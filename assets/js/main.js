@@ -1,3 +1,4 @@
+//Global variables
 var questions = [
   {
     competence: "Personal competence",
@@ -15,111 +16,103 @@ var questions = [
     competence: "Personal competence",
     questionNumber: "3",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Self-confidence: having a solid sense of our own value, capabilities and potential.",
   },
   {
     competence: "Personal competence",
     questionNumber: "4",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Emotional self-control: maintaining emotions and destructive impulses under control, even in times of stress.",
   },
   {
     competence: "Personal competence",
     questionNumber: "5",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Overcoming: having an impetus to improve the performance to meet interior standards of excellence.",
   },
   {
     competence: "Personal competence",
     questionNumber: "6",
-    question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+    question: "Initiative: always be ready to act and enjoy opportunities.",
   },
   {
     competence: "Personal competence",
     questionNumber: "7",
-    question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+    question: "Transparency: be honest and honest, worthy of confidence.",
   },
   {
     competence: "Personal competence",
     questionNumber: "8",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Adaptability: having flexibility in adapting to people with a different style, to volatile situations or in way of thinking and behaving in situations antagonistic.",
   },
   {
     competence: "Personal competence",
     questionNumber: "9",
-    question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+    question: "Optimism: seeing the bright side of events in any situation.",
   },
   {
     competence: "Social competence",
     questionNumber: "1",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Empathy: understanding other people's emotions, understanding their points of view and take an active interest in their concerns.",
   },
   {
     competence: "Social competence",
     questionNumber: "2",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Organizational awareness: identify and understand trends, decision networks and policy at the level organizational.",
   },
   {
     competence: "Social competence",
     questionNumber: "3",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Service: recognize and satisfy the needs of subordinates and customers, serving them and helping them improve your performance and achieve your goals.",
   },
   {
     competence: "Social competence",
     questionNumber: "4",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Inspirational leadership: guide and motivate, with a thought-stimulating vision, leading people to achieve mutual goals.",
   },
   {
     competence: "Social competence",
     questionNumber: "5",
-    question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+    question: "Influence: having the ability to persuade and influence people.",
   },
   {
     competence: "Social competence",
     questionNumber: "6",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Development of others: cultivating others habilities through feedback and guidance.",
   },
   {
     competence: "Social competence",
     questionNumber: "7",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Promoting change: starting and managing change leading people in a new directions.",
   },
   {
     competence: "Social competence",
     questionNumber: "8",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Conflict management: resolve differences between people, leading them to mutual integration and acceptance.",
   },
   {
     competence: "Social competence",
     questionNumber: "9",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Teamwork: Achieving high performance collaboration and team work.",
   },
 ];
-
 var i = 0;
 var currentCompetencyType = questions[i].competence;
 var currentQuestionNumber = questions[i].questionNumber;
 var currentQuestion = questions[i].question;
+var resultArray = [];
 
-var answer = $("#testAnswer").change(function () {
-  $(this).val();
-  console.log(answer);
-});
-
-//-----------------------------------------------------------Open Modal - doc ready function
+//-------------------------------Open Modal - doc ready function
+//--------------------------------------------------------------
 $(document).ready(function () {
   //--Open modal on rules of the test
   $("#myBtn").click(function () {
@@ -130,8 +123,8 @@ $(document).ready(function () {
     $("#questionContainer").hide();
   });
 
-  //---------------------------------------On clicking Start button (function)
-
+  //-------------------------On clicking Start button (function)
+  //------------------------------------------------------------
   $("#startBtn").click(function () {
     console.log("button was clicked, it works!");
     $("#rulesContainer").hide();
@@ -141,9 +134,9 @@ $(document).ready(function () {
 
     //--On clicking Start, display the first question
 
-    console.log(`the var${currentCompetencyType}`);
-    console.log(`the var${currentQuestionNumber}`);
-    console.log(`the var${currentQuestion}`);
+    console.log(currentCompetencyType);
+    console.log(currentQuestionNumber);
+    console.log(currentQuestion);
 
     document.getElementById(
       "myCompetencyType"
@@ -152,23 +145,25 @@ $(document).ready(function () {
       currentQuestionNumber + ".  " + currentQuestion;
   });
 
-  //--On clicking Next button
-
+  //-------------------------On clicking Next button function
+  //---------------------------------------------------------
   $("#nextBtn").click(function () {
     console.log("button clicked, it works!");
 
     //--On clicking Next, display the next question
-
-    for (i = 1; i < questions.length; i++) {
+    if (i < questions.length) {
+      i++;
       console.log(i);
-
+      
+      //local variables
       var currentCompetencyType = questions[i].competence;
       var currentQuestionNumber = questions[i].questionNumber;
       var currentQuestion = questions[i].question;
-      console.log(`the var${currentCompetencyType}`);
-      console.log(`the var${currentQuestionNumber}`);
-      console.log(`the var${currentQuestion}`);
-
+      console.log(currentCompetencyType);
+      console.log(currentQuestionNumber);
+      console.log(currentQuestion);
+      
+      //change question every time next button is pressed
       document.getElementById(
         "myCompetencyType"
       ).innerHTML = currentCompetencyType;
@@ -176,4 +171,8 @@ $(document).ready(function () {
         currentQuestionNumber + ".  " + currentQuestion;
     }
   });
+
+  //-------------------------calculating result
+
+  
 });
