@@ -190,12 +190,13 @@
       <div class="modal-content modal-md-lg mx-auto">
         <div class="close">+</div>
         <div id="questionContainer">
-          <div id="myCompetencyType"></div>
-          <div id="myQuestionNumber"></div>
-          <div id="myQuestion"></div>
+          <div id="myCompetencyType" class="mb-2"></div>
+          <hr>
+          <div id="myQuestion" class="mb-3"></div>
           <div id="answerButtons" class="container">
-            <form id="testForm">
-                <select name="test answer" id="testAnswer" required>
+            <form id="testForm" class="mb-4">
+                <select name="test answer" id="testAnswer">
+                    <option value="" disabled selected hidden>Choose value</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -210,7 +211,7 @@
                 </select>
             </form>
           </div>
-          <div id="testMessage"></div>
+          
         </div>
         <!--Rules Container-->
         <div class="container" id="rulesContainer">

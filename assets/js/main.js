@@ -109,11 +109,8 @@ var questions = [
   },
 ];
 
-var currentCompetencyType = 0;
-var currentQuestionNumber = 0;
-var currentQuestion = 0;
 var testOver = false;
-var i = 0;
+
 var answer = $("#testAnswer").change(function () {
                 $(this).val();
   console.log(answer);
@@ -142,11 +139,16 @@ $(document).ready(function () {
     // on clicking Start, display the first question
     var i = 0;
     var currentCompetencyType = questions[i].competence;
-    console.log("the var" + currentCompetencyType);
-    $(this).find("#testMessage").hide();
+    var currentQuestionNumber = questions[i].questionNumber;
+    var currentQuestion = questions[i].question;
+    console.log(`the var${currentCompetencyType}`);
+    console.log(`the var${currentQuestionNumber}`);
+    console.log(`the var${currentQuestion}`);
+    
 
     document.getElementById("myCompetencyType").innerHTML = currentCompetencyType;
-    i++;
+    document.getElementById("myQuestion").innerHTML = currentQuestionNumber + ".  " + currentQuestion;
+    
 
  
   });
