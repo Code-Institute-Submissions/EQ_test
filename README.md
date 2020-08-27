@@ -37,4 +37,6 @@ list of websites used for inspiration:
     --https://www.w3schools.com/css/css_background_shorthand.asp  
     --https://www.w3schools.com/howto_css_modals.asp
     --https://www.youtube.com/watch?v=gLWIYk0Sd38 - used for modal  
-    --overflow and padding code takenfrom https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ to fix scroll bug when modal is open
+    --overflow and padding code takenfrom https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ to fix scroll bug when modal is open;  
+    --about placeholder on select option form taken and adapted from https://www.tutorialrepublic.com/faq/how-to-make-a-placeholder-for-a-select-box-in-html.php#:~:text=Answer%3A%20Use%20the%20disabled%20and,element%20that%20has%20empty%20value. 
+    --

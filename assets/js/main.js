@@ -9,7 +9,7 @@ var questions = [
     competence: "Personal competence",
     questionNumber: "2",
     question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+      "Accurate self-assessment: knowing your own limits and possibilities, without overestimating or underestimating yourself.",
   },
   {
     competence: "Personal competence",
@@ -109,16 +109,19 @@ var questions = [
   },
 ];
 
-var testOver = false;
+var i = 0;
+var currentCompetencyType = questions[i].competence;
+var currentQuestionNumber = questions[i].questionNumber;
+var currentQuestion = questions[i].question;
 
 var answer = $("#testAnswer").change(function () {
-                $(this).val();
+  $(this).val();
   console.log(answer);
 });
 
-//open Modal
+//-----------------------------------------------------------Open Modal - doc ready function
 $(document).ready(function () {
-  // open modal on rules of the test
+  //--Open modal on rules of the test
   $("#myBtn").click(function () {
     console.log("button was clicked, it works!");
     $(".bg-modal").show();
@@ -127,7 +130,7 @@ $(document).ready(function () {
     $("#questionContainer").hide();
   });
 
-  //on clicking Start button
+  //---------------------------------------On clicking Start button (function)
 
   $("#startBtn").click(function () {
     console.log("button was clicked, it works!");
@@ -136,27 +139,41 @@ $(document).ready(function () {
     $("#startBtn").hide();
     $("#nextBtn").show();
 
-    // on clicking Start, display the first question
-    var i = 0;
-    var currentCompetencyType = questions[i].competence;
-    var currentQuestionNumber = questions[i].questionNumber;
-    var currentQuestion = questions[i].question;
+    //--On clicking Start, display the first question
+
     console.log(`the var${currentCompetencyType}`);
     console.log(`the var${currentQuestionNumber}`);
     console.log(`the var${currentQuestion}`);
-    
 
-    document.getElementById("myCompetencyType").innerHTML = currentCompetencyType;
-    document.getElementById("myQuestion").innerHTML = currentQuestionNumber + ".  " + currentQuestion;
-    
+    document.getElementById(
+      "myCompetencyType"
+    ).innerHTML = currentCompetencyType;
+    document.getElementById("myQuestion").innerHTML =
+      currentQuestionNumber + ".  " + currentQuestion;
+  });
 
- 
+  //--On clicking Next button
+
+  $("#nextBtn").click(function () {
+    console.log("button clicked, it works!");
+
+    //--On clicking Next, display the next question
+
+    for (i = 1; i < questions.length; i++) {
+      console.log(i);
+
+      var currentCompetencyType = questions[i].competence;
+      var currentQuestionNumber = questions[i].questionNumber;
+      var currentQuestion = questions[i].question;
+      console.log(`the var${currentCompetencyType}`);
+      console.log(`the var${currentQuestionNumber}`);
+      console.log(`the var${currentQuestion}`);
+
+      document.getElementById(
+        "myCompetencyType"
+      ).innerHTML = currentCompetencyType;
+      document.getElementById("myQuestion").innerHTML =
+        currentQuestionNumber + ".  " + currentQuestion;
+    }
   });
 });
-
-
-//continue Test
-
-//
-
-
