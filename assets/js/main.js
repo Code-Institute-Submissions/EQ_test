@@ -116,6 +116,8 @@ var resultArray = [];
 //--------------------------------------------------------------
 $(document).ready(function () {
 
+
+
   //--Open modal on rules of the test
   $("#myBtn").click(function () {
     console.log("button was clicked, it works!");
@@ -134,6 +136,8 @@ $(document).ready(function () {
     $("#questionContainer").show();
     $("#startBtn").hide();
     $("#nextBtn").show();
+    disableNextBtn();
+    
 
     //--On clicking Start, display the first question
 
@@ -152,6 +156,7 @@ $(document).ready(function () {
   //---------------------------------------------------------
   $("#nextBtn").click(function () {
     console.log("button clicked, it works!");
+    disableNextBtn();
 
     $("#testForm").show();
     $("#submitAlert").hide();
@@ -194,12 +199,16 @@ $(document).ready(function () {
 
         $("#testForm").hide();
         $("#submitAlert").show();
+        $("#nextBtn").removeAttr("disabled");
         
     });
 
 
 
-  //-------------------------calculating result
-
+  //---------------------next button disabled function
+  function disableNextBtn(){
+    $("#nextBtn").attr("disabled","disabled");
+}
+disableNextBtn();
   
 });
