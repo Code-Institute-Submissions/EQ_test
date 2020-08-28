@@ -121,10 +121,12 @@ $(document).ready(function () {
   //--Open modal on rules of the test
   $("#myBtn").click(function () {
     console.log("button was clicked, it works!");
+
     $(".bg-modal").show();
     $("#nextBtn").hide();
     $("#resultsBtn").hide();
     $("#questionContainer").hide();
+    $("#submitAlert").hide();
   });
 
   //-------------------------On clicking Start button (function)
@@ -132,19 +134,14 @@ $(document).ready(function () {
   $("#startBtn").click(function () {
     console.log("button was clicked, it works!");
     
+    //On clicking Start, display the first question and show and disable the next button
     $("#rulesContainer").hide();
     $("#questionContainer").show();
     $("#startBtn").hide();
     $("#nextBtn").show();
-    disableNextBtn();
     
-
-    //--On clicking Start, display the first question
-
-    console.log(currentCompetencyType);
-    console.log(currentQuestionNumber);
-    console.log(currentQuestion);
-
+    disableNextBtn();
+  
     document.getElementById(
       "myCompetencyType"
     ).innerHTML = currentCompetencyType;
@@ -152,7 +149,7 @@ $(document).ready(function () {
       currentQuestionNumber + ".  " + currentQuestion;
   });
 
-  //-------------------------On clicking Next button function
+  //---------On clicking Next button function----------------
   //---------------------------------------------------------
   $("#nextBtn").click(function () {
     console.log("button clicked, it works!");
@@ -162,7 +159,7 @@ $(document).ready(function () {
     $("#submitAlert").hide();
     $("#inputGroupSelect01").val("");
 
-    //--On clicking Next, display the next question
+    //On clicking Next, display the next question
     if (i < questions.length) {
       i++;
       console.log(i);

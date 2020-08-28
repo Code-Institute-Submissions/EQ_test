@@ -199,6 +199,8 @@ form#testAnswer {
 
 #submitAlert {
     display: none;
+    
+    color: var(--color-8);
 }
 
 

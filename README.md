@@ -25,9 +25,10 @@ This test is based on Daniel Goleman work about brain and behavioral sciences. T
     $("h1").css("text-decoration", "underline");  
     -- when the h1 appeared underlined it was established that file was operational and linked to index.html file.  
     -- jquery and javascript tested with console.log commands previous to coding functions
-    -- user could select different times and answer to the same question and that would be stored which caused an error calculating results.
+    -- user could select different times and answer to the same question and that would be stored which caused an error calculating results. To resolve this issue, the form element was hiden after selected answer and a message to press button would appear instead.
     -- known bug: 
-        • start, next and result buttons inside modal did not respond to .hide, when inspected realised that bootstrap class 'btn' was overriding class 'hide'. To resolve this issue added '!important' to display code of 'hide' class...
+        • start, next and result buttons inside modal did not respond to .hide, when inspected realised that bootstrap class 'btn' was overriding class 'hide'. To resolve this issue added '!important' to display property of 'hide' class.  
+
 
         • home page margins and overflow of background image colour and footer ...
         • first used grid for modal buttons layout but it was not responsive so changes to rows and columns classes to take advantage of bootstrap responsive layout.  
