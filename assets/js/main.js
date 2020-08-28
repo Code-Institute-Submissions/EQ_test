@@ -110,10 +110,12 @@ var currentCompetencyType = questions[i].competence;
 var currentQuestionNumber = questions[i].questionNumber;
 var currentQuestion = questions[i].question;
 var resultArray = [];
+ resultArray;
 
 //-------------------------------Open Modal - doc ready function
 //--------------------------------------------------------------
 $(document).ready(function () {
+
   //--Open modal on rules of the test
   $("#myBtn").click(function () {
     console.log("button was clicked, it works!");
@@ -127,10 +129,12 @@ $(document).ready(function () {
   //------------------------------------------------------------
   $("#startBtn").click(function () {
     console.log("button was clicked, it works!");
+    
     $("#rulesContainer").hide();
     $("#questionContainer").show();
     $("#startBtn").hide();
     $("#nextBtn").show();
+    $("#baba").val("");
 
     //--On clicking Start, display the first question
 
@@ -149,6 +153,8 @@ $(document).ready(function () {
   //---------------------------------------------------------
   $("#nextBtn").click(function () {
     console.log("button clicked, it works!");
+
+    $("#inputGroupSelect01").val("");
 
     //--On clicking Next, display the next question
     if (i < questions.length) {
@@ -172,16 +178,19 @@ $(document).ready(function () {
     currentQuestionNumber + ".  " + currentQuestion;
  });
  
+
  //when a value is selected
     $("select").change(function(){
         console.log("a value has been selected");
 
-        var resultArray = [];
-        resultArray;
-        $("select option:selected").each(function() {
-            resultArray += $(this).val();
-        });
+        var valSelected = $("#inputGroupSelect01").val();
+        
+        valSelected;
+        
+        resultArray.push(valSelected);
+        console.log(valSelected);
         console.log(resultArray);
+
     });
 
 
