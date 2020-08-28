@@ -110,15 +110,11 @@ var currentCompetencyType = questions[i].competence;
 var currentQuestionNumber = questions[i].questionNumber;
 var currentQuestion = questions[i].question;
 var resultArray = [];
- resultArray;
+resultArray;
 
-//-------------------------------Open Modal - doc ready function
-//--------------------------------------------------------------
+//--DOCUMENT.READY FUNCTION-----------------------------------
 $(document).ready(function () {
-
-
-
-  //--Open modal on rules of the test
+  //--Test Button Clicked from home page to open modal---------
   $("#myBtn").click(function () {
     console.log("button was clicked, it works!");
 
@@ -129,19 +125,18 @@ $(document).ready(function () {
     $("#submitAlert").hide();
   });
 
-  //-------------------------On clicking Start button (function)
-  //------------------------------------------------------------
+  //--On clicking Start button (function)----------------------
   $("#startBtn").click(function () {
     console.log("button was clicked, it works!");
-    
+
     //On clicking Start, display the first question and show and disable the next button
     $("#rulesContainer").hide();
     $("#questionContainer").show();
     $("#startBtn").hide();
     $("#nextBtn").show();
-    
+
     disableNextBtn();
-  
+
     document.getElementById(
       "myCompetencyType"
     ).innerHTML = currentCompetencyType;
@@ -175,37 +170,39 @@ $(document).ready(function () {
 
     //change question every time next button is pressed
     document.getElementById(
-    "myCompetencyType"
+      "myCompetencyType"
     ).innerHTML = currentCompetencyType;
     document.getElementById("myQuestion").innerHTML =
-    currentQuestionNumber + ".  " + currentQuestion;
- });
- 
+      currentQuestionNumber + ".  " + currentQuestion;
+  });
 
- //when a value is selected
-    $("select").change(function(){
-        console.log("a value has been selected");
-        
-        var valSelected = $("#inputGroupSelect01").val();
-        valSelected;
-        
-        resultArray.push(valSelected);
-        //$( "#inputGroupSelect01" ).blur();
-        console.log(valSelected);
-        console.log(resultArray);
+  //when a value is selected
+  $("select").change(function () {
+    console.log("a value has been selected");
 
-        $("#testForm").hide();
-        $("#submitAlert").show();
-        $("#nextBtn").removeAttr("disabled");
-        
-    });
+    var valSelected = $("#inputGroupSelect01").val();
+    valSelected;
 
+    resultArray.push(valSelected);
+    //$( "#inputGroupSelect01" ).blur();
+    console.log(valSelected);
+    console.log(resultArray);
 
+    $("#testForm").hide();
+    $("#submitAlert").show();
+    $("#nextBtn").removeAttr("disabled");
+  });
 
   //---------------------next button disabled function
-  function disableNextBtn(){
-    $("#nextBtn").attr("disabled","disabled");
-}
-disableNextBtn();
+  function disableNextBtn() {
+    $("#nextBtn").attr("disabled", "disabled");
+  }
+
+  //--close button function to return to home page------------
+  $(".close").click(function() {
+    console.log("button was clicked, it works!");
+    $(".bg-modal").hide();
+  });
   
+  disableNextBtn();
 });
