@@ -25,6 +25,7 @@ This test is based on Daniel Goleman work about brain and behavioral sciences. T
     $("h1").css("text-decoration", "underline");  
     -- when the h1 appeared underlined it was established that file was operational and linked to index.html file.  
     -- jquery and javascript tested with console.log commands previous to coding functions
+    -- user could select different times and answer to the same question and that would be stored which caused an error calculating results.
     -- known bug: 
         • start, next and result buttons inside modal did not respond to .hide, when inspected realised that bootstrap class 'btn' was overriding class 'hide'. To resolve this issue added '!important' to display code of 'hide' class...
 
@@ -38,5 +39,6 @@ list of websites used for inspiration:
     --https://www.w3schools.com/howto_css_modals.asp
     --https://www.youtube.com/watch?v=gLWIYk0Sd38 - used for modal  
     --overflow and padding code takenfrom https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ to fix scroll bug when modal is open;  
-    --about placeholder on select option form taken and adapted from https://www.tutorialrepublic.com/faq/how-to-make-a-placeholder-for-a-select-box-in-html.php#:~:text=Answer%3A%20Use%20the%20disabled%20and,element%20that%20has%20empty%20value. 
+    --about placeholder on select option form taken and adapted from https://www.tutorialrepublic.com/faq/how-to-make-a-placeholder-for-a-select-box-in-html.php#:~:text=Answer%3A%20Use%20the%20disabled%20and,element%20that%20has%20empty%20value.
+    --https://api.jquery.com/ was a source used throughout this project as reference
     --

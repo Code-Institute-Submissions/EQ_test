@@ -134,7 +134,6 @@ $(document).ready(function () {
     $("#questionContainer").show();
     $("#startBtn").hide();
     $("#nextBtn").show();
-    $("#baba").val("");
 
     //--On clicking Start, display the first question
 
@@ -154,6 +153,8 @@ $(document).ready(function () {
   $("#nextBtn").click(function () {
     console.log("button clicked, it works!");
 
+    $("#testForm").show();
+    $("#submitAlert").hide();
     $("#inputGroupSelect01").val("");
 
     //--On clicking Next, display the next question
@@ -182,15 +183,18 @@ $(document).ready(function () {
  //when a value is selected
     $("select").change(function(){
         console.log("a value has been selected");
-
-        var valSelected = $("#inputGroupSelect01").val();
         
+        var valSelected = $("#inputGroupSelect01").val();
         valSelected;
         
         resultArray.push(valSelected);
+        //$( "#inputGroupSelect01" ).blur();
         console.log(valSelected);
         console.log(resultArray);
 
+        $("#testForm").hide();
+        $("#submitAlert").show();
+        
     });
 
 
