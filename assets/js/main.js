@@ -44,7 +44,7 @@ var questions = [
     competence: "Personal competence",
     questionNumber: "8",
     question:
-      "Adaptability: having flexibility in adapting to people with a different style, to volatile situations or in way of thinking and behaving in situations antagonistic.",
+      "Adaptability: having flexibility in adapting to people with a different style, to volatile situations or in way of thinking and behaving in antagonistic situations.",
   },
   {
     competence: "Personal competence",
@@ -154,23 +154,37 @@ $(document).ready(function () {
     if (i < questions.length) {
       i++;
       console.log(i);
-      
-      //local variables
-      var currentCompetencyType = questions[i].competence;
-      var currentQuestionNumber = questions[i].questionNumber;
-      var currentQuestion = questions[i].question;
-      console.log(currentCompetencyType);
-      console.log(currentQuestionNumber);
-      console.log(currentQuestion);
-      
-      //change question every time next button is pressed
-      document.getElementById(
-        "myCompetencyType"
-      ).innerHTML = currentCompetencyType;
-      document.getElementById("myQuestion").innerHTML =
-        currentQuestionNumber + ".  " + currentQuestion;
     }
-  });
+
+    //local variables
+    var currentCompetencyType = questions[i].competence;
+    var currentQuestionNumber = questions[i].questionNumber;
+    var currentQuestion = questions[i].question;
+    console.log(currentCompetencyType);
+    console.log(currentQuestionNumber);
+    console.log(currentQuestion);
+
+    //change question every time next button is pressed
+    document.getElementById(
+    "myCompetencyType"
+    ).innerHTML = currentCompetencyType;
+    document.getElementById("myQuestion").innerHTML =
+    currentQuestionNumber + ".  " + currentQuestion;
+ });
+ 
+ //when a value is selected
+    $("select").change(function(){
+        console.log("a value has been selected");
+
+        var resultArray = [];
+        resultArray;
+        $("select option:selected").each(function() {
+            resultArray += $(this).val();
+        });
+        console.log(resultArray);
+    });
+
+
 
   //-------------------------calculating result
 
