@@ -105,6 +105,7 @@ var questions = [
       "Teamwork: Achieving high performance collaboration and team work.",
   },
 ];
+
 var i = 0;
 var currentCompetencyType = questions[i].competence;
 var currentQuestionNumber = questions[i].questionNumber;
@@ -123,7 +124,21 @@ $(document).ready(function () {
     $("#resultsBtn").hide();
     $("#questionContainer").hide();
     $("#submitAlert").hide();
+    $("#rulesContainer").show();
+    $("#startBtn").show();
   });
+
+  //--close button function to return to home page------------
+  $(".close").click(function () {
+      console.log("button was clicked, it works!");
+      $(".bg-modal").hide();
+
+      function resetTest () {
+        i = 0;
+        resultArray = [];
+      };
+      resetTest();
+    });
 
   //--On clicking Start button (function)----------------------
   $("#startBtn").click(function () {
@@ -134,6 +149,8 @@ $(document).ready(function () {
     $("#questionContainer").show();
     $("#startBtn").hide();
     $("#nextBtn").show();
+    $("#testForm").show();
+    $("#inputGroupSelect01").val("");
 
     disableNextBtn();
 
@@ -184,7 +201,6 @@ $(document).ready(function () {
     valSelected;
 
     resultArray.push(valSelected);
-    //$( "#inputGroupSelect01" ).blur();
     console.log(valSelected);
     console.log(resultArray);
 
@@ -198,11 +214,7 @@ $(document).ready(function () {
     $("#nextBtn").attr("disabled", "disabled");
   }
 
-  //--close button function to return to home page------------
-  $(".close").click(function() {
-    console.log("button was clicked, it works!");
-    $(".bg-modal").hide();
-  });
   
+
   disableNextBtn();
 });
