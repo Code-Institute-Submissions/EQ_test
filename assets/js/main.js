@@ -111,8 +111,9 @@ var currentCompetencyType = questions[i].competence;
 var currentQuestionNumber = questions[i].questionNumber;
 var currentQuestion = questions[i].question;
 var resultArray = [];
-resultArrayLength;
+
 resultArray;
+
 
 //--DOCUMENT.READY FUNCTION-----------------------------------
 $(document).ready(function () {
@@ -171,7 +172,9 @@ $(document).ready(function () {
   $("select").change(function () {
     console.log("a value has been selected");
 
-    var valSelected = $("#inputGroupSelect01").val();
+    var stringSelected = $("#inputGroupSelect01").val();
+    var valSelected = parseInt(stringSelected);
+    stringSelected;
     valSelected;
     console.log(valSelected);
 
@@ -239,33 +242,110 @@ $(document).ready(function () {
 
   //display result;
   $("#resultsBtn").click(function () {
-    
     $("#resultsBtn").hide();
-    $("#testForm").hide();
-    
-    var resultsNumbersArray = parseInt(resultArray);
-    console.log( "The resultsNumbersArray is ", resultsNumbersArray);
-    
-    var sum = resultsNumbersArray.reduce(add,0); // with initial value to avoid when the array is empty
+    $("#questionContainer").hide();
+    $("#resultsContainer").show();
 
-    function add(accumulator, a) {
-    return accumulator + a;
-}
 
-console.log(sum);
+    var resultsChart = Highcharts.chart("container", {
+      chart: {
+        type: "column",
+      },
+      title: {
+        text: "Your Current EQ",
+      },
+      subtitle: {
+        text:
+          'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>',
+      },
+      xAxis: {
+        type: "category",
+        labels: {
+          rotation: -45,
+          style: {
+            fontSize: "13px",
+            fontFamily: "Verdana, sans-serif",
+          },
+        },
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: "Answer values 1-10",
+        },
+      },
+      legend: {
+        enabled: false,
+      },
+      tooltip: {
+        pointFormat: "Population in 2017: <b>{point.y:.1f} millions</b>",
+      },
+      series: [
+        {
+          name: "Questions",
+          data: [
+            ["Emotional self-awareness", resultArray[0]],
+            ["Accurate self-assessment", resultArray[1]],
+            ["Self-confidence", resultArray[2]],
+            ["Emotional self-control", resultArray[3]],
+            ["Overcoming", resultArray[4]],
+            ["Initiative", resultArray[5]],
+            ["Transparency", resultArray[6]],
+            ["adaptability", resultArray[7]],
+            ["Optimism", resultArray[8]],
+            ["Empathy", resultArray[9]],
+            ["Organizational awareness", resultArray[10]],
+            ["Service", resultArray[11]],
+            ["Inspirational leadership", resultArray[12]],
+            ["Influence", resultArray[13]],
+            ["Development of others", resultArray[14]],
+            ["Promoting Change", resultArray[15]],
+            ["Conflict management", resultArray[16]],
+            ["Teamwork", resultArray[17]],
+          ],
+          dataLabels: {
+            enabled: true,
+            rotation: -90,
+            color: "#FFFFFF",
+            align: "right",
+            format: "{point.y:.1f}", // one decimal
+            y: 10, // 10 pixels down from the top
+            style: {
+              fontSize: "13px",
+              fontFamily: "Verdana, sans-serif",
+            },
+          },
+        },
+      ],
+    });
+    resultsChart;
+
+    document.getElementById(
+      "myCompetencyType"
+    ).innerHTML = resultsChart;
+
+    //var resultArray = parseInt(resultArray);
+    console.log("The resultArray is ", resultArray);
+
+    //var sum = resultArray.reduce(add, 0); // with initial value to avoid when the array is empty
+
+    //function add(accumulator, a) {
+    //  return accumulator + a;
+    //}
+
+    //console.log(sum);
   });
-
-
 
   //---------------------next button disabled function
   function disableNextBtn() {
     $("#nextBtn").attr("disabled", "disabled");
-  };
+  }
 
   //---------------------results button disabled function
   function disableResultsBtn() {
     $("#resultsBtn").attr("disabled", "disabled");
-  };
+  }
+
 
   console.log(currentCompetencyType);
   console.log(currentQuestionNumber);
