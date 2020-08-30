@@ -28,7 +28,7 @@ var questions = [
     competence: "Personal competence",
     questionNumber: "5",
     question:
-      "Overcoming: having an impetus to improve the performance to meet interior standards of excellence.",
+      "Overcoming: having motivation to improve the performance to meet interior standards of excellence.",
   },
   {
     competence: "Personal competence",
@@ -38,13 +38,13 @@ var questions = [
   {
     competence: "Personal competence",
     questionNumber: "7",
-    question: "Transparency: be honest and honest, worthy of confidence.",
+    question: "Transparency: be honest and righteous, worthy of trust.",
   },
   {
     competence: "Personal competence",
     questionNumber: "8",
     question:
-      "Adaptability: having flexibility in adapting to people with a different style, to volatile situations or in way of thinking and behaving in antagonistic situations.",
+      "Adaptability: having flexibility in adapting to people with a different style. To adapt to volatile situations or to way of thinking and behaving in adverse situations.",
   },
   {
     competence: "Personal competence",
@@ -61,13 +61,13 @@ var questions = [
     competence: "Social competence",
     questionNumber: "2",
     question:
-      "Organizational awareness: identify and understand trends, decision networks and policy at the level organizational.",
+      "Organizational awareness: identify and understand trends, influencial networks. Understand politics organizational level.",
   },
   {
     competence: "Social competence",
     questionNumber: "3",
     question:
-      "Service: recognize and satisfy the needs of subordinates and customers, serving them and helping them improve your performance and achieve your goals.",
+      "Service: identify and satisfy the needs of subordinates and customers, supporting them and helping them improve their performance and achieve their goals.",
   },
   {
     competence: "Social competence",
@@ -84,13 +84,13 @@ var questions = [
     competence: "Social competence",
     questionNumber: "6",
     question:
-      "Development of others: cultivating others habilities through feedback and guidance.",
+      "Development of others: nurturing others' habilities through feedback and guidance.",
   },
   {
     competence: "Social competence",
     questionNumber: "7",
     question:
-      "Promoting change: starting and managing change leading people in a new directions.",
+      "Promoting change: starting and managing change, leading people in a new directions.",
   },
   {
     competence: "Social competence",
@@ -102,7 +102,7 @@ var questions = [
     competence: "Social competence",
     questionNumber: "9",
     question:
-      "Teamwork: Achieving high performance collaboration and team work.",
+      "Teamwork: Achieving high performance, collaboration and team work.",
   },
 ];
 
@@ -111,10 +111,13 @@ var currentCompetencyType = questions[i].competence;
 var currentQuestionNumber = questions[i].questionNumber;
 var currentQuestion = questions[i].question;
 var resultArray = [];
+var resultArrayLength = resultArray.length;
+resultArrayLength;
 resultArray;
 
 //--DOCUMENT.READY FUNCTION-----------------------------------
 $(document).ready(function () {
+
   //--Test Button Clicked from home page to open modal---------
   $("#myBtn").click(function () {
     console.log("button was clicked, it works!");
@@ -145,6 +148,7 @@ $(document).ready(function () {
     console.log("button was clicked, it works!");
 
     //On clicking Start, display the first question and show and disable the next button
+    
     $("#rulesContainer").hide();
     $("#questionContainer").show();
     $("#startBtn").hide();
@@ -166,17 +170,28 @@ $(document).ready(function () {
   $("#nextBtn").click(function () {
     console.log("button clicked, it works!");
     disableNextBtn();
+    disableResultsBtn();
 
-    $("#testForm").show();
-    $("#submitAlert").hide();
-    $("#inputGroupSelect01").val("");
 
     //On clicking Next, display the next question
-    if (i < questions.length) {
+    if(i < 17) {
       i++;
       console.log(i);
-    }
+      console.log(resultArrayLength);
 
+        $("#testForm").show();
+        $("#submitAlert").hide();
+        $("#inputGroupSelect01").val("");
+
+    } if (i >= 17) {
+        console.log("last question");
+
+        $("#nextBtn").hide();
+        $("#resultsBtn").show();
+
+    }
+        
+    
     //local variables
     var currentCompetencyType = questions[i].competence;
     var currentQuestionNumber = questions[i].questionNumber;
@@ -193,7 +208,7 @@ $(document).ready(function () {
       currentQuestionNumber + ".  " + currentQuestion;
   });
 
-  //when a value is selected
+  //when a value is selected th
   $("select").change(function () {
     console.log("a value has been selected");
 
@@ -207,14 +222,19 @@ $(document).ready(function () {
     $("#testForm").hide();
     $("#submitAlert").show();
     $("#nextBtn").removeAttr("disabled");
+    $("#resultsBtn").removeAttr("disabled");
   });
 
   //---------------------next button disabled function
   function disableNextBtn() {
     $("#nextBtn").attr("disabled", "disabled");
-  }
+  };
 
-  
+  function disableResultsBtn() {
+    $("#resultsBtn").attr("disabled", "disabled");
+  };
+
 
   disableNextBtn();
+  disableResultsBtn();
 });
