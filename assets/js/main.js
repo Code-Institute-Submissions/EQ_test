@@ -111,7 +111,6 @@ var currentCompetencyType = questions[i].competence;
 var currentQuestionNumber = questions[i].questionNumber;
 var currentQuestion = questions[i].question;
 var resultArray = [];
-var resultArrayLength = resultArray.length;
 resultArrayLength;
 resultArray;
 
@@ -131,7 +130,6 @@ $(document).ready(function () {
     $("#startBtn").show();
   });
 
-
   //--close button function to return to home page------------
   $(".close").click(function () {
     console.log("close button was clicked, it works!");
@@ -147,7 +145,7 @@ $(document).ready(function () {
   //--On clicking Start button (function)----------------------
   $("#startBtn").click(function () {
     console.log("start button was clicked, it works!");
-    
+
     console.log("i = ", i);
 
     //On clicking Start, display the first question and show and disable the next button
@@ -179,15 +177,14 @@ $(document).ready(function () {
 
     resultArray.push(valSelected); //selected values from each question are pushed onto an array
     console.log(resultArray);
-
-    i++; //added 1 to the value of i which is going to select next question 
+    
+    i++; //added 1 to the value of i which is going to select next question
     console.log("i = ", i);
 
     $("#testForm").hide();
     $("#submitAlert").show();
     $("#nextBtn").removeAttr("disabled");
     $("#resultsBtn").removeAttr("disabled");
-    
   });
 
   //---------On clicking Next button function----------------
@@ -195,7 +192,6 @@ $(document).ready(function () {
   $("#nextBtn").click(function () {
     console.log("next button clicked, it works!");
 
-    
     var currentCompetencyType = questions[i].competence;
     var currentQuestionNumber = questions[i].questionNumber;
     var currentQuestion = questions[i].question;
@@ -209,10 +205,8 @@ $(document).ready(function () {
     /*On clicking Next, display the next question
     with next button or results button (on last question)*/
     if (i < 17) {
-    
       console.log("the if condition was fired; i = ", i);
       //console.log(resultArrayLength);
-
 
       $("#testForm").show();
       $("#submitAlert").hide();
@@ -223,8 +217,8 @@ $(document).ready(function () {
       ).innerHTML = currentCompetencyType;
       document.getElementById("myQuestion").innerHTML =
         currentQuestionNumber + ".  " + currentQuestion;
-    };
-     if (i == 17) {
+    }
+    if (i == 17) {
       console.log("This is the very last question...");
 
       $("#nextBtn").hide();
@@ -238,12 +232,30 @@ $(document).ready(function () {
       ).innerHTML = currentCompetencyType;
       document.getElementById("myQuestion").innerHTML =
         currentQuestionNumber + ".  " + currentQuestion;
-    };
+    }
 
     //change question every time next button is pressed
   });
 
-  //$("#resultsBtn").click(function () {});
+  //display result;
+  $("#resultsBtn").click(function () {
+    
+    $("#resultsBtn").hide();
+    $("#testForm").hide();
+    
+    var resultsNumbersArray = parseInt(resultArray);
+    console.log( "The resultsNumbersArray is ", resultsNumbersArray);
+    
+    var sum = resultsNumbersArray.reduce(add,0); // with initial value to avoid when the array is empty
+
+    function add(accumulator, a) {
+    return accumulator + a;
+}
+
+console.log(sum);
+  });
+
+
 
   //---------------------next button disabled function
   function disableNextBtn() {
@@ -254,7 +266,6 @@ $(document).ready(function () {
   function disableResultsBtn() {
     $("#resultsBtn").attr("disabled", "disabled");
   };
-
 
   console.log(currentCompetencyType);
   console.log(currentQuestionNumber);
