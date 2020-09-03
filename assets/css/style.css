@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700|Montserrat:wght@400;600;700&display=swap");
 
 * {
   padding: 0;
@@ -20,9 +20,10 @@
   --color-5: #7149c7;
   --color-6: white;
   --color-7: #e02214;
-  --color-8: #d96685;
+  --color-8: rgba(51, 51, 51, 0.4);
   --color-9: #365d8a;
   --color-10: #8e62dc;
+  --color-11:rgba(0, 0, 0, 0.5);
 } /*--VARIABLES -I found the need to use variables as I was experimenting with 
     different tones of grey and pink - learnt with Kevin Powel's youtube video 
     "CSS Variables - An introduction to CSS custom properties" https://www.youtube.com/watch?v=PHO6TBq_auI"--*/
@@ -47,6 +48,17 @@ hr.hr-home {
   font-family: "Open Sans", sans-serif;
   margin-left: 0;
   margin-right: 0;
+}
+
+.background-img {
+    background-color: var(--color-1);
+    background-image: url("../images/men_1024x802.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding: 0;
+    max-height: 400px;
+    overflow: hidden;
 }
 
 /*content area*/
@@ -79,6 +91,7 @@ hr.hr-home {
 }
 
 #callout-1-headers {
+ font-family: "Monserrat", sans-serif;
   margin-bottom: 16px;
 }
 
@@ -102,11 +115,11 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 }
 
 .test-button {
-  padding: 0.5rem 0.35rem;
+  padding: 0.5rem 0.5rem;
   background-color: var(--color-7);
   color: var(--color-4);
   display: inline-block;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
   border-radius: 0.5rem;
 }
@@ -142,6 +155,7 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 
 /*-------second part of content page (up to subscribe)--*/
 #second-callout-container {
+  background: var(--color-1);
   color: var(--color-4);
   padding: 0;
 }
@@ -159,6 +173,7 @@ div.more-text-EQ {
 
 /*---------subscribe area--*/
 #subscribe-container {
+  background: var(--color-1);
   align-items: center;
   display: flex;
   justify-content: center;
@@ -172,7 +187,7 @@ div.more-text-EQ {
   background-color: #000;
   border-radius: 4px;
   color: var(--color-4);
-  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 50px 5px var(--color-11);
 }
 
 .close-btn {
@@ -190,7 +205,7 @@ div.more-text-EQ {
   background-color: var(--color-6);
   border-radius: 4px;
   color: #333;
-  box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 60px 5px var(--color-11);
 }
 
 .subscribe-wrapper:after {
@@ -353,7 +368,7 @@ form#testAnswer {
 #submitAlert {
   display: none;
 
-  color: var(--color-8);
+  color: var(--color-10);
 }
 
 /* Chart - copied from highcharts dual axis, line and column */
@@ -406,70 +421,30 @@ form#testAnswer {
   background: #f1f7ff;
 }
 
-/* Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { 
-    #header-callout-image-container {
-    background-image: url("../images/men_1024x802.jpg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    height: 400px;
-    background-size: cover;
-    padding: 0; 
-    }
- }*/
 
 /* Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) {
-  #margins-container {
-    background-color: var(--color-1);
-
-    background-image: url("../images/men_1024x802.jpg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    padding: 0;
-    max-height: 400px;
-    overflow: hidden;
+@media (min-width: 576px) {
+  html {
+      font-size: 1.2rem;
+  }
+  .parent-wrapper{
+      width: 340px;
+  }
+  .more-links {
+      text-align: center;
   }
 }
 
-/*#header-callout-image-container {
-    background-image: url("../images/men_1024x802.jpg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    height: 400px;
-    background-size: cover;
-    padding: 0;
 
-    overflow: hidden;
-  }
-  #dropdownMenuButton {
-    font-size: 0.7rem;
-  }
-
-  a.dropdown-item {
-    font-size: 14px;
-  }
-  #callout-container-1,
-  #myBtn {
-    margin: 0 150px 0px 30px;
-  }
-
-  div.callout-1-headers h5 {
-    font-size: 1.5rem;
-  }
-
-  #hr-1 {
-    display: none;
-  }
-
-  button #myBtn {
-    font-size: 1rem;
-  }
+/* Medium devices (tablets, more than 768px)*/
+@media (min-width: 768px) {
+    html {
+        font-size: 1.3rem;
+    }
+    .background-img {
+        display: none;
+    }
 }
 
-/* Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) { ... }
-
- Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... }*/
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) { ... }

@@ -9,15 +9,15 @@
 
   <body class="container-fluid">
     <!--Area containing first part of content including start test button-->
-    <div class="row" id="margins-container">
+    <div class="row background-img" id="margins-container">
       <div class="col-1"></div>
       <div class="col-10" id="content-container">
         <!--Header Callout and Image Container-->
         <div class="mb-3" id="header-callout-image-container">
           <!--NAVBAR with dropdown button-->
           <div class="row pt-2">
-            <div class="col"></div>
-            <div class="col-4 col-md-2">
+            <div class="col-10"></div>
+            <div class="col-2pr-0 ">
               <!--dropdown button-->
               <div class="dropdown">
                 <button
@@ -96,89 +96,86 @@
       <div class="col-1"></div>
     </div>
 
-    <!--second part content and subscribe areas (same gradient background)-->
-    <div class="container" id="second-callout-subscribe-container">
-      <!--Area containing second part of content-->
-      <div class="container" id="second-callout-container">
-        <div class="row pt-3">
-          <div class="col-1"></div>
-          <div class="col-10">
-            <!--second callout container to add info about life coaching-->
-            <div class="row">
-              <!--SECOND CALLOUT-->
-              <div class="col callout-container" id="callout-2-headers">
-                <h3>Achieve Success</h3>
-                <hr class="hr-home" />
-              </div>
+    <!--Area containing second part of content-->
+    <div class="container-fluid" id="second-callout-container">
+    <div class="row pt-3">
+        <div class="col-1"></div>
+        <!--second callout container for added info about EQ-->
+        <div class="col-10">
+        <div class="row">
+            <!--SECOND CALLOUT-->
+            <div class="col callout-container" id="callout-2-headers">
+            <h3>Achieve Success</h3>
+            <hr class="hr-home" />
             </div>
-            <div class="row">
-              <!--profile foto-->
-              <div class="d-none d-md-block col-md-4 container-fluid">
-                <img src="assets/images/brain.jpg" alt="#" id="profile-img" />
-
-                <!--second callout text-->
-                <h4>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h4>
-              </div>
-              <div class="more-text-EQ col-md-4 mb-2">
-                <p>
-                  Unlike IQ, which does not change significantly over a
-                  lifetime, our EQ can progress throughout life as we learn and
-                  learn and grow.<br />
-                  Our brains are programmed to react in certain situations but
-                  we can re-program them by reprogramming habits, beliefs and
-                  with repeated practice and application.
-                </p>
-              </div>
-              <div class="more-text-EQ d-none d-md-block col-md-4">
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Libero ex dolor tempora neque laudantium, suscipit est
-                  quisquam omnis provident iste! Repellendus omnis quam
-                  doloremque aperiam repellat cumque architecto aut alias?
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <hr class="hr-home" />
-
-                <!--EQ + IQ = Success image-->
-                <img
-                  src="assets/images/iqeq_1136x446.jpg"
-                  class="img-fluid mb-3"
-                  alt="Responsive image"
-                />
-
-                <!--Sign up Form-->
-                <hr class="hr-home" />
-              </div>
-            </div>
-          </div>
-          <div class="col-1"></div>
         </div>
-      </div>
+        <div class="row">
+            <!--profile foto-->
+            <div class="d-none d-md-block col-md-4 container-fluid">
+            <img src="assets/images/brain.jpg" alt="#" id="profile-img" />
 
-      <!--subscribe form, codepen.io creation of Hugo Carneiro and adapted to this project-->
-      <div class="container pb-5" id="subscribe-container">
-        <div class="parent-wrapper">
-          <span class="close-btn glyphicon glyphicon-remove"></span>
-          <div class="subscribe-wrapper">
-            <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
-            <form id="subscribeForm">
-              <input
-                id="emailAddress"
-                type="text"
-                name="email"
-                class="subscribe-input"
-                placeholder="Your e-mail"
-              />
-              <div class="submit-btn" id="submitAddressBtn">SUBMIT</div>
-            </form>
-          </div>
+            <!--second callout text-->
+            <h4>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </h4>
+            </div>
+            <div class="more-text-EQ col-md-4 mb-2">
+            <p>
+                Unlike IQ, which does not change significantly over a
+                lifetime, our EQ can progress throughout life as we learn and
+                learn and grow.<br />
+                Our brains are programmed to react in certain situations but
+                we can re-program them by reprogramming habits, beliefs and
+                with repeated practice and application.
+            </p>
+            </div>
+            <div class="more-text-EQ d-none d-md-block col-md-4">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Libero ex dolor tempora neque laudantium, suscipit est
+                quisquam omnis provident iste! Repellendus omnis quam
+                doloremque aperiam repellat cumque architecto aut alias?
+            </p>
+            </div>
         </div>
-      </div>
+        <div class="row">
+            <div class="col">
+            <hr class="hr-home" />
+
+            <!--EQ + IQ = Success image-->
+            <img
+                src="assets/images/iqeq_1136x446.jpg"
+                class="img-fluid mb-3"
+                alt="Responsive image"
+            />
+
+            <!--Sign up Form-->
+            <hr class="hr-home" />
+            </div>
+        </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+    </div>
+
+    <!--subscribe form, codepen.io creation of Hugo Carneiro and adapted to this project-->
+    <div class="container-fluid pb-5" id="subscribe-container">
+    <div class="parent-wrapper">
+        <span class="close-btn glyphicon glyphicon-remove"></span>
+        <div class="subscribe-wrapper">
+        <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+        <form id="subscribeForm">
+            <input
+            id="emailAddress"
+            type="text"
+            name="email"
+            class="subscribe-input"
+            placeholder="Your e-mail"
+            />
+            <div class="submit-btn" id="submitAddressBtn">SUBMIT</div>
+        </form>
+        </div>
+    </div>
     </div>
     <!--footer-->
     <footer>
