@@ -4,25 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/test-form.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/2ba69951ac.js"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script defer type="text/javascript" src="assets/js/main.js"></script>
     <title>EQ test</title>
   </head>
 
@@ -30,12 +11,12 @@
     <div class="row" id="margins-container">
       <div class="col-1"></div>
 
-      <!--Area containing all page content-->
+      <!--Area containing first part of content including start test button-->
       <div class="col-10" id="content-container">
         <!--Header Callout and Image Container-->
         <div class="mb-3" id="header-callout-image-container">
           <!--NAVBAR with dropdown button-->
-          <div class="row mb-3">
+          <div class="row pt-2">
             <div class="col"></div>
             <div class="col-4 col-md-2">
               <!--dropdown button-->
@@ -51,7 +32,7 @@
                   language
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">English</a>
+                  <a class="dropdown-item" href="index.html">English</a>
                   <a class="dropdown-item" href="#">Portuguese</a>
                 </div>
               </div>
@@ -59,28 +40,40 @@
           </div>
 
           <!--Callout Container top of page-->
-          <div class="row mb-3">
-            <!--Headers-->
+          <div class="row">
             <div class="col callout-container" id="callout-container-1">
-              <h5>Test your EMOTIONAL</h5>
-              <h1 mb-3>Intelligence</h1>
-
-              <hr class="hr-home" id="hr-1" />
-
-              <!--description of Emotional Intelligence-->
-              <p>
-                A way to determine you Emotional inteligence on you current
-                moment, it is important to evaluate each parameters determined
-                by Daniel Goleman (.........). By testing personal and social
-                competences, it is possible to determine your best qualities and
-                what downfall are prevnting you from progressing.
-              </p>
+              <div class="row">
+                <!--Headers-->
+                <div class="col-7 col-md-12" id="callout-1-headers">
+                  <h6>Test your Emotional</h6>
+                  <h3>Intelligence</h3>
+                  <hr class="hr-home d-none d-md-block" id="hr-1" />
+                </div>
+              </div>
+              <div class="row">
+                <!--description of Emotional Intelligence-->
+                <div class="col-7 coll-md-12" id="callout-1-p1">
+                  <p>
+                    Emotional intelligence (EQ or EI) is the ability to
+                    understand and manage your own emotions, and those of the
+                    people around you.
+                  </p>
+                </div>
+                <div class="d-none d-md-block col-md-12" id="callout-1-p2">
+                  <p>
+                    For leaders, having emotional intelligence is essential for
+                    success.<br> After all, who is more likely to succeed – a leader
+                    who shouts at his team when he's under stress, or a leader
+                    who stays in control, and calmly assesses the situation?
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
           <!--TEST Button-->
           <div class="row mb-3">
-            <div class="col button-container">
+            <div class="col-6 button-container">
               <button class="test-button hvr-grow-shadow" id="myBtn">
                 What is my EQ?
               </button>
@@ -99,68 +92,101 @@
             </div>
           </div>
         </div>
-
-        <!--second callout container to add info about life coaching-->
-        <div class="row mb-3">
-          <!--SECOND CALLOUT-->
-          <div class="col callout-container" id="callout-container-2">
-            <h2>Achieve Success</h2>
-            <hr class="hr-home" />
-          </div>
-        </div>
-        <div class="row mb-5">
-          <!--profile foto-->
-          <div class="d-none d-md-block col-md-4 container-fluid">
-            <img src="assets/images/brain.jpg" alt="#" id="profile-img" />
-
-            <!--second callout text-->
-            <h4>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </h4>
-          </div>
-          <div class="col-md-4 mb-2">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
-              cupiditate fugit explicabo non velit praesentium? Impedit tenetur
-              mollitia blanditiis vero quod quaerat voluptatum quidem quibusdam
-              amet tempore, soluta modi incidunt?
-            </p>
-          </div>
-          <div class="d-none d-md-block col-md-4">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
-              ex dolor tempora neque laudantium, suscipit est quisquam omnis
-              provident iste! Repellendus omnis quam doloremque aperiam repellat
-              cumque architecto aut alias?
-            </p>
-          </div>
-        </div>
-        <div class="row mb-5">
-          <div class="col">
-            <hr class="hr-home" />
-
-            <!--EQ + IQ = Success image-->
-            <img
-              src="assets/images/iqeq_1136x446.jpg"
-              class="img-fluid mb-3"
-              alt="Responsive image"
-            />
-
-            <!--Sign up Form-->
-            <hr class="hr-home" />
-          </div>
-        </div>
       </div>
       <div class="col-1"></div>
+    </div>
+    <!--Area containing first part of content-->
+    <div class="container" id="second-callout-container">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <!--second callout container to add info about life coaching-->
+          <div class="row mb-3">
+            <!--SECOND CALLOUT-->
+            <div class="col callout-container" id="callout-container-2">
+              <h2>Achieve Success</h2>
+              <hr class="hr-home" />
+            </div>
+          </div>
+          <div class="row mb-5">
+            <!--profile foto-->
+            <div class="d-none d-md-block col-md-4 container-fluid">
+              <img src="assets/images/brain.jpg" alt="#" id="profile-img" />
+
+              <!--second callout text-->
+              <h4>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h4>
+            </div>
+            <div class="more-text-EQ col-md-4 mb-2">
+              <p>
+                Unlike IQ, which does not change significantly over a lifetime,
+                our EQ can progress throughout life as we learn and learn and
+                grow.<br />
+                Our brains are programmed to react in certain situations but we
+                can re-program them by reprogramming habits, beliefs and with
+                repeated practice and application.
+              </p>
+            </div>
+            <div class="more-text-EQ d-none d-md-block col-md-4">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+                ex dolor tempora neque laudantium, suscipit est quisquam omnis
+                provident iste! Repellendus omnis quam doloremque aperiam
+                repellat cumque architecto aut alias?
+              </p>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col">
+              <hr class="hr-home" />
+
+              <!--EQ + IQ = Success image-->
+              <img
+                src="assets/images/iqeq_1136x446.jpg"
+                class="img-fluid mb-3"
+                alt="Responsive image"
+              />
+
+              <!--Sign up Form-->
+              <hr class="hr-home" />
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
     </div>
 
     <!--footer-->
     <footer>
       <div class="container-fluid">
-        <div class="row">
+        <div class="row py-3">
           <div class="col-1"></div>
-          <div class="col-5">
+          <div class="col-2">
             <p>&copy Vera Leitao</p>
+          </div>
+          <div class="col-3">
+            <h5>Read More About EQ</h5>
+            <ul>
+              <li>
+                <a
+                  href="https://positivepsychology.com/category/emotional-intelligence/"
+                  >Positive Psychology website</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://positivepsychology.com/category/emotional-intelligence/"
+                  >Positive Psychology website</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://positivepsychology.com/category/emotional-intelligence/"
+                  >Positive Psychology website</a
+                >
+              </li>
+            </ul>
           </div>
           <div class="col-5">
             <ul class="list-inline social-links justify-content-end">
@@ -247,10 +273,7 @@
               labels can sometimes make charts harder to read.
             </p>
           </figure>
-          <div id="resultsDescriptionTable">
-
-
-          </div>
+          <div id="resultsDescriptionTable"></div>
         </div>
         <!--Controls Container with buttons start next and results-->
         <div class="controls container">
@@ -266,6 +289,25 @@
     </div>
 
     <!--source scripts-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script defer type="text/javascript" src="assets/js/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/2ba69951ac.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>

@@ -7,21 +7,21 @@
 }
 
 *,
-*::before,
+*/*::before,
 *::after {
   box-sizing: border-box;
-}
+}*/
 
 :root {
   --color-1: #2e5959;
   --color-2: #010a26;
-  --color-3: #CBD0D3;
+  --color-3: #cbd0d3;
   --color-4: #e6dbda;
   --color-5: #d66a52;
   --color-6: white;
   --color-7: #e02214;
   --color-8: #d96685;
-  --color-9: #365D8A;
+  --color-9: #365d8a;
 } /*--VARIABLES -I found the need to use variables as I was experimenting with 
     different tones of grey and pink - learnt with Kevin Powel's youtube video 
     "CSS Variables - An introduction to CSS custom properties" https://www.youtube.com/watch?v=PHO6TBq_auI"--*/
@@ -37,15 +37,24 @@ hr.hr-home {
   margin-bottom: 30px;
 }
 
+/*-------first part of content page (bg image up to md size scree)--*/
 #margins-container {
   background-color: var(--color-1);
   padding-top: 15px;
   font-family: "Open Sans", sans-serif;
+  margin-left: 0;
+  margin-right: 0;
 }
 
+/*content area*/
 #content-container {
   padding: 0;
   margin: 0;
+}
+
+#header-callout-image-container {
+  padding: 0;
+  margin: 0 0 16px 0;
 }
 
 #header-container {
@@ -55,15 +64,29 @@ hr.hr-home {
 #dropdownMenuButton {
   background: transparent;
   color: var(--color-4);
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .dropdown-item {
   font-size: 0.9rem;
 }
 
-.callout-container {
-  color: white;
+#callout-1-headers h6 {
+    margin-bottom: 2px;
+}
+
+#callout-1-headers {
+    margin-bottom: 16px;
+}
+
+#callout-1-p1,
+#callout-1-p2 {
+    font-size: 0.8rem;
+}
+
+.callout-container,
+.callout-container p {
+  color: var(--color-4);
   padding: 0;
 }
 
@@ -76,16 +99,14 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 }
 
 .test-button {
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem 0.35rem;
   background-color: var(--color-7);
   color: var(--color-4);
   display: inline-block;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: .8rem;
+  font-weight: 700;
   border-radius: 0.5rem;
 }
-
-
 
 /* Grow Shadow */
 .hvr-grow-shadow {
@@ -110,10 +131,20 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
   transform: scale(1.1);
 }
 
+/*-------second part of content page (up to footer)--*/
+#second-callout-container {
+  background-color: var(--color-1);
+  padding: 0;
+}
+
 #profile-img {
   border-radius: 50%;
   max-width: 100px;
   margin-bottom: 30px;
+}
+
+div.more-text-EQ {
+  color: var(--color-3);
 }
 
 footer {
@@ -127,6 +158,10 @@ footer p,
   display: inline;
   font-size: 0.9rem;
   color: var(--color-1);
+}
+
+footer ul {
+  list-style-type: none;
 }
 
 /*--EQ test Modals--*/
@@ -175,7 +210,6 @@ button.btn {
   color: var(--color-2);
   font-weight: 600;
   padding: 3px 4px;
-  
 }
 
 button.btn:hover {
@@ -184,41 +218,40 @@ button.btn:hover {
 }
 
 #rulesContainer p {
-    font-size: 0.7rem;
+  font-size: 0.7rem;
 }
 
 #myCompetencyType {
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--color-1);
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-1);
 }
 
 form#testAnswer {
-    width: 30px;
+  width: 30px;
 }
 
 #submitAlert {
-    display: none;
-    
-    color: var(--color-8);
+  display: none;
+
+  color: var(--color-8);
 }
-
-
 
 /* Chart - copied from highcharts dual axis, line and column */
 
-#resultsContainer{
-    display: none;
-    max-height: 800px;
-    width: 100%;
+#resultsContainer {
+  display: none;
+  max-height: 800px;
+  width: 100%;
 }
 
 #container {
-  height: 400px; 
+  height: 400px;
 }
 
-.highcharts-figure, .highcharts-data-table table {
-  min-width: 310px; 
+.highcharts-figure,
+.highcharts-data-table table {
+  min-width: 310px;
   max-width: 800px;
   margin: 1em auto;
 }
@@ -226,7 +259,7 @@ form#testAnswer {
 .highcharts-data-table table {
   font-family: Verdana, sans-serif;
   border-collapse: collapse;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
   margin: 10px auto;
   text-align: center;
   width: 100%;
@@ -238,22 +271,21 @@ form#testAnswer {
   color: #555;
 }
 .highcharts-data-table th {
-	font-weight: 600;
+  font-weight: 600;
   padding: 0.5em;
 }
-.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
   padding: 0.5em;
 }
-.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
   background: #f8f8f8;
 }
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
 }
-
-
-
-
 
 /* Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
@@ -269,27 +301,51 @@ form#testAnswer {
 
 /* Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
-  #header-callout-image-container {
+  
+  #margins-container {
+    background-color: var(--color-1);
+
+    background-image: url("../images/men_1024x802.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding: 0;
+    max-height: 400px;
+    overflow: hidden;
+
+  }
+}
+
+  /*#header-callout-image-container {
     background-image: url("../images/men_1024x802.jpg");
     background-repeat: no-repeat;
     background-position: center bottom;
     height: 400px;
     background-size: cover;
     padding: 0;
-    margin: -15px -60px 45px;
-    font-size: 65%;
+
     overflow: hidden;
   }
   #dropdownMenuButton {
-  font-size: 0.7rem;
-}
+    font-size: 0.7rem;
+  }
+
+  a.dropdown-item {
+    font-size: 14px;
+  }
   #callout-container-1,
   #myBtn {
-    margin: 0 150px 0px 60px;
+    margin: 0 150px 0px 30px;
   }
+
+  div.callout-1-headers h5 {
+    font-size: 1.5rem;
+  }
+
   #hr-1 {
     display: none;
   }
+
   button #myBtn {
     font-size: 1rem;
   }
