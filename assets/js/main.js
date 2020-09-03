@@ -114,7 +114,6 @@ var resultArray = [];
 
 resultArray;
 
-
 //--DOCUMENT.READY FUNCTION-----------------------------------
 $(document).ready(function () {
   //--Test Button Clicked from home page to open modal---------
@@ -180,7 +179,7 @@ $(document).ready(function () {
 
     resultArray.push(valSelected); //selected values from each question are pushed onto an array
     console.log(resultArray);
-    
+
     i++; //added 1 to the value of i which is going to select next question
     console.log("i = ", i);
 
@@ -245,7 +244,6 @@ $(document).ready(function () {
     $("#resultsBtn").hide();
     $("#questionContainer").hide();
     $("#resultsContainer").show();
-
 
     var resultsChart = Highcharts.chart("container", {
       chart: {
@@ -320,32 +318,21 @@ $(document).ready(function () {
     });
     resultsChart;
 
-    document.getElementById(
-      "myCompetencyType"
-    ).innerHTML = resultsChart;
+    document.getElementById("myCompetencyType").innerHTML = resultsChart;
 
     //var resultArray = parseInt(resultArray);
     console.log("The resultArray is ", resultArray);
-
-    //var sum = resultArray.reduce(add, 0); // with initial value to avoid when the array is empty
-
-    //function add(accumulator, a) {
-    //  return accumulator + a;
-    //}
-
-    //console.log(sum);
   });
 
-  //---------------------next button disabled function
+  //-------------------next button disabled function
   function disableNextBtn() {
     $("#nextBtn").attr("disabled", "disabled");
   }
 
-  //---------------------results button disabled function
+  //-------------------results button disabled function
   function disableResultsBtn() {
     $("#resultsBtn").attr("disabled", "disabled");
   }
-
 
   console.log(currentCompetencyType);
   console.log(currentQuestionNumber);
@@ -353,4 +340,10 @@ $(document).ready(function () {
 
   disableNextBtn();
   disableResultsBtn();
+
+  //-------------------when pressing submit email to subscribe
+
+  $("#submitAddressBtn").click(function () {
+    alert("Sorry, this button is not working yet.");
+  });
 });

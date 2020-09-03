@@ -17,11 +17,12 @@
   --color-2: #010a26;
   --color-3: #cbd0d3;
   --color-4: #e6dbda;
-  --color-5: #d66a52;
+  --color-5: #7149c7;
   --color-6: white;
   --color-7: #e02214;
   --color-8: #d96685;
   --color-9: #365d8a;
+  --color-10: #8e62dc;
 } /*--VARIABLES -I found the need to use variables as I was experimenting with 
     different tones of grey and pink - learnt with Kevin Powel's youtube video 
     "CSS Variables - An introduction to CSS custom properties" https://www.youtube.com/watch?v=PHO6TBq_auI"--*/
@@ -30,6 +31,7 @@ body.container-fluid {
   height: 100vh;
   width: 100vw;
   padding: 0;
+  line-height: 1.15rem;
 }
 
 hr.hr-home {
@@ -38,6 +40,7 @@ hr.hr-home {
 }
 
 /*-------first part of content page (bg image up to md size scree)--*/
+
 #margins-container {
   background-color: var(--color-1);
   padding-top: 15px;
@@ -72,16 +75,16 @@ hr.hr-home {
 }
 
 #callout-1-headers h6 {
-    margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 #callout-1-headers {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 #callout-1-p1,
 #callout-1-p2 {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .callout-container,
@@ -103,7 +106,7 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
   background-color: var(--color-7);
   color: var(--color-4);
   display: inline-block;
-  font-size: .8rem;
+  font-size: 0.9rem;
   font-weight: 700;
   border-radius: 0.5rem;
 }
@@ -131,11 +134,18 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
   transform: scale(1.1);
 }
 
-/*-------second part of content page (up to footer)--*/
+/*-------second callout and subscribe container with same background gradient--*/
+#second-callout-subscribe-container {
+  background: var(--color-1);
+  margin left: 0;
+}
+
+/*-------second part of content page (up to subscribe)--*/
 #second-callout-container {
-  background-color: var(--color-1);
+  color: var(--color-4);
   padding: 0;
 }
+
 
 #profile-img {
   border-radius: 50%;
@@ -144,20 +154,129 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 }
 
 div.more-text-EQ {
-  color: var(--color-3);
+  font-size: 0.8rem;
 }
 
+/*---------subscribe area--*/
+#subscribe-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.parent-wrapper {
+  position: relative;
+  width: 240px;
+  height: 220px;
+  margin: 35px auto 0;
+  background-color: #000;
+  border-radius: 4px;
+  color: var(--color-4);
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  margin: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.subscribe-wrapper {
+  position: absolute;
+  left: -30px;
+  right: -30px;
+  height: 170px;
+  padding: 20px;
+  background-color: var(--color-6);
+  border-radius: 4px;
+  color: #333;
+  box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
+}
+
+.subscribe-wrapper:after {
+  position: absolute;
+  content: "";
+  right: -10px;
+  bottom: 71px;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--color-5);
+}
+
+.subscribe-wrapper h4 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  line-height: 26px;
+}
+
+.subscribe-wrapper input {
+  position: absolute;
+  bottom: 30px;
+  border: none;
+  border-bottom: 1px solid var(--color-2);
+  padding: 10px;
+  width: 65%;
+  background: transparent;
+  transition: all 0.25s ease;
+  font-size: .8rem;
+}
+
+.subscribe-wrapper input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--color-5);
+}
+
+.subscribe-wrapper .submit-btn {
+  position: absolute;
+  border-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: var(--color-5);
+  color: var(--color-4);
+  padding: 12px 25px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  right: -10px;
+  bottom: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: -5px 6px 20px 0px rgba(51, 51, 51, 0.4);
+}
+
+.subscribe-wrapper .submit-btn:hover {
+  background-color: var(--color-10);
+}
+
+/*---------footer area--*/
 footer {
   background-color: var(--color-3);
   color: var(--color-1);
 }
 
-footer p,
+.more-links a,
+footer p {
+  font-size: 0.5rem;
+  color: var(--color-1);
+  line-height: .9rem;
+}
+
 .list-inline > li,
 .list-inline li a {
   display: inline;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--color-1);
+}
+
+.more-links p {
+    font-size: .6rem;
+    font-weight: bold;
+    margin-bottom: 0;
 }
 
 footer ul {
@@ -301,7 +420,6 @@ form#testAnswer {
 
 /* Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
-  
   #margins-container {
     background-color: var(--color-1);
 
@@ -312,11 +430,10 @@ form#testAnswer {
     padding: 0;
     max-height: 400px;
     overflow: hidden;
-
   }
 }
 
-  /*#header-callout-image-container {
+/*#header-callout-image-container {
     background-image: url("../images/men_1024x802.jpg");
     background-repeat: no-repeat;
     background-position: center bottom;
