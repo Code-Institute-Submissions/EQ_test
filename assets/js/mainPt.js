@@ -258,7 +258,7 @@ $(document).ready(function () {
     //to print the result
     console.log("Average is: " + average);
 
-
+    
 
     var resultsChart = Highcharts.chart("container", {
       chart: {
@@ -268,7 +268,8 @@ $(document).ready(function () {
         text: "Your Current EQ",
       },
       subtitle: {
-        text: "",
+        text:
+          'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>',
       },
       xAxis: {
         type: "category",
@@ -290,7 +291,7 @@ $(document).ready(function () {
         enabled: false,
       },
       tooltip: {
-        pointFormat: "",
+        pointFormat: "Population in 2017: <b>{point.y:.1f} millions</b>",
       },
       series: [
         {
@@ -324,7 +325,7 @@ $(document).ready(function () {
             y: 10, // 10 pixels down from the top
             style: {
               fontSize: "13px",
-              fontFamily: "Monserrat, sans-serif",
+              fontFamily: "Verdana, sans-serif",
             },
           },
         },
@@ -336,14 +337,22 @@ $(document).ready(function () {
 
     //var resultArray = parseInt(resultArray);
     console.log("The resultArray is ", resultArray);
+
+    //var sum = resultArray.reduce(add, 0); // with initial value to avoid when the array is empty
+
+    //function add(accumulator, a) {
+    //  return accumulator + a;
+    //}
+
+    //console.log(sum);
   });
 
-  //-------------------next button disabled function
+  //---------------------next button disabled function
   function disableNextBtn() {
     $("#nextBtn").attr("disabled", "disabled");
   }
 
-  //-------------------results button disabled function
+  //---------------------results button disabled function
   function disableResultsBtn() {
     $("#resultsBtn").attr("disabled", "disabled");
   }
@@ -354,10 +363,4 @@ $(document).ready(function () {
 
   disableNextBtn();
   disableResultsBtn();
-
-  //-------------------when pressing submit email to subscribe
-
-  $("#submitAddressBtn").click(function () {
-    alert("Sorry, this button is not working yet.");
-  });
 });
