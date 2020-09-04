@@ -333,12 +333,17 @@ $(document).ready(function () {
     //there are 18 questions therefore there are 18 items
     //so the average is
     var average = sumResults / 18;
+    average;
+    //to change from a float number to a whole number
+    var intNumber = Math.trunc(average);
+    intNumber;
+
 
     //to print the result
-    console.log("Average is: " + average);
+    console.log("Average is " + average);
     document.getElementById(
         "averageScore"
-      ).innerHTML = "Your average score is " + average + ".";
+      ).innerHTML = "Your average score is " + intNumber + ".";
     
   });
 
