@@ -257,8 +257,10 @@ $(document).ready(function () {
 
     //to print the result
     console.log("Average is: " + average);
-
-
+    document.getElementById(
+        "averageScore"
+      ).innerHTML = "Your average score is " + average + ".";
+      
 
     var resultsChart = Highcharts.chart("container", {
       chart: {
