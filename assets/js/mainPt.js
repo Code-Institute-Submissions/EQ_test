@@ -114,7 +114,6 @@ var resultArray = [];
 
 resultArray;
 
-
 //--DOCUMENT.READY FUNCTION-----------------------------------
 $(document).ready(function () {
   //--Test Button Clicked from home page to open modal---------
@@ -180,7 +179,7 @@ $(document).ready(function () {
 
     resultArray.push(valSelected); //selected values from each question are pushed onto an array
     console.log(resultArray);
-    
+
     i++; //added 1 to the value of i which is going to select next question
     console.log("i = ", i);
 
@@ -246,6 +245,20 @@ $(document).ready(function () {
     $("#questionContainer").hide();
     $("#resultsContainer").show();
 
+    //the sum if the numbers in resultArray
+    var sumResults = 0;
+    for (var i in resultArray) {
+      sumResults += resultArray[i];
+    }
+
+    //there are 18 questions therefore there are 18 items
+    //so the average is
+    var average = sumResults / 18;
+
+    //to print the result
+    console.log("Average is: " + average);
+
+    
 
     var resultsChart = Highcharts.chart("container", {
       chart: {
@@ -320,9 +333,7 @@ $(document).ready(function () {
     });
     resultsChart;
 
-    document.getElementById(
-      "myCompetencyType"
-    ).innerHTML = resultsChart;
+    document.getElementById("myCompetencyType").innerHTML = resultsChart;
 
     //var resultArray = parseInt(resultArray);
     console.log("The resultArray is ", resultArray);
@@ -345,7 +356,6 @@ $(document).ready(function () {
   function disableResultsBtn() {
     $("#resultsBtn").attr("disabled", "disabled");
   }
-
 
   console.log(currentCompetencyType);
   console.log(currentQuestionNumber);

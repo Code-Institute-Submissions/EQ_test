@@ -245,6 +245,21 @@ $(document).ready(function () {
     $("#questionContainer").hide();
     $("#resultsContainer").show();
 
+    //the sum if the numbers in resultArray
+    var sumResults = 0;
+    for (var i in resultArray) {
+      sumResults += resultArray[i];
+    }
+
+    //there are 18 questions therefore there are 18 items
+    //so the average is
+    var average = sumResults / 18;
+
+    //to print the result
+    console.log("Average is: " + average);
+
+
+
     var resultsChart = Highcharts.chart("container", {
       chart: {
         type: "column",
@@ -253,8 +268,7 @@ $(document).ready(function () {
         text: "Your Current EQ",
       },
       subtitle: {
-        text:
-          'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>',
+        text: "",
       },
       xAxis: {
         type: "category",
@@ -276,7 +290,7 @@ $(document).ready(function () {
         enabled: false,
       },
       tooltip: {
-        pointFormat: "Population in 2017: <b>{point.y:.1f} millions</b>",
+        pointFormat: "",
       },
       series: [
         {
@@ -310,7 +324,7 @@ $(document).ready(function () {
             y: 10, // 10 pixels down from the top
             style: {
               fontSize: "13px",
-              fontFamily: "Verdana, sans-serif",
+              fontFamily: "Monserrat, sans-serif",
             },
           },
         },

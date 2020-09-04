@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700|Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
 * {
   padding: 0;
@@ -7,10 +7,10 @@
 }
 
 *,
-*/*::before,
+*::before,
 *::after {
   box-sizing: border-box;
-}*/
+}
 
 :root {
   --color-1: #2e5959;
@@ -23,7 +23,7 @@
   --color-8: rgba(51, 51, 51, 0.4);
   --color-9: #365d8a;
   --color-10: #8e62dc;
-  --color-11:rgba(0, 0, 0, 0.5);
+  --color-11: rgba(0, 0, 0, 0.5);
 } /*--VARIABLES -I found the need to use variables as I was experimenting with 
     different tones of grey and pink - learnt with Kevin Powel's youtube video 
     "CSS Variables - An introduction to CSS custom properties" https://www.youtube.com/watch?v=PHO6TBq_auI"--*/
@@ -51,14 +51,14 @@ hr.hr-home {
 }
 
 .background-img {
-    background-color: var(--color-1);
-    background-image: url("../images/men_1024x802.jpg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    padding: 0;
-    max-height: 400px;
-    overflow: hidden;
+  background-color: var(--color-1);
+  background-image: url("../images/men_1024x802.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  padding: 0;
+  max-height: 400px;
+  overflow: hidden;
 }
 
 /*content area*/
@@ -91,7 +91,6 @@ hr.hr-home {
 }
 
 #callout-1-headers {
- font-family: "Monserrat", sans-serif;
   margin-bottom: 16px;
 }
 
@@ -147,19 +146,13 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
   transform: scale(1.1);
 }
 
-/*-------second callout and subscribe container with same background gradient--*/
-#second-callout-subscribe-container {
-  background: var(--color-1);
-  margin left: 0;
-}
-
 /*-------second part of content page (up to subscribe)--*/
-#second-callout-container {
+#second-callout-container.row.pt-3 {
   background: var(--color-1);
   color: var(--color-4);
   padding: 0;
+  margin: 0;
 }
-
 
 #profile-img {
   border-radius: 50%;
@@ -237,7 +230,7 @@ div.more-text-EQ {
   width: 65%;
   background: transparent;
   transition: all 0.25s ease;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .subscribe-wrapper input:focus {
@@ -278,7 +271,7 @@ footer {
 footer p {
   font-size: 0.5rem;
   color: var(--color-1);
-  line-height: .9rem;
+  line-height: 0.9rem;
 }
 
 .list-inline > li,
@@ -289,9 +282,9 @@ footer p {
 }
 
 .more-links p {
-    font-size: .6rem;
-    font-weight: bold;
-    margin-bottom: 0;
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
 footer ul {
@@ -421,30 +414,56 @@ form#testAnswer {
   background: #f1f7ff;
 }
 
-
 /* Small devices (landscape phones, less than 768px)*/
 @media (min-width: 576px) {
   html {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
-  .parent-wrapper{
-      width: 340px;
+  .parent-wrapper {
+    width: 340px;
   }
   .more-links {
-      text-align: center;
+    text-align: center;
   }
 }
-
 
 /* Medium devices (tablets, more than 768px)*/
 @media (min-width: 768px) {
-    html {
-        font-size: 1.3rem;
-    }
-    .background-img {
-        display: none;
-    }
+  html {
+    font-size: 1.2rem;
+  }
+  .background-img {
+    background: var(--color-1);
+    max-height: none;
+    overflow: visible;
+  }
+  .image-container {
+    display: block;
+  }
+  .parent-wrapper {
+    width: 400px;
+    height: 260px;
+  }
+  .parent-wrapper span {
+    font-size: 72px;
+  }
+  div.more-links p {
+    font-size: 1rem;
+  }
+  .list-inline > li,
+  .list-inline li a {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  div.copyright p,
+  div.more-links li a {
+    font-size: .8rem;
+  }
 }
 
 /*Large devices (desktops, less than 1200px)*/
-@media (max-width: 1199.98px) { ... }
+@media (min-width: 1024px) {
+  html {
+    font-size: 1.3rem;
+  }
+}
