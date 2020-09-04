@@ -245,22 +245,7 @@ $(document).ready(function () {
     $("#questionContainer").hide();
     $("#resultsContainer").show();
 
-    //the sum if the numbers in resultArray
-    var sumResults = 0;
-    for (var i in resultArray) {
-      sumResults += resultArray[i];
-    }
-
-    //there are 18 questions therefore there are 18 items
-    //so the average is
-    var average = sumResults / 18;
-
-    //to print the result
-    console.log("Average is: " + average);
-    document.getElementById(
-        "averageScore"
-      ).innerHTML = "Your average score is " + average + ".";
-      
+    
 
     var resultsChart = Highcharts.chart("container", {
       chart: {
@@ -338,6 +323,23 @@ $(document).ready(function () {
 
     //var resultArray = parseInt(resultArray);
     console.log("The resultArray is ", resultArray);
+
+    //the sum if the numbers in resultArray
+    var sumResults = 0;
+    for (var i in resultArray) {
+      sumResults += resultArray[i];
+    }
+
+    //there are 18 questions therefore there are 18 items
+    //so the average is
+    var average = sumResults / 18;
+
+    //to print the result
+    console.log("Average is: " + average);
+    document.getElementById(
+        "averageScore"
+      ).innerHTML = "Your average score is " + average + ".";
+    
   });
 
   //-------------------next button disabled function
