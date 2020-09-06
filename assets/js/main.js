@@ -133,6 +133,15 @@ $(document).ready(function () {
   //--close button function to return to home page------------
   $(".close").click(function () {
     console.log("close button was clicked, it works!");
+
+    //confirmation funtion
+    $(".confirm").click(function () {
+      console.log("are you sure function triggered");
+      return confirm(
+        "Are you sure you want to leave this page? <br> When you leave this page, your answers will be reset."
+      );
+    });
+
     $(".bg-modal").hide();
 
     function resetTest() {
@@ -245,8 +254,6 @@ $(document).ready(function () {
     $("#questionContainer").hide();
     $("#resultsContainer").show();
 
-    
-
     var resultsChart = Highcharts.chart("container", {
       chart: {
         type: "column",
@@ -338,13 +345,10 @@ $(document).ready(function () {
     var intNumber = Math.trunc(average);
     intNumber;
 
-
     //to print the result
     console.log("Average is " + average);
-    document.getElementById(
-        "averageScore"
-      ).innerHTML = "Your average score is " + intNumber + ".";
-    
+    document.getElementById("averageScore").innerHTML =
+      "Your average score is " + intNumber + ".";
   });
 
   //-------------------next button disabled function
@@ -369,4 +373,29 @@ $(document).ready(function () {
   $("#submitAddressBtn").click(function () {
     alert("Sorry, this button is not working yet.");
   });
+
+  function moreFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("moreBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+  myFunction();
+
+  //function validateForm() {
+  //   var x = document.forms["subscribeForm"]["email"].value;
+  //   if (x == "") {
+  //     alert("Name must be filled out");
+  //     return false;
+  //   }
+  // }
 });

@@ -364,6 +364,11 @@ form#testAnswer {
   color: var(--color-10);
 }
 
+#more {
+    display: visible;
+    }
+
+
 /* Chart - copied from highcharts dual axis, line and column */
 
 #resultsContainer {
