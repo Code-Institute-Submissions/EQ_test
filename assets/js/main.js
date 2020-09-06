@@ -137,42 +137,14 @@ $(document).ready(function () {
     $("#moreBtn").text(txt);
     $(this).next("#more").slideToggle(200);
   });
-  //$(".bg-modal").css("overflow-y", "scroll");
-  /*$("moreBtn").click(function() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("moreBtn");
-
-  if (dots.style.display === "") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "";
-  } else {
-    dots.style.display = "";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
-  }
-});*/
 
   //--close button function to return to home page------------
   $(".close").click(function () {
-    console.log("close button was clicked, it works!");
-
-    //confirmation funtion
-    $(".confirm").click(function () {
-      console.log("are you sure function triggered");
-      return confirm(
-        "Are you sure you want to leave this page? <br> When you leave this page, your answers will be reset."
-      );
-    });
-
-    $(".bg-modal").hide();
-
-    function resetTest() {
-      i = 0;
-      resultArray = [];
+    if (confirm("Are you sure you want to leave this page?") == true) {
+      return true;
+    } else {
+      return false;
     }
-    resetTest();
   });
 
   //--On clicking Start button (function)----------------------
@@ -397,12 +369,4 @@ $(document).ready(function () {
   $("#submitAddressBtn").click(function () {
     alert("Sorry, this button is not working yet.");
   });
-
-  //function validateForm() {
-  //   var x = document.forms["subscribeForm"]["email"].value;
-  //   if (x == "") {
-  //     alert("Name must be filled out");
-  //     return false;
-  //   }
-  // }
 });
