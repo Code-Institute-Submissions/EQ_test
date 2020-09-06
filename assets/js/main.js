@@ -130,6 +130,30 @@ $(document).ready(function () {
     $("#startBtn").show();
   });
 
+  //click "read more" button to expand the rules' text
+  $("#more").hide();
+  $("#moreBtn").click(function () {
+    var txt = $("#more").is(":visible") ? "Read More" : "Read Less";
+    $("#moreBtn").text(txt);
+    $(this).next("#more").slideToggle(200);
+  });
+  //$(".bg-modal").css("overflow-y", "scroll");
+  /*$("moreBtn").click(function() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("moreBtn");
+
+  if (dots.style.display === "") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "";
+  } else {
+    dots.style.display = "";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+});*/
+
   //--close button function to return to home page------------
   $(".close").click(function () {
     console.log("close button was clicked, it works!");
@@ -331,7 +355,7 @@ $(document).ready(function () {
     //var resultArray = parseInt(resultArray);
     console.log("The resultArray is ", resultArray);
 
-    //the sum if the numbers in resultArray
+    //the sum of the numbers in resultArray
     var sumResults = 0;
     for (var i in resultArray) {
       sumResults += resultArray[i];
@@ -373,23 +397,6 @@ $(document).ready(function () {
   $("#submitAddressBtn").click(function () {
     alert("Sorry, this button is not working yet.");
   });
-
-  function moreFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("moreBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
-  }
-}
-  myFunction();
 
   //function validateForm() {
   //   var x = document.forms["subscribeForm"]["email"].value;

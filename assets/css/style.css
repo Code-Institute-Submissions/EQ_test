@@ -302,7 +302,7 @@ footer ul {
   top: 0;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
+  overflow-y: scroll;
   padding: 15px; /* Avoid width reflow - overflow and padding code taken 
                         from https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ to fix scroll bug when modal is open*/
 }
@@ -365,7 +365,7 @@ form#testAnswer {
 }
 
 #more {
-    display: visible;
+    display: none;
     }
 
 
