@@ -444,13 +444,27 @@ list-style-type: none;
 }
 
 .highcharts-description li {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     color: var(--color-1);
 }
 
 
 #averageScore {
     text-align: center;
+}
+
+p#result1-4,
+p#result5-7,
+p#result8-10 {
+    display: none;
+}
+
+.linkHomePage,
+.linkHomePage a {
+    color: var(--color-5);
+    text-align: center;
+    font-size: .7rem;
+    font-weight: bold;
 }
 
 /* Small devices (landscape phones, less than 768px)*/

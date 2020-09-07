@@ -374,10 +374,27 @@ $(document).ready(function () {
     var intNumber = Math.trunc(average);
     intNumber;
 
-    //to print the result
+    /*--To print the result change average Score 
+    from float number to whole number and display then
+    display result text accordingly--*/
     console.log("Average is " + average);
     document.getElementById("averageScore").innerHTML =
       "Your average score is " + intNumber + ".";
+     if (intNumber >= 1 && intNumber <= 4) {
+
+        console.log("intNumber >= 1 && intNumber <= 4 condition was fired");
+        $("#result1-4").show();
+    }
+    if (intNumber >= 5 && intNumber <= 7) {
+
+        console.log("intNumber >= 5 && intNumber <= 7 condition was fired");
+        $("#result5-7").show();
+    }
+    if (intNumber >= 8 && intNumber <= 10) {
+
+        console.log("intNumber >= 8 && intNumber <= 10 condition was fired");
+        $("#result8-10").show();
+    }
   });
 
   //-------------------next button disabled function
