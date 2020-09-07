@@ -396,6 +396,11 @@ div#resultsContainer {
   height: 400px;
 }
 
+.highcharts-background {
+    padding-left: 8px;
+    padding-right: 8px; 
+}
+
 .highcharts-figure,
 .highcharts-data-table table {
   min-width: 310px;
