@@ -3,113 +3,132 @@ var questions = [
   {
     competence: "Personal competence",
     questionNumber: "1",
-    question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+    questionP1: "Emotional self-awareness: ",
+    questionP2:
+      "Identifying your own emotions and recognize their impact on actions and decisions.",
   },
   {
     competence: "Personal competence",
     questionNumber: "2",
-    question:
-      "Accurate self-assessment: knowing your own limits and possibilities, without overestimating or underestimating yourself.",
+    questionP1: "Accurate self-assessment: ",
+    questionP2:
+      "Knowing your own limits and possibilities, without overestimating or underestimating yourself.",
   },
   {
     competence: "Personal competence",
     questionNumber: "3",
-    question:
-      "Self-confidence: having a solid sense of our own value, capabilities and potential.",
+    questionP1:"Self-confidence: ",
+    questionP2:
+      "Having a solid sense of our own value, capabilities and potential.",
   },
   {
     competence: "Personal competence",
     questionNumber: "4",
-    question:
-      "Emotional self-control: maintaining emotions and destructive impulses under control, even in times of stress.",
+    questionP1: "Emotional self-control: ",
+    questionP2:
+      "Maintaining emotions and destructive impulses under control, even in times of stress.",
   },
   {
     competence: "Personal competence",
     questionNumber: "5",
-    question:
-      "Overcoming: having motivation to improve the performance to meet interior standards of excellence.",
+    questionP1:"Overcoming: ",
+    questionP2:
+      "Having motivation to improve the performance to meet interior standards of excellence.",
   },
   {
     competence: "Personal competence",
     questionNumber: "6",
-    question: "Initiative: always be ready to act and enjoy opportunities.",
+    questionP1: "Initiative: ",
+    questionP2: "Always be ready to act and enjoy opportunities.",
   },
   {
     competence: "Personal competence",
     questionNumber: "7",
-    question: "Transparency: be honest and righteous, worthy of trust.",
+    questionP1: "Transparency: ",
+    questionP2: "Be honest and righteous, worthy of trust.",
   },
   {
     competence: "Personal competence",
     questionNumber: "8",
-    question:
-      "Adaptability: having flexibility in adapting to people with a different style. To adapt to volatile situations or to way of thinking and behaving in adverse situations.",
+    questionP1: "Adaptability: ",
+    questionP2:
+      "Having flexibility in adapting to people with a different style. To adapt to volatile situations or to way of thinking and behaving in adverse situations.",
   },
   {
     competence: "Personal competence",
     questionNumber: "9",
-    question: "Optimism: seeing the bright side of events in any situation.",
+    questionP1: "Optimism: ",
+    questionP2: "Seeing the bright side of events in any situation.",
   },
   {
     competence: "Social competence",
     questionNumber: "1",
-    question:
-      "Empathy: understanding other people's emotions, understanding their points of view and take an active interest in their concerns.",
+    questionP1: "Empathy: ",
+    questionP2:
+      "Understanding other people's emotions, understanding their points of view and take an active interest in their concerns.",
   },
   {
     competence: "Social competence",
     questionNumber: "2",
-    question:
-      "Organizational awareness: identify and understand trends, influencial networks. Understand politics organizational level.",
+    questionP1: "Organizational awareness: ",
+    questionP2:
+      "Identify and understand trends, influencial networks. Understand politics organizational level.",
   },
   {
     competence: "Social competence",
     questionNumber: "3",
-    question:
-      "Service: identify and satisfy the needs of subordinates and customers, supporting them and helping them improve their performance and achieve their goals.",
+    questionP1: "Service: ",
+    questionP2:
+      "Identify and satisfy the needs of subordinates and customers, supporting them and helping them improve their performance and achieve their goals.",
   },
   {
     competence: "Social competence",
     questionNumber: "4",
-    question:
-      "Inspirational leadership: guide and motivate, with a thought-stimulating vision, leading people to achieve mutual goals.",
+    questionP1: "Inspirational leadership: ",
+    questionP2:
+      "Guide and motivate, with a thought-stimulating vision, leading people to achieve mutual goals.",
   },
   {
     competence: "Social competence",
     questionNumber: "5",
-    question: "Influence: having the ability to persuade and influence people.",
+    questionP1: "Influence: ",
+    questionP2: "Having the ability to persuade and influence people.",
   },
   {
     competence: "Social competence",
     questionNumber: "6",
-    question:
-      "Development of others: nurturing others' habilities through feedback and guidance.",
+    questionP1: "Development of others: ",
+    questionP2:
+      "Nurturing others' habilities through feedback and guidance.",
   },
   {
     competence: "Social competence",
     questionNumber: "7",
-    question:
-      "Promoting change: starting and managing change, leading people in a new directions.",
+    questionP1: "Promoting change: ",
+    questionP2:
+      "Starting and managing change, leading people in a new directions.",
   },
   {
     competence: "Social competence",
     questionNumber: "8",
-    question:
-      "Conflict management: resolve differences between people, leading them to mutual integration and acceptance.",
+    questionP1: "Conflict management: ",
+    questionP2:
+      "Resolve differences between people, leading them to mutual integration and acceptance.",
   },
   {
     competence: "Social competence",
     questionNumber: "9",
-    question:
-      "Teamwork: Achieving high performance, collaboration and team work.",
+    questionP1: "Teamwork: ",
+    questionP2:
+      "Achieving high performance, collaboration and team work.",
   },
 ];
 
 var i = 0;
 var currentCompetencyType = questions[i].competence;
 var currentQuestionNumber = questions[i].questionNumber;
-var currentQuestion = questions[i].question;
+var currentQuestionP1 = questions[i].questionP1;
+var currentQuestionP2 = questions[i].questionP2;
 var resultArray = [];
 
 resultArray;
@@ -162,14 +181,14 @@ $(document).ready(function () {
     $("#testForm").show();
     $("#inputGroupSelect01").val("");
 
-    disableNextBtn();
-    disableResultsBtn();
-
     document.getElementById(
       "myCompetencyType"
     ).innerHTML = currentCompetencyType;
     document.getElementById("myQuestion").innerHTML =
-      currentQuestionNumber + ".  " + currentQuestion;
+      currentQuestionNumber + ".  " + currentQuestionP1;
+    document.getElementById(
+      "descriptionMyQuestion"
+    ).innerHTML = currentQuestionP2;
   });
 
   //when a value is selected on #testForm
@@ -178,8 +197,6 @@ $(document).ready(function () {
 
     var stringSelected = $("#inputGroupSelect01").val();
     var valSelected = parseInt(stringSelected);
-    stringSelected;
-    valSelected;
     console.log(valSelected);
 
     resultArray.push(valSelected); //selected values from each question are pushed onto an array
@@ -201,53 +218,69 @@ $(document).ready(function () {
 
     var currentCompetencyType = questions[i].competence;
     var currentQuestionNumber = questions[i].questionNumber;
-    var currentQuestion = questions[i].question;
-
+    var currentQuestionP1 = questions[i].questionP1;
+    var currentQuestionP2 = questions[i].questionP2;
+    var stringSelected = $("#inputGroupSelect01").val();
+    var valSelected = parseInt(stringSelected);
+    console.log(valSelected);
     console.log(currentCompetencyType);
     console.log(currentQuestionNumber);
-    console.log(currentQuestion);
-    disableNextBtn();
-    disableResultsBtn();
+    console.log(currentQuestionP1);
+    console.log(currentQuestionP2);
 
-    /*On clicking Next, display the next question
-    with next button or results button (on last question)*/
-    if (i < 17) {
-      console.log("the if condition was fired; i = ", i);
-      //console.log(resultArrayLength);
+    if (valSelected >= 1) {
+      console.log("if condition selectOccurred >= 1 was triggered");
 
-      $("#testForm").show();
-      $("#submitAlert").hide();
-      $("#inputGroupSelect01").val("");
+      /*On clicking Next, display the next question
+                with next button or results button (on last question)*/
+      if (i < 17) {
+        console.log("the if i<17 condition was fired; i = ", i);
 
-      document.getElementById(
-        "myCompetencyType"
-      ).innerHTML = currentCompetencyType;
-      document.getElementById("myQuestion").innerHTML =
-        currentQuestionNumber + ".  " + currentQuestion;
+        $("#testForm").show();
+        $("#submitAlert").hide();
+        $("#inputGroupSelect01").val("");
+
+        document.getElementById(
+          "myCompetencyType"
+        ).innerHTML = currentCompetencyType;
+        document.getElementById("myQuestion").innerHTML =
+          currentQuestionNumber + ".  " + currentQuestionP1;
+        document.getElementById(
+          "descriptionMyQuestion"
+        ).innerHTML = currentQuestionP2;
+      }
+      if (i == 17) {
+        console.log("This is the very last question...");
+
+        $("#nextBtn").hide();
+        $("#resultsBtn").show();
+        $("#testForm").show();
+        $("#submitAlert").hide();
+        $("#inputGroupSelect01").val("");
+
+        document.getElementById(
+          "myCompetencyType"
+        ).innerHTML = currentCompetencyType;
+        document.getElementById("myQuestion").innerHTML =
+          currentQuestionNumber + ".  " + currentQuestionP1;
+        document.getElementById(
+          "descriptionMyQuestion"
+        ).innerHTML = currentQuestionP2;
+      }
+    } else {
+      alert("Ops! You need to select a value first.");
+      disableNextBtn();
+      disableResultsBtn();
     }
-    if (i == 17) {
-      console.log("This is the very last question...");
-
-      $("#nextBtn").hide();
-      $("#resultsBtn").show();
-      $("#testForm").show();
-      $("#submitAlert").hide();
-      $("#inputGroupSelect01").val("");
-
-      document.getElementById(
-        "myCompetencyType"
-      ).innerHTML = currentCompetencyType;
-      document.getElementById("myQuestion").innerHTML =
-        currentQuestionNumber + ".  " + currentQuestion;
-    }
-
     //change question every time next button is pressed
   });
 
   //display result;
   $("#resultsBtn").click(function () {
+    $(".bg-modal").hide();
     $("#resultsBtn").hide();
     $("#questionContainer").hide();
+
     $("#resultsContainer").show();
 
     var resultsChart = Highcharts.chart("container", {
@@ -359,10 +392,8 @@ $(document).ready(function () {
 
   console.log(currentCompetencyType);
   console.log(currentQuestionNumber);
-  console.log(currentQuestion);
-
-  disableNextBtn();
-  disableResultsBtn();
+  console.log(currentQuestionP1);
+  console.log(currentQuestionP2);
 
   //-------------------when pressing submit email to subscribe
 
