@@ -439,6 +439,16 @@ div#resultsContainer {
   background: #f1f7ff;
 }
 
+ul.highcharts-description {
+list-style-type: none;
+}
+
+.highcharts-description li {
+    font-size: 0.7rem;
+    color: var(--color-1);
+}
+
+
 #averageScore {
     text-align: center;
 }
