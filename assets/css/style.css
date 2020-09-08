@@ -184,6 +184,7 @@ div.more-text-EQ {
 }
 
 .close-btn {
+  color: #000;
   margin: 20px;
   font-size: 18px;
   cursor: pointer;
@@ -302,7 +303,7 @@ footer ul {
   top: 0;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
+  overflow-y: scroll;
   padding: 15px; /* Avoid width reflow - overflow and padding code taken 
                         from https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ to fix scroll bug when modal is open*/
 }
@@ -321,13 +322,14 @@ footer ul {
   max-width: 80%;
 }
 
-.close {
+.close a {
   position: absolute;
   top: 0;
   right: 20px;
   transform: rotate(45deg);
   cursor: pointer;
-  font-size: 42px;
+  font-size: 24px;
+  color: var(--color-2);
 }
 
 button.btn {
@@ -354,6 +356,11 @@ button.btn:hover {
   color: var(--color-1);
 }
 
+#myquestion {
+    font-weight: bold;
+    color: var(--color-1);
+}
+
 form#testAnswer {
   width: 30px;
 }
@@ -364,16 +371,34 @@ form#testAnswer {
   color: var(--color-10);
 }
 
+#more {
+    display: none;
+    }
+
+
 /* Chart - copied from highcharts dual axis, line and column */
 
-#resultsContainer {
-  display: none;
-  max-height: 800px;
+div#resultsContainer {
   width: 100%;
+  height: 100%;
+  display: none;
+  background-color: var(--color-3);
+  color: var(--color-2);
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+
 }
 
 #container {
   height: 400px;
+}
+
+.highcharts-background {
+    padding-left: 8px;
+    padding-right: 8px; 
 }
 
 .highcharts-figure,
@@ -412,6 +437,34 @@ form#testAnswer {
 }
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
+}
+
+ul.highcharts-description {
+list-style-type: none;
+}
+
+.highcharts-description li {
+    font-size: 0.5rem;
+    color: var(--color-1);
+}
+
+
+#averageScore {
+    text-align: center;
+}
+
+p#result1-4,
+p#result5-7,
+p#result8-10 {
+    display: none;
+}
+
+.linkHomePage,
+.linkHomePage a {
+    color: var(--color-5);
+    text-align: center;
+    font-size: .7rem;
+    font-weight: bold;
 }
 
 /* Small devices (landscape phones, less than 768px)*/
