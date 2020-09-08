@@ -3,113 +3,130 @@ var questions = [
   {
     competence: "Personal competence",
     questionNumber: "1",
-    question:
-      "Emotional self-awareness: identifying your own emotions and recognize their impact on actions and decisions.",
+    questionP1: "Emotional self-awareness: ",
+    questionP2:
+      "I am aware of my own emotions and know their impact on my actions and decisions.",
   },
   {
     competence: "Personal competence",
     questionNumber: "2",
-    question:
-      "Accurate self-assessment: knowing your own limits and possibilities, without overestimating or underestimating yourself.",
+    questionP1: "Accurate self-assessment: ",
+    questionP2:
+      "I know my own limits and possibilities, without overestimating or underestimating myself.",
   },
   {
     competence: "Personal competence",
     questionNumber: "3",
-    question:
-      "Self-confidence: having a solid sense of our own value, capabilities and potential.",
+    questionP1: "Self-confidence: ",
+    questionP2:
+      "I have a solid sense of my own value, capabilities and potential.",
   },
   {
     competence: "Personal competence",
     questionNumber: "4",
-    question:
-      "Emotional self-control: maintaining emotions and destructive impulses under control, even in times of stress.",
+    questionP1: "Emotional self-control: ",
+    questionP2:
+      "I maintain emotions and destructive impulses under control, even in times of stress.",
   },
   {
     competence: "Personal competence",
     questionNumber: "5",
-    question:
-      "Overcoming: having motivation to improve the performance to meet interior standards of excellence.",
+    questionP1: "Overcoming: ",
+    questionP2:
+      "I have motivation to improve performance and to meet my high standards.",
   },
   {
     competence: "Personal competence",
     questionNumber: "6",
-    question: "Initiative: always be ready to act and enjoy opportunities.",
+    questionP1: "Initiative: ",
+    questionP2: "I will always be ready to act and take opportunities.",
   },
   {
     competence: "Personal competence",
     questionNumber: "7",
-    question: "Transparency: be honest and righteous, worthy of trust.",
+    questionP1: "Transparency: ",
+    questionP2: "I am honest and righteous, worthy of trust.",
   },
   {
     competence: "Personal competence",
     questionNumber: "8",
-    question:
-      "Adaptability: having flexibility in adapting to people with a different style. To adapt to volatile situations or to way of thinking and behaving in adverse situations.",
+    questionP1: "Adaptability: ",
+    questionP2:
+      "I have flexibility in adapting to people with a different style. I can adapt to difficult situations and different ways of thinking.",
   },
   {
     competence: "Personal competence",
     questionNumber: "9",
-    question: "Optimism: seeing the bright side of events in any situation.",
+    questionP1: "Optimism: ",
+    questionP2: "I see the bright side of events in any situation.",
   },
   {
     competence: "Social competence",
     questionNumber: "1",
-    question:
-      "Empathy: understanding other people's emotions, understanding their points of view and take an active interest in their concerns.",
+    questionP1: "Empathy: ",
+    questionP2:
+      "I Understand other people's emotions and their points of view. I take an active interest in people's concerns.",
   },
   {
     competence: "Social competence",
     questionNumber: "2",
-    question:
-      "Organizational awareness: identify and understand trends, influencial networks. Understand politics organizational level.",
+    questionP1: "Organizational awareness: ",
+    questionP2:
+      "I can identify and understand trends and influencial networks. I understand the politics of organizational level.",
   },
   {
     competence: "Social competence",
     questionNumber: "3",
-    question:
-      "Service: identify and satisfy the needs of subordinates and customers, supporting them and helping them improve their performance and achieve their goals.",
+    questionP1: "Service: ",
+    questionP2:
+      "Identify and satisfy the needs of colleagues and customers. I support and help them improve their performance and achieve their goals.",
   },
   {
     competence: "Social competence",
     questionNumber: "4",
-    question:
-      "Inspirational leadership: guide and motivate, with a thought-stimulating vision, leading people to achieve mutual goals.",
+    questionP1: "Inspirational leadership: ",
+    questionP2:
+      "I guide and motivate, with a thought-provoking vision, leading people to achieve mutual goals.",
   },
   {
     competence: "Social competence",
     questionNumber: "5",
-    question: "Influence: having the ability to persuade and influence people.",
+    questionP1: "Influence: ",
+    questionP2: "I have the ability to persuade and influence people.",
   },
   {
     competence: "Social competence",
     questionNumber: "6",
-    question:
-      "Development of others: nurturing others' habilities through feedback and guidance.",
+    questionP1: "Development of others: ",
+    questionP2: "I nurture others habilities through feedback and guidance.",
   },
   {
     competence: "Social competence",
     questionNumber: "7",
-    question:
-      "Promoting change: starting and managing change, leading people in a new directions.",
+    questionP1: "Promoting change: ",
+    questionP2:
+      "I start make change happen, leading people in new directions.",
   },
   {
     competence: "Social competence",
     questionNumber: "8",
-    question:
-      "Conflict management: resolve differences between people, leading them to mutual integration and acceptance.",
+    questionP1: "Conflict management: ",
+    questionP2:
+      "I resolve differences between people, leading them to mutual integration and acceptance.",
   },
   {
     competence: "Social competence",
     questionNumber: "9",
-    question:
-      "Teamwork: Achieving high performance, collaboration and team work.",
+    questionP1: "Teamwork: ",
+    questionP2: "I achieve high performance, collaboration and team work.",
   },
 ];
 
 var i = 0;
 var currentCompetencyType = questions[i].competence;
 var currentQuestionNumber = questions[i].questionNumber;
-var currentQuestion = questions[i].question;
+var currentQuestionP1 = questions[i].questionP1;
+var currentQuestionP2 = questions[i].questionP2;
 var resultArray = [];
 
 resultArray;
@@ -130,16 +147,21 @@ $(document).ready(function () {
     $("#startBtn").show();
   });
 
+  //click "read more" button to expand the rules' text
+  $("#more").hide();
+  $("#moreBtn").click(function () {
+    var txt = $("#more").is(":visible") ? "Read More" : "Read Less";
+    $("#moreBtn").text(txt);
+    $(this).next("#more").slideToggle(200);
+  });
+
   //--close button function to return to home page------------
   $(".close").click(function () {
-    console.log("close button was clicked, it works!");
-    $(".bg-modal").hide();
-
-    function resetTest() {
-      i = 0;
-      resultArray = [];
+    if (confirm("Are you sure you want to leave this page?") == true) {
+      return true;
+    } else {
+      return false;
     }
-    resetTest();
   });
 
   //--On clicking Start button (function)----------------------
@@ -157,14 +179,14 @@ $(document).ready(function () {
     $("#testForm").show();
     $("#inputGroupSelect01").val("");
 
-    disableNextBtn();
-    disableResultsBtn();
-
     document.getElementById(
       "myCompetencyType"
     ).innerHTML = currentCompetencyType;
     document.getElementById("myQuestion").innerHTML =
-      currentQuestionNumber + ".  " + currentQuestion;
+      currentQuestionNumber + ".  " + currentQuestionP1;
+    document.getElementById(
+      "descriptionMyQuestion"
+    ).innerHTML = currentQuestionP2;
   });
 
   //when a value is selected on #testForm
@@ -173,8 +195,6 @@ $(document).ready(function () {
 
     var stringSelected = $("#inputGroupSelect01").val();
     var valSelected = parseInt(stringSelected);
-    stringSelected;
-    valSelected;
     console.log(valSelected);
 
     resultArray.push(valSelected); //selected values from each question are pushed onto an array
@@ -196,69 +216,70 @@ $(document).ready(function () {
 
     var currentCompetencyType = questions[i].competence;
     var currentQuestionNumber = questions[i].questionNumber;
-    var currentQuestion = questions[i].question;
-
+    var currentQuestionP1 = questions[i].questionP1;
+    var currentQuestionP2 = questions[i].questionP2;
+    var stringSelected = $("#inputGroupSelect01").val();
+    var valSelected = parseInt(stringSelected);
+    console.log(valSelected);
     console.log(currentCompetencyType);
     console.log(currentQuestionNumber);
-    console.log(currentQuestion);
-    disableNextBtn();
-    disableResultsBtn();
+    console.log(currentQuestionP1);
+    console.log(currentQuestionP2);
 
-    /*On clicking Next, display the next question
-    with next button or results button (on last question)*/
-    if (i < 17) {
-      console.log("the if condition was fired; i = ", i);
-      //console.log(resultArrayLength);
+    if (valSelected >= 1) {
+      console.log("if condition selectOccurred >= 1 was triggered");
 
-      $("#testForm").show();
-      $("#submitAlert").hide();
-      $("#inputGroupSelect01").val("");
+      /*On clicking Next, display the next question
+                with next button or results button (on last question)*/
+      if (i < 17) {
+        console.log("the if i<17 condition was fired; i = ", i);
 
-      document.getElementById(
-        "myCompetencyType"
-      ).innerHTML = currentCompetencyType;
-      document.getElementById("myQuestion").innerHTML =
-        currentQuestionNumber + ".  " + currentQuestion;
+        $("#testForm").show();
+        $("#submitAlert").hide();
+        $("#inputGroupSelect01").val("");
+
+        document.getElementById(
+          "myCompetencyType"
+        ).innerHTML = currentCompetencyType;
+        document.getElementById("myQuestion").innerHTML =
+          currentQuestionNumber + ".  " + currentQuestionP1;
+        document.getElementById(
+          "descriptionMyQuestion"
+        ).innerHTML = currentQuestionP2;
+      }
+      if (i == 17) {
+        console.log("This is the very last question...");
+
+        $("#nextBtn").hide();
+        $("#resultsBtn").show();
+        $("#testForm").show();
+        $("#submitAlert").hide();
+        $("#inputGroupSelect01").val("");
+
+        document.getElementById(
+          "myCompetencyType"
+        ).innerHTML = currentCompetencyType;
+        document.getElementById("myQuestion").innerHTML =
+          currentQuestionNumber + ".  " + currentQuestionP1;
+        document.getElementById(
+          "descriptionMyQuestion"
+        ).innerHTML = currentQuestionP2;
+      }
+    } else {
+      alert("Ops! You need to select a value first.");
+      disableNextBtn();
+      disableResultsBtn();
     }
-    if (i == 17) {
-      console.log("This is the very last question...");
-
-      $("#nextBtn").hide();
-      $("#resultsBtn").show();
-      $("#testForm").show();
-      $("#submitAlert").hide();
-      $("#inputGroupSelect01").val("");
-
-      document.getElementById(
-        "myCompetencyType"
-      ).innerHTML = currentCompetencyType;
-      document.getElementById("myQuestion").innerHTML =
-        currentQuestionNumber + ".  " + currentQuestion;
-    }
-
     //change question every time next button is pressed
   });
 
   //display result;
   $("#resultsBtn").click(function () {
+    $(".bg-modal").hide();
     $("#resultsBtn").hide();
     $("#questionContainer").hide();
+
     $("#resultsContainer").show();
-
-    //the sum if the numbers in resultArray
-    var sumResults = 0;
-    for (var i in resultArray) {
-      sumResults += resultArray[i];
-    }
-
-    //there are 18 questions therefore there are 18 items
-    //so the average is
-    var average = sumResults / 18;
-
-    //to print the result
-    console.log("Average is: " + average);
-
-    
 
     var resultsChart = Highcharts.chart("container", {
       chart: {
@@ -268,8 +289,7 @@ $(document).ready(function () {
         text: "Your Current EQ",
       },
       subtitle: {
-        text:
-          'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>',
+        text: "",
       },
       xAxis: {
         type: "category",
@@ -291,7 +311,7 @@ $(document).ready(function () {
         enabled: false,
       },
       tooltip: {
-        pointFormat: "Population in 2017: <b>{point.y:.1f} millions</b>",
+        pointFormat: "",
       },
       series: [
         {
@@ -325,7 +345,7 @@ $(document).ready(function () {
             y: 10, // 10 pixels down from the top
             style: {
               fontSize: "13px",
-              fontFamily: "Verdana, sans-serif",
+              fontFamily: "Monserrat, sans-serif",
             },
           },
         },
@@ -338,29 +358,58 @@ $(document).ready(function () {
     //var resultArray = parseInt(resultArray);
     console.log("The resultArray is ", resultArray);
 
-    //var sum = resultArray.reduce(add, 0); // with initial value to avoid when the array is empty
+    //the sum of the numbers in resultArray
+    var sumResults = 0;
+    for (var i in resultArray) {
+      sumResults += resultArray[i];
+    }
 
-    //function add(accumulator, a) {
-    //  return accumulator + a;
-    //}
+    //there are 18 questions therefore there are 18 items
+    //so the average is
+    var average = sumResults / 18;
+    average;
+    //to change from a float number to a whole number
+    var intNumber = Math.trunc(average);
+    intNumber;
 
-    //console.log(sum);
+    /*--To print the result change average Score 
+    from float number to whole number and display then
+    display result text accordingly--*/
+    console.log("Average is " + average);
+    document.getElementById("averageScore").innerHTML =
+      "Your average score is " + intNumber + ".";
+    if (intNumber >= 1 && intNumber <= 4) {
+      console.log("intNumber >= 1 && intNumber <= 4 condition was fired");
+      $("#result1-4").show();
+    }
+    if (intNumber >= 5 && intNumber <= 7) {
+      console.log("intNumber >= 5 && intNumber <= 7 condition was fired");
+      $("#result5-7").show();
+    }
+    if (intNumber >= 8 && intNumber <= 10) {
+      console.log("intNumber >= 8 && intNumber <= 10 condition was fired");
+      $("#result8-10").show();
+    }
   });
 
-  //---------------------next button disabled function
+  //-------------------next button disabled function
   function disableNextBtn() {
     $("#nextBtn").attr("disabled", "disabled");
   }
 
-  //---------------------results button disabled function
+  //-------------------results button disabled function
   function disableResultsBtn() {
     $("#resultsBtn").attr("disabled", "disabled");
   }
 
   console.log(currentCompetencyType);
   console.log(currentQuestionNumber);
-  console.log(currentQuestion);
+  console.log(currentQuestionP1);
+  console.log(currentQuestionP2);
 
-  disableNextBtn();
-  disableResultsBtn();
+  //-------------------when pressing submit email to subscribe
+
+  $("#submitAddressBtn").click(function () {
+    alert("Sorry, this button is not working yet.");
+  });
 });

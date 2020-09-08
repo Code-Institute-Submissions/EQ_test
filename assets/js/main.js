@@ -26,14 +26,14 @@ var questions = [
     questionNumber: "4",
     questionP1: "Emotional self-control: ",
     questionP2:
-      "I mantain emotions and destructive impulses under control, even in times of stress.",
+      "I maintain emotions and destructive impulses under control, even in times of stress.",
   },
   {
     competence: "Personal competence",
     questionNumber: "5",
     questionP1: "Overcoming: ",
     questionP2:
-      "I have motivation to improve performance tand meet my standards of excellence.",
+      "I have motivation to improve performance and to meet my high standards.",
   },
   {
     competence: "Personal competence",

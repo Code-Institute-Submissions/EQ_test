@@ -4,21 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Teste de EQ</title>
+    <title>Teste de Q.E.</title>
   </head>
 
   <body class="container-fluid">
-    <div class="row" id="margins-container">
+    <!--Area containing first part of content including start test button-->
+    <div class="row background-img" id="margins-container">
       <div class="col-1"></div>
-
-      <!--Area containing all page content-->
       <div class="col-10" id="content-container">
         <!--Header Callout and Image Container-->
-        <div id="header-callout-image-container">
+        <div class="mb-3" id="header-callout-image-container">
           <!--NAVBAR with dropdown button-->
-          <div class="row mb-3">
-            <div class="col"></div>
-            <div class="col-4 col-md-2">
+          <div class="row pt-2justify-content-end">
+            <div class="col-8 col-md-9 col-lg-10"></div>
+            <div class="col-4 col-md-3 col-lg-2">
               <!--dropdown button-->
               <div class="dropdown">
                 <button
@@ -40,31 +39,42 @@
           </div>
 
           <!--Callout Container top of page-->
-          <div class="row mb-3">
-            <!--Headers-->
+          <div class="row">
             <div class="col callout-container" id="callout-container-1">
-              <h5>Teste a sua</h5>
-              <h1 mb-3>Inteligência Emocional</h1>
-
-              <hr class="hr-home" id="hr-1" />
-
-              <!--description of Emotional Intelligence-->
-              <p>
-                A inteligência emocional (EQ ou IE) é a capacidade de compreender e
-                gerir as suas próprias emoções e as das pessoas ao seu redor.
-                Pessoas com alto grau de EQ sabem o que sentem, o que suas emoções significam e como essas
-                emoções podem afetar outras pessoas. <br> Para líderes, ter alto nivel de EQ é essencial para obter sucesso. Afinal quem tem mais
-                probabilidade de alcançar sucesso - um líder que grita com a sua equipa quando está
-                sob stress, ou um líder que mantem controle e calma através avalia a situação?
-              </p>
+              <div class="row">
+                <!--Headers-->
+                <div class="col-7 col-md-12" id="callout-1-headers">
+                  <h6>Teste a sua</h6>
+                  <h3>inteligência Emocional</h3>
+                  <hr class="hr-home d-none d-md-block" id="hr-1" />
+                </div>
+              </div>
+              <div class="row">
+                <!--description of Emotional Intelligence-->
+                <div class="col-7 col-md-12" id="callout-1-p1">
+                  <p>
+                    Inteligência emocional (Q.E. ou I.E.) é a capacidade de
+                    compreender e gerenciar as nossas próprias emoções, e as das
+                    pessoas ao nosso redor.
+                  </p>
+                </div>
+                <div class="d-none d-md-block col-md-12" id="callout-1-p2">
+                  <p>
+                    Para os líderes, ter inteligência emocional é essencial para
+                    obter sucesso. Afinal, quem tem mais chances de sucesso - um
+                    líder que grita com sua equipa quando está sob stress, ou um
+                    líder que mantém o control e avalia a situação com calma?
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
           <!--TEST Button-->
           <div class="row mb-3">
-            <div class="col button-container">
+            <div class="col-6 button-container">
               <button class="test-button hvr-grow-shadow" id="myBtn">
-                Qual é o meu EQ?
+                Qual é o meu Q.E.?
               </button>
             </div>
           </div>
@@ -81,43 +91,58 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
 
-        <!--second callout container to add info about life coaching-->
-        <div class="row mb-3">
+    <!--Area containing second part of content-->
+
+    <div class="row pt-3" id="second-callout-container">
+      <div class="col-1"></div>
+      <!--second callout container for added info about EQ-->
+      <div class="col-10">
+        <div class="row">
           <!--SECOND CALLOUT-->
-          <div class="col callout-container" id="callout-container-2">
-            <h2>Achieve Success</h2>
+          <div class="col callout-container" id="callout-2-headers">
+            <h3>Alcance Successo</h3>
             <hr class="hr-home" />
           </div>
         </div>
-        <div class="row mb-5">
+        <div class="row">
           <!--profile foto-->
           <div class="d-none d-md-block col-md-4 container-fluid">
             <img src="assets/images/brain.jpg" alt="#" id="profile-img" />
 
             <!--second callout text-->
-            <h4>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </h4>
+            <blockquote class="blockquote">
+              <p class="mb-1">
+                O cérebro emocional responde a um evento mais rapidamente do que
+                o cérebro racional.
+              </p>
+              <cite class="blockquote-footer">Daniel Goleman</cite>
+            </blockquote>
           </div>
-          <div class="col-md-4 mb-2">
+          <div class="more-text-EQ col-md-4 mb-2">
             <p>
-              Ao contrário do IQ, que não muda significativamente ao longo da vida,
-              nosso QE pode progredir ao longo da vida à medida que aprendemos e aprendemos e
-              crescer. <br> Nossos cérebros são programados para reagir em certas situações, mas nós
-              pode reprogramá-los reprogramando hábitos, crenças e com prática e aplicação repetidas.
+              Ao contrário do Q.I., que não muda significativamente ao longo da
+              vida, nosso QE pode progredir ao longo da vida à medida que
+              aprendemos e crescemos. <br />
+              Os nossos cérebros são programados para reagir em certas
+              situações, mas nós pode reprogramá-los reprogramando hábitos,
+              crenças e com prática e aplicação repetidas.
             </p>
           </div>
-          <div class="d-none d-md-block col-md-4">
+          <div class="more-text-EQ d-none d-md-block col-md-4">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
-              ex dolor tempora neque laudantium, suscipit est quisquam omnis
-              provident iste! Repellendus omnis quam doloremque aperiam repellat
-              cumque architecto aut alias?
+              O desenvolvimento da inteligência emocional implica desenvolver um
+              grupo de qualidades inatas que nos ajudam a melhorar o nosso
+              bem-estar mental diariamente. Subscreva o nosso boletim
+              informativo para encontrar dicas sobre como desenvolver a
+              consciência afetiva.
             </p>
           </div>
         </div>
-        <div class="row mb-5">
+        <div class="row">
           <div class="col">
             <hr class="hr-home" />
 
@@ -136,31 +161,61 @@
       <div class="col-1"></div>
     </div>
 
+    <!--subscribe form, codepen.io creation of Hugo Carneiro and adapted to this project-->
+    <div class="container-fluid pb-5" id="subscribe-container">
+      <div class="parent-wrapper">
+        <span class="close-btn glyphicon glyphicon-remove"></span>
+        <div class="subscribe-wrapper">
+          <h4>SUBSCREVA A NOSSA NEWSLETTER</h4>
+          <form name="subscribeForm" id="subscribeForm">
+            <input
+              id="emailAddress"
+              type="text"
+              name="email"
+              class="subscribe-input"
+              placeholder="Your e-mail"
+              required
+            />
+            <div class="submit-btn" id="submitAddressBtn">ENVIAR</div>
+          </form>
+        </div>
+      </div>
+    </div>
     <!--footer-->
     <footer>
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-2">
+        <div class="row py-3">
+          <div class="col-3 copyright">
             <p>&copy Vera Leitao</p>
           </div>
-          <div class="col-3">
-          <h4>Read More About EQ</h4>
-          <ul>
-            <li> <a href="https://positivepsychology.com/category/emotional-intelligence/">Positive Psychology website</a></li>
-            <li> <a href="https://positivepsychology.com/category/emotional-intelligence/">Positive Psychology website</a></li>
-            <li> <a href="https://positivepsychology.com/category/emotional-intelligence/">Positive Psychology website</a></li>
-          </ul>
+          <div class="col-5 more-links">
+            <p>Leia mais sobre Q.E.:</p>
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://febracis.com/5-pilares-inteligencia-emocional/"
+                  >Febracis website</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.wook.pt/livro/inteligencia-emocional-daniel-goleman/3501417"
+                  >"inteligência Emocional" por Daniel Goleman</a
+                >
+              </li>
+            </ul>
           </div>
-          <div class="col-5">
-            <ul class="list-inline social-links justify-content-end">
-              <li class="list-inline-item ml-3 mr-2">
+          <div class="col-4 social-links">
+            <ul class="list-inline social-links text-center">
+              <li class="list-inline-item">
                 <a target="_blank" href="https://www.instagram.com/">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
                   <span class="sr-only">Instagram</span>
                 </a>
               </li>
-              <li class="list-inline-item mr-2">
+              <li class="list-inline-item">
                 <a target="_blank" href="https://www.youtube.com/">
                   <i class="fa fa-youtube" aria-hidden="true"></i>
                   <span class="sr-only">YouTube</span>
@@ -174,7 +229,6 @@
               </li>
             </ul>
           </div>
-          <div class="col-1"></div>
         </div>
       </div>
     </footer>
@@ -182,16 +236,19 @@
     <!--EQ test modals-->
     <div class="bg-modal">
       <div class="modal-content modal-md-lg mx-auto">
-        <div class="close">+</div>
+        <div class="close confirm"><a href="index.html">+</a></div>
         <div id="questionContainer">
           <div id="myCompetencyType" class="mb-2"></div>
           <hr />
-          <div id="myQuestion" class="mb-3"></div>
+          <div class="mb-3">
+            <h6 id="myQuestion"></h6>
+            <p id="descriptionMyQuestion"></p>
+          </div>
           <div id="answerButtons" class="container">
             <div class="input-group mb-3" id="testForm">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01"
-                  >Choose</label
+                  >Escolha</label
                 >
               </div>
               <select class="custom-select" id="inputGroupSelect01">
@@ -219,34 +276,97 @@
           <h4>How It Works</h4>
           <hr />
           <p>
-            There are 9 questions related to
-            <strong>Personal competencies</strong> and 9 questions related to
-            <strong>Social competencies</strong>.<br />
-            Chose a number from 1 to 10, where 1 means the sentence is the
-            furthest from your current behaviour, and 10 is the closest from
-            your behaviour.
+            Existem 18 questões no total: <br />
+            9 relacionadas com<strong> competências pessoais </strong> <br />
+            9 relacionadas com<strong> competências sociais </strong>. <br />
+            Quando você pressiona o<em> botão Iniciar </em>, a primeira pergunta
+            aparecer. <br />
+            Para avançar para a próxima pergunta, você precisa escolher um
+            número de 1 a 10, onde<strong> 1 significa que a frase NÃO </strong
+            >o/a descreve, e<strong> 10 descreve completamente </strong>. <br />
+          </p>
+          <button class="mb-3" id="moreBtn">Mais informações</button>
+          <p id="more">
+            Após responder a última pergunta, clique no botão "resultados" e uma
+            nova janela com seus resultados aparecerá. Vai mostrar um gráfico
+            com suas respostas que você pode salvar para consultar em um estágio
+            posterior e o resultado médio com sua interpretação. <br />
+            Se a qualquer momento durante o teste você clicar no "x" no topo
+            canto direito, você retornará à página inicial do site e ao as
+            perguntas que você respondeu anteriormente serão apagadas. Assim o O
+            teste está pronto para ser repetido!
           </p>
         </div>
-        <!--Results Container-->
-        <div id="resultsContainer">
-          <figure class="highcharts-figure">
-            <div id="container"></div>
-            <p class="highcharts-description">
-              Chart showing use of rotated axis labels and data labels. This can
-              be a way to include more labels in the chart, but note that more
-              labels can sometimes make charts harder to read.
-            </p>
-          </figure>
-          <div id="resultsDescriptionTable"></div>
-        </div>
+
         <!--Controls Container with buttons start next and results-->
-        <div class="controls container">
+        <div class="controls container py-3">
           <div class="row">
             <div class="col">
-              <button id="startBtn" class="start-btn btn">Start</button>
-              <button id="nextBtn" class="next-btn btn">Next</button>
-              <button id="resultsBtn" class="results-btn btn">Results</button>
+              <button id="startBtn" class="start-btn btn">Começar</button>
+              <button id="nextBtn" class="next-btn btn">Próximo</button>
+              <button id="resultsBtn" class="results-btn btn">
+                Resultados
+              </button>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Results Container-->
+    <div class="container-fluid" id="resultsContainer">
+      <div class="row">
+        <div class="col">
+          <figure class="highcharts-figure">
+            <div id="container" class="mb-2"></div>
+            <ul class="highcharts-description">
+              <li>1-2: Sem consciência emocional;</li>
+              <li>3-4: Parcialmente ciente das próprias emoções;</li>
+              <li>5-6: Identifica emoções e é capaz de racionaliza-las;</li>
+              <li>
+                7-8: Capaz de compreender emoções complexas e como mudam de um
+                estágio para outro;
+              </li>
+              <li>
+                9-10: você entende emoções complexas e tem capacidade de gerir
+                as suas emoções e de outras pessoas.
+              </li>
+            </ul>
+            <h4 id="averageScore"></h4>
+            <p id="descriptionOfScore"></p>
+          </figure>
+          <div id="resultsDescriptionTable" class="px-2 text-center">
+            <p id="result1-4" class="text-center">
+              Você precisa trabalhar sua inteligência emocional. Você pode achar
+              que você se sente oprimido por suas emoções, especialmente em
+              situações stressantes; ou, pode evitar o conflito porque pensa que
+              vai ser angustiante. <br />
+              É provável, também, que você ache difícil ter calma depois de se
+              sentir chateado, e você pode lutar para construir relacionamentos
+              fortes de trabalho. Não se preocupe - há várias formas em como
+              você pode construir inteligência emocional.
+            </p>
+            <p id="result5-7">
+              Seu nível de inteligência emocional é ... OK. Você provavelmente
+              tem bom relacionamentos com alguns dos seus colegas, mas outros
+              podem ser mais difícil. <br />
+              A boa notícia é que você tem uma grande oportunidade de melhorar
+              os seus relações de trabalho significativamente. Leia mais sobre
+              como impulsionar seu Q.E.
+            </p>
+            <p id="result8-10">
+              Ótimo! Você é uma pessoa emocionalmente inteligente. Você tem
+              ótimos relacionamentos, e provavelmente você descobrirá que as
+              pessoas se aproximam de si para obter conselho. <br />
+              No entanto, quando tantas pessoas admiram as suas capacidades
+              pessoais, é fácil para perder de vista as suas próprias necessidades.
+              Os pesquisadores descobriram que pessoas emocionalmente
+              inteligentes tendem a ter grande potencial de liderança. Perceba esse
+              potencial, buscando oportunidades para melhorar ainda mais.
+            </p>
+            <p class="linkHomePage pb-3">
+              <a href="index.html">Regresse para a página inicial.</a>
+            </p>
           </div>
         </div>
       </div>
@@ -258,7 +378,7 @@
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="assets/js/mainPt.js"></script>
+    <script defer type="text/javascript" src="assets/js/main.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"

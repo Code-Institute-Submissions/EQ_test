@@ -42,7 +42,7 @@ hr.hr-home {
   margin-bottom: 30px;
 }
 
-/*-------first part of content page (bg image up to md size scree)--*/
+/*-------first part of content page (bg image up to md size screen)--*/
 
 #margins-container {
   background-color: var(--color-1);
@@ -183,8 +183,8 @@ div.more-text-EQ {
 }
 .parent-wrapper {
   position: relative;
-  width: 240px;
-  height: 220px;
+  width: 200px;
+  height: 210px;
   margin: 35px auto 0;
   background-color: #000;
   border-radius: 4px;
@@ -277,8 +277,10 @@ footer {
   color: var(--color-1);
 }
 
-.more-links a,
-footer p {
+div.col-3.copyright {
+  font-size: 0.4rem;
+}
+.more-links a {
   font-size: 0.5rem;
   color: var(--color-1);
   line-height: 0.9rem;
@@ -355,10 +357,16 @@ button.btn:hover {
   box-shadow: 0 0 10px 2px var(--color-1);
 }
 
+/*--How it works part from test--*/
 #rulesContainer p {
   font-size: 0.7rem;
 }
 
+#more {
+    display: none;
+}
+
+/*--questions container--*/
 #myCompetencyType {
   font-size: 1rem;
   font-weight: bold;
@@ -380,12 +388,8 @@ form#testAnswer {
   color: var(--color-10);
 }
 
-#more {
-    display: none;
-    }
-
-
-/* Chart - copied from highcharts dual axis, line and column */
+/*----results container---*/
+/* Chart - copied from highcharts dual axis, line and column and adapted to this project */
 
 div#resultsContainer {
   width: 100%;
@@ -483,6 +487,7 @@ p#result8-10 {
   }
   .parent-wrapper {
     width: 340px;
+    height: 260px;
   }
   .more-links {
     text-align: center;
@@ -492,7 +497,7 @@ p#result8-10 {
 /* Medium devices (tablets, more than 768px)*/
 @media (min-width: 768px) {
   html {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .background-img {
     background: var(--color-1);
@@ -526,6 +531,6 @@ p#result8-10 {
 /*Large devices (desktops, less than 1200px)*/
 @media (min-width: 1024px) {
   html {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
