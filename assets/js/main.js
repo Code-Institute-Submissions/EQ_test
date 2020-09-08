@@ -5,122 +5,120 @@ var questions = [
     questionNumber: "1",
     questionP1: "Emotional self-awareness: ",
     questionP2:
-      "Identifying your own emotions and recognize their impact on actions and decisions.",
+      "I am aware of my own emotions and know their impact on my actions and decisions.",
   },
   {
     competence: "Personal competence",
     questionNumber: "2",
     questionP1: "Accurate self-assessment: ",
     questionP2:
-      "Knowing your own limits and possibilities, without overestimating or underestimating yourself.",
+      "I know my own limits and possibilities, without overestimating or underestimating myself.",
   },
   {
     competence: "Personal competence",
     questionNumber: "3",
-    questionP1:"Self-confidence: ",
+    questionP1: "Self-confidence: ",
     questionP2:
-      "Having a solid sense of our own value, capabilities and potential.",
+      "I have a solid sense of my own value, capabilities and potential.",
   },
   {
     competence: "Personal competence",
     questionNumber: "4",
     questionP1: "Emotional self-control: ",
     questionP2:
-      "Maintaining emotions and destructive impulses under control, even in times of stress.",
+      "I mantain emotions and destructive impulses under control, even in times of stress.",
   },
   {
     competence: "Personal competence",
     questionNumber: "5",
-    questionP1:"Overcoming: ",
+    questionP1: "Overcoming: ",
     questionP2:
-      "Having motivation to improve the performance to meet interior standards of excellence.",
+      "I have motivation to improve performance tand meet my standards of excellence.",
   },
   {
     competence: "Personal competence",
     questionNumber: "6",
     questionP1: "Initiative: ",
-    questionP2: "Always be ready to act and enjoy opportunities.",
+    questionP2: "I will always be ready to act and take opportunities.",
   },
   {
     competence: "Personal competence",
     questionNumber: "7",
     questionP1: "Transparency: ",
-    questionP2: "Be honest and righteous, worthy of trust.",
+    questionP2: "I am honest and righteous, worthy of trust.",
   },
   {
     competence: "Personal competence",
     questionNumber: "8",
     questionP1: "Adaptability: ",
     questionP2:
-      "Having flexibility in adapting to people with a different style. To adapt to volatile situations or to way of thinking and behaving in adverse situations.",
+      "I have flexibility in adapting to people with a different style. I can adapt to difficult situations and different ways of thinking.",
   },
   {
     competence: "Personal competence",
     questionNumber: "9",
     questionP1: "Optimism: ",
-    questionP2: "Seeing the bright side of events in any situation.",
+    questionP2: "I see the bright side of events in any situation.",
   },
   {
     competence: "Social competence",
     questionNumber: "1",
     questionP1: "Empathy: ",
     questionP2:
-      "Understanding other people's emotions, understanding their points of view and take an active interest in their concerns.",
+      "I Understand other people's emotions and their points of view. I take an active interest in people's concerns.",
   },
   {
     competence: "Social competence",
     questionNumber: "2",
     questionP1: "Organizational awareness: ",
     questionP2:
-      "Identify and understand trends, influencial networks. Understand politics organizational level.",
+      "I can identify and understand trends and influencial networks. I understand the politics of organizational level.",
   },
   {
     competence: "Social competence",
     questionNumber: "3",
     questionP1: "Service: ",
     questionP2:
-      "Identify and satisfy the needs of subordinates and customers, supporting them and helping them improve their performance and achieve their goals.",
+      "Identify and satisfy the needs of colleagues and customers. I support and help them improve their performance and achieve their goals.",
   },
   {
     competence: "Social competence",
     questionNumber: "4",
     questionP1: "Inspirational leadership: ",
     questionP2:
-      "Guide and motivate, with a thought-stimulating vision, leading people to achieve mutual goals.",
+      "I guide and motivate, with a thought-provoking vision, leading people to achieve mutual goals.",
   },
   {
     competence: "Social competence",
     questionNumber: "5",
     questionP1: "Influence: ",
-    questionP2: "Having the ability to persuade and influence people.",
+    questionP2: "I have the ability to persuade and influence people.",
   },
   {
     competence: "Social competence",
     questionNumber: "6",
     questionP1: "Development of others: ",
-    questionP2:
-      "Nurturing others' habilities through feedback and guidance.",
+    questionP2: "I nurture others habilities through feedback and guidance.",
   },
   {
     competence: "Social competence",
     questionNumber: "7",
     questionP1: "Promoting change: ",
     questionP2:
-      "Starting and managing change, leading people in a new directions.",
+      "I start make change happen, leading people in new directions.",
   },
   {
     competence: "Social competence",
     questionNumber: "8",
     questionP1: "Conflict management: ",
     questionP2:
-      "Resolve differences between people, leading them to mutual integration and acceptance.",
+      "I resolve differences between people, leading them to mutual integration and acceptance.",
   },
   {
     competence: "Social competence",
     questionNumber: "9",
     questionP1: "Teamwork: ",
-    questionP2:
-      "Achieving high performance, collaboration and team work.",
+    questionP2: "I achieve high performance, collaboration and team work.",
   },
 ];
 
@@ -380,20 +378,17 @@ $(document).ready(function () {
     console.log("Average is " + average);
     document.getElementById("averageScore").innerHTML =
       "Your average score is " + intNumber + ".";
-     if (intNumber >= 1 && intNumber <= 4) {
-
-        console.log("intNumber >= 1 && intNumber <= 4 condition was fired");
-        $("#result1-4").show();
+    if (intNumber >= 1 && intNumber <= 4) {
+      console.log("intNumber >= 1 && intNumber <= 4 condition was fired");
+      $("#result1-4").show();
     }
     if (intNumber >= 5 && intNumber <= 7) {
-
-        console.log("intNumber >= 5 && intNumber <= 7 condition was fired");
-        $("#result5-7").show();
+      console.log("intNumber >= 5 && intNumber <= 7 condition was fired");
+      $("#result5-7").show();
     }
     if (intNumber >= 8 && intNumber <= 10) {
-
-        console.log("intNumber >= 8 && intNumber <= 10 condition was fired");
-        $("#result8-10").show();
+      console.log("intNumber >= 8 && intNumber <= 10 condition was fired");
+      $("#result8-10").show();
     }
   });
 
