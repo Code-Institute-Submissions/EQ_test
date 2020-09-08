@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap');
 
 * {
   padding: 0;
@@ -91,6 +93,7 @@ hr.hr-home {
 }
 
 #callout-1-headers {
+  font-family: 'Exo', sans-serif;
   margin-bottom: 16px;
 }
 
@@ -111,6 +114,7 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
   margin-top: 20px;
   width: 100%;
   text-align: center;
+  font-family: 'Exo', sans-serif;
 }
 
 .test-button {
@@ -147,6 +151,10 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 }
 
 /*-------second part of content page (up to subscribe)--*/
+#callout-2-headers {
+    font-family: 'Exo', sans-serif;
+}
+
 #second-callout-container.row.pt-3 {
   background: var(--color-1);
   color: var(--color-4);
@@ -166,6 +174,7 @@ div.more-text-EQ {
 
 /*---------subscribe area--*/
 #subscribe-container {
+  font-family: 'Roboto Mono', monospace;
   background: var(--color-1);
   align-items: center;
   display: flex;

@@ -1,25 +1,58 @@
 <img src="assets/images/multiple-devices.jpeg" style="margin: 0;">
 
-# EQ Test
+
+[website link](https://veraleitaodev.github.io/EQ_test/)
+
+---
+
+## Table of Contents
+
+- [1.Project Summary](#1.Project-Summary)
+- [2.UX](#2.UX)
+    * [2.1.Strategy](#2.1.Strategy)
+    * [2.2.Scope](#2.2.Scope)
+        * [2.2.1.Current Features](#2.2.1.Current-Features)
+        * [2.2.2.Future Features](#2.2.2.Future-Features)
+        * [2.2.3.Ongoing Features](#2.2.3.Ongoing-Features)
+    * [2.4.Structure](#2.4.Structure)
+    * [2.5.Skeleton](#2.5.Skeleton)
+    * [2.6.Surface](#2.6.Surface)
+- [3.Technologies and Libraries](#3.Technologies-and-Libraries)
+- [4.Resources and Tools](#4.Resources-and-Tools)
+- [5.Tests](#5.Tests)
+    * [5.1.Validation](#5.1.Validation)
+    * [5.2.Manual Testing](#5.2.Manual-Testing)
+- [6.Deployment](#6.Deployment)
+- [7.Credits](#7.Credits)
+
+---
+## 1.Project Summary
 
 EQ test is a test to your Emotional Intelligence. Emotional Intelligence is as relevant or more than IQ for a successful, happy life.
 This test is based on Daniel Goleman work about brain and behavioral sciences. The test had been replicated from Paulo Vieira books as he uses it to access the EQ before and after the subject of his books and course materials.
 
-[website link](https://veraleitaodev.github.io/EQ_test/)
 
-## Table of Contents
+## 2.UX
 
-### 1. [UX](#ux).
-
-    ####color theme
+### 2.1.Strategy
+    #### color theme
     after chosing the images for the home page, I used Adobe Color to extract colour scheme matching the image on the first callout container.
         -- colours used:
 
 <img src="assets/images/color-scheme.jpeg"> 
-            
-### 2. [Features](#features)
-### 3. [Technologies Applied](#technologies-applied)
-### 4. [Tests](#tests)  
+
+### 2.2.Scope           
+#### 2.2.1.Current Features
+#### 2.2.2.Future Features
+#### 2.2.3.Ongoing Features
+### 2.3.Structure
+### 2.4.Skeleton
+### 2.5.Surface
+## 3.Resources and Tools
+## 4.Technologies Applied
+## 5.Tests  
+### 5.1.Validation
+### 5.2.Testing
     -- used inspect tool from google chrome and firefox web engines as both allow to inspect different size devices  
     -- used simple function in main.js to determine if page was working $(document).ready(function() {
     $("h1").css("text-decoration", "underline");  
@@ -44,3 +77,4 @@ list of websites used for inspiration:
     --https://api.jquery.com/ was a source used throughout this project as reference
     -- first paragraph taken from website https://www.mindtools.com/pages/article/newLDR_45.htm in response to "What is Emotional Intelligence"
     --result text obtained from https://www.mindtools.com/pages/article/ei-quiz.htm and "manual do realizador" manual from Paulo Vieira;
+    --[ami.responsivdesign.is](http://ami.responsivedesign.is) - multiple devices image in README.md file
