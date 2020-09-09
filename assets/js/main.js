@@ -407,9 +407,5 @@ $(document).ready(function () {
   console.log(currentQuestionP1);
   console.log(currentQuestionP2);
 
-  //-------------------when pressing submit email to subscribe
-
-  $("#submitAddressBtn").click(function () {
-    alert("Sorry, this button is not working yet.");
-  });
+ 
 });
