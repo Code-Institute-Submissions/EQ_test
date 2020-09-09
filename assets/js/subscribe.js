@@ -19,7 +19,7 @@ $(document).ready(function () {
       $("#subscribeMessage").hide();
       $("#subscribeForm").hide();
     } else {
-      $result.text(email + " is not valid");
+      $result.text("Ops... " + email + " is not valid");
       $("#subscribeMessage").hide();
       $("#subscribeForm").hide();
       $("#tryAgain").show();
@@ -32,6 +32,7 @@ $(document).ready(function () {
   $("#tryAgain").on("click", function () {
     console.log("tryAgain clicked and form reset");
     document.getElementById("subscribeForm").reset();
+
     $("#subscribeMessage").show();
     $("#subscribeForm").show();
     $("#tryAgain").hide();
