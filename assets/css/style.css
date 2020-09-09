@@ -164,7 +164,7 @@ copied from Juan Salazar code at https://codepen.io/juanedsa/pen/EyZQqb?editors=
 
 #profile-img {
   border-radius: 50%;
-  max-width: 100px;
+  max-width: 150px;
   margin-bottom: 30px;
 }
 
@@ -479,7 +479,7 @@ p#result8-10 {
     font-weight: bold;
 }
 
-/* Small devices (landscape phones, less than 768px)*/
+/* Small devices (landscape phones, more than 576px)*/
 @media (min-width: 576px) {
   html {
     font-size: 1.2rem;
@@ -527,7 +527,7 @@ p#result8-10 {
   }
 }
 
-/*Large devices (desktops, less than 1200px)*/
+/*Large devices (desktops, more than 1200px)*/
 @media (min-width: 1024px) {
   html {
     font-size: 1.4rem;
