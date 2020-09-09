@@ -468,6 +468,7 @@ p#result1-4,
 p#result5-7,
 p#result8-10 {
     display: none;
+    line-height: 1.6em;
 }
 
 .linkHomePage,

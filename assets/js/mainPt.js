@@ -1,4 +1,6 @@
-//Global variables
+
+$(document).ready(function (){
+
 var questions = [
   {
     competence: "Competência pessoal",
@@ -133,8 +135,6 @@ var resultArray = [];
 
 resultArray;
 
-//--DOCUMENT.READY FUNCTION-----------------------------------
-$(document).ready(function (){
   //--Test Button Clicked from home page to open modal---------
 
   $("#myBtn").click(function () {
@@ -152,14 +152,14 @@ $(document).ready(function (){
   //click "read more" button to expand the rules' text
   $("#more").hide();
   $("#moreBtn").click(function () {
-    var txt = $("#more").is(":visible") ? "Read More" : "Read Less";
+    var txt = $("#more").is(":visible") ? "Leia mais" : "Leia menos";
     $("#moreBtn").text(txt);
     $(this).next("#more").slideToggle(200);
   });
 
   //--close button function to return to home page------------
   $(".close").click(function () {
-    if (confirm("Are you sure you want to leave this page?") == true) {
+    if (confirm("Tem certeza que deseja sair desta página?") == true) {
       return true;
     } else {
       return false;
@@ -268,7 +268,7 @@ $(document).ready(function (){
         ).innerHTML = currentQuestionP2;
       }
     } else {
-      alert("Ops! You need to select a value first.");
+      alert("Ops! Você precisa selecionar um valor primeiro.");
       disableNextBtn();
       disableResultsBtn();
     }
@@ -381,7 +381,7 @@ $(document).ready(function (){
     display result text accordingly--*/
     console.log("Average is " + average);
     document.getElementById("averageScore").innerHTML =
-      "Your average score is " + intNumber + ".";
+      "A sua pontuação média é " + intNumber + ".";
     if (intNumber >= 1 && intNumber <= 4) {
       console.log("intNumber >= 1 && intNumber <= 4 condition was fired");
       $("#result1-4").show();
