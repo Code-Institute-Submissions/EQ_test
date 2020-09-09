@@ -129,8 +129,7 @@ var i = 0;
 var currentCompetencyType = questions[i].competence;
 var currentQuestionNumber = questions[i].questionNumber;
 var currentQuestionP1 = questions[i].questionP1;
-var currentQuestionP2 = q
-uestions[i].questionP2;
+var currentQuestionP2 = questions[i].questionP2;
 var resultArray = [];
 
 resultArray;
