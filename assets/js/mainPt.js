@@ -1,124 +1,126 @@
 //Global variables
 var questions = [
   {
-    competence: "Personal competence",
+    competence: "Competência pessoal",
     questionNumber: "1",
-    questionP1: "Emotional self-awareness: ",
+    questionP1: "Autoconsciência emocional:",
     questionP2:
-      "I am aware of my own emotions and know their impact on my actions and decisions.",
+      "Estou ciente das minhas próprias emoções e sei o impacto delas nas minhas ações e decisões.",
   },
   {
-    competence: "Personal competence",
+    competence: "Competência pessoal",
     questionNumber: "2",
-    questionP1: "Accurate self-assessment: ",
+    questionP1: "Autoavaliação precisa:",
     questionP2:
-      "I know my own limits and possibilities, without overestimating or underestimating myself.",
+      "Eu conheço meus próprios limites e possibilidades, sem me supervalorizar ou subestimar.",
   },
   {
-    competence: "Personal competence",
+    competence: "Competência pessoal",
     questionNumber: "3",
-    questionP1: "Self-confidence: ",
+    questionP1: "Autoconfiança:",
     questionP2:
-      "I have a solid sense of my own value, capabilities and potential.",
+      "Tenho uma noção sólida do meu próprio valor, capacidades e potencial.",
   },
   {
-    competence: "Personal competence",
+    competence: "Competência pessoal",
     questionNumber: "4",
-    questionP1: "Emotional self-control: ",
+    questionP1: "Autocontrole emocional:",
     questionP2:
-      "I maintain emotions and destructive impulses under control, even in times of stress.",
+      "Mantenho as emoções e os impulsos destrutivos sob control, mesmo em momentos de stress.",
   },
   {
-    competence: "Personal competence",
+    competence: "Competência pessoal",
     questionNumber: "5",
-    questionP1: "Overcoming: ",
+    questionP1: "Superação:",
     questionP2:
-      "I have motivation to improve performance and to meet my high standards.",
+      "Tenho motivação para melhorar o meu desempenho e a fim de satisfazer padrões interiores de excelência.",
   },
   {
-    competence: "Personal competence",
+    competence: "Competência pessoal",
     questionNumber: "6",
-    questionP1: "Initiative: ",
-    questionP2: "I will always be ready to act and take opportunities.",
-  },
-  {
-    competence: "Personal competence",
-    questionNumber: "7",
-    questionP1: "Transparency: ",
-    questionP2: "I am honest and righteous, worthy of trust.",
-  },
-  {
-    competence: "Personal competence",
-    questionNumber: "8",
-    questionP1: "Adaptability: ",
+    questionP1: "Iniciativa:",
     questionP2:
-      "I have flexibility in adapting to people with a different style. I can adapt to difficult situations and different ways of thinking.",
+      "Estarei sempre pronto para agir e aproveitar as oportunidades.",
   },
   {
-    competence: "Personal competence",
+    competence: "Competência pessoal",
+    questionNumber: "7",
+    questionP1: "Transparência:",
+    questionP2: "Eu sou honesto e justo, digno de confiança.",
+  },
+  {
+    competence: "Competência pessoal",
+    questionNumber: "8",
+    questionP1: "Adaptabilidade:",
+    questionP2:
+      "Tenho flexibilidade para me adaptar a pessoas com estilos diferentes. Posso me adaptar a situações difíceis e a diferentes formas de pensar.",
+  },
+  {
+    competence: "Competência pessoal",
     questionNumber: "9",
-    questionP1: "Optimism: ",
-    questionP2: "I see the bright side of events in any situation.",
+    questionP1: "Otimismo:",
+    questionP2: "Vejo o lado bom dos eventos em qualquer situação.",
   },
   {
-    competence: "Social competence",
+    competence: "Competência social",
     questionNumber: "1",
-    questionP1: "Empathy: ",
+    questionP1: "Empatia:",
     questionP2:
-      "I Understand other people's emotions and their points of view. I take an active interest in people's concerns.",
+      "Eu entendo as emoções das outras pessoas e os seus pontos de vista. Tenho um interesse ativo nas preocupações dos outros.",
   },
   {
-    competence: "Social competence",
+    competence: "Competência social",
     questionNumber: "2",
-    questionP1: "Organizational awareness: ",
+    questionP1: "Consciência organizacional:",
     questionP2:
-      "I can identify and understand trends and influencial networks. I understand the politics of organizational level.",
+      "Posso identificar e entender tendências e redes influentes. Entendo as políticas de nível organizacional.",
   },
   {
-    competence: "Social competence",
+    competence: "Competência social",
     questionNumber: "3",
-    questionP1: "Service: ",
+    questionP1: "Serviço:",
     questionP2:
-      "Identify and satisfy the needs of colleagues and customers. I support and help them improve their performance and achieve their goals.",
+      "Identificar e satisfazer necessidades de colegas e clientes. Eu os apoio e ajudo a melhorar o seu desempenho e atingir os seus objetivos.",
   },
   {
-    competence: "Social competence",
+    competence: "Competência social",
     questionNumber: "4",
-    questionP1: "Inspirational leadership: ",
+    questionP1: "Liderança inspiradora:",
     questionP2:
-      "I guide and motivate, with a thought-provoking vision, leading people to achieve mutual goals.",
+      "Eu guio e motivo, com uma visão instigante, levando as pessoas a alcançarem objetivos mútuos.",
   },
   {
-    competence: "Social competence",
+    competence: "Competência social",
     questionNumber: "5",
-    questionP1: "Influence: ",
-    questionP2: "I have the ability to persuade and influence people.",
+    questionP1: "Influência:",
+    questionP2: "Tenho a capacidade de persuadir e influenciar as pessoas.",
   },
   {
-    competence: "Social competence",
+    competence: "Competência social",
     questionNumber: "6",
-    questionP1: "Development of others: ",
-    questionP2: "I nurture others habilities through feedback and guidance.",
+    questionP1: "Desenvolvimento de outros:",
+    questionP2:
+      "Eu cultivo as habilidades dos outros por meio de feedback e orientação.",
   },
   {
-    competence: "Social competence",
+    competence: "Competência social",
     questionNumber: "7",
-    questionP1: "Promoting change: ",
+    questionP1: "Promovendo mudança:",
     questionP2:
-      "I start make change happen, leading people in new directions.",
+      "Eu começo a fazer a mudança acontecer, levando as pessoas em novas direções.",
   },
   {
-    competence: "Social competence",
+    competence: "Competência social",
     questionNumber: "8",
-    questionP1: "Conflict management: ",
+    questionP1: "Gestão de conflitos:",
     questionP2:
-      "I resolve differences between people, leading them to mutual integration and acceptance.",
+      "Resolvo as diferenças entre as pessoas, levando-as à integração e aceitação mútua.",
   },
   {
-    competence: "Social competence",
+    competence: "Competência social",
     questionNumber: "9",
-    questionP1: "Teamwork: ",
-    questionP2: "I achieve high performance, collaboration and team work.",
+    questionP1: "Trabalho em equipe:",
+    questionP2: "Alcanço alto desempenho, colaboração e trabalho em equipe.",
   },
 ];
 
@@ -132,7 +134,7 @@ var resultArray = [];
 resultArray;
 
 //--DOCUMENT.READY FUNCTION-----------------------------------
-$(document).ready(function () {
+$(document).ready(function (){
   //--Test Button Clicked from home page to open modal---------
 
   $("#myBtn").click(function () {
@@ -189,7 +191,7 @@ $(document).ready(function () {
     ).innerHTML = currentQuestionP2;
   });
 
-  //when a value is selected on #testForm
+  //when a value is selected on #testForm that value is then pushed to an array
   $("select").change(function () {
     console.log("a value has been selected");
 
@@ -273,14 +275,14 @@ $(document).ready(function () {
     //change question every time next button is pressed
   });
 
-  //display result;
+  //display result when results button is clicked
   $("#resultsBtn").click(function () {
     $(".bg-modal").hide();
     $("#resultsBtn").hide();
     $("#questionContainer").hide();
-
     $("#resultsContainer").show();
 
+    //chart will appear first
     var resultsChart = Highcharts.chart("container", {
       chart: {
         type: "column",
@@ -355,6 +357,8 @@ $(document).ready(function () {
 
     document.getElementById("myCompetencyType").innerHTML = resultsChart;
 
+    //*******  CALCULATIONS RELATED TO RESULT   ************/
+    
     //var resultArray = parseInt(resultArray);
     console.log("The resultArray is ", resultArray);
 
@@ -407,9 +411,4 @@ $(document).ready(function () {
   console.log(currentQuestionP1);
   console.log(currentQuestionP2);
 
-  //-------------------when pressing submit email to subscribe
-
-  $("#submitAddressBtn").click(function () {
-    alert("Sorry, this button is not working yet.");
-  });
 });
