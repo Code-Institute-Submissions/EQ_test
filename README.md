@@ -78,3 +78,4 @@ list of websites used for inspiration:
     -- first paragraph taken from website https://www.mindtools.com/pages/article/newLDR_45.htm in response to "What is Emotional Intelligence"
     --result text obtained from https://www.mindtools.com/pages/article/ei-quiz.htm and "manual do realizador" manual from Paulo Vieira;
     --[ami.responsivdesign.is](http://ami.responsivedesign.is) - multiple devices image in README.md file
+    --https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript - code to validate an email address

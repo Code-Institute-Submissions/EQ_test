@@ -227,7 +227,7 @@ $(document).ready(function () {
     console.log(currentQuestionP2);
 
     if (valSelected >= 1) {
-      console.log("if condition selectOccurred >= 1 was triggered");
+      console.log("if condition valSelected >= 1 was triggered");
 
       /*On clicking Next, display the next question
                 with next button or results button (on last question)*/
