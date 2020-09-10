@@ -573,6 +573,7 @@ p#result4-5 {
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
+  margin: auto;
 }
 
 .linkHomePage:hover,
@@ -584,6 +585,9 @@ p#result4-5 {
 @media (min-width: 576px) {
   html {
     font-size: 1.2rem;
+  }
+  .background-img {
+    min-height: 500px;
   }
   .parent-wrapper {
     width: 340px;
@@ -605,8 +609,12 @@ p#result4-5 {
     left: 50%;
     margin-left: -6px;
   }
+  .social-links li a i {
+    font-size: 1.4rem;
+    padding-left: 1rem;
+  }
 }
-}
+
 
 /* Medium devices (tablets, more than 768px)*/
 @media (min-width: 768px) {
@@ -617,27 +625,32 @@ p#result4-5 {
   .background-img {
     min-height: 600px;
   }
+
   .parent-wrapper {
     width: 400px;
     height: 260px;
   }
+
   .parent-wrapper span {
     font-size: 72px;
   }
+
   div.more-links p {
     font-size: 1rem;
   }
-  .social-links > li,
-  .social-links li a {
-    text-align: center;
-    font-size: 1.2rem;
-  }
+
   div.copyright p,
   div.more-links li a {
     font-size: 0.8rem;
   }
+
   #myCompetencyType {
     font-size: 1.6rem;
+  }
+
+  .social-links li a i {
+    font-size: 1.6rem;
+    padding-left: 1rem;
   }
 }
 
