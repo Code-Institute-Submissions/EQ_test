@@ -403,7 +403,7 @@ form#testAnswer {
 /*--radio buttons, a codepen https://codepen.io/veraleitaodev/pen/gOrerwY adapted for this project*/
 
 .wrap {
-  font-family: "Exo" san-serif;
+  font-family: "Exo", sans-serif;
   font-size: 16px;
   color: var(--color-9);
   font-weight: 500;
