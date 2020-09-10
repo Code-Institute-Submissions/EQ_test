@@ -570,8 +570,8 @@ p#result4-5 {
     width: 340px;
     height: 260px;
   }
-  .more-links {
-    text-align: center;
+  .more-links a {
+    text-align: left;
   }
   form .likert:before {
     display: block;
@@ -595,7 +595,7 @@ p#result4-5 {
   }
 
   .background-img {
-    max-height: 600px;
+    min-height: 600px;
   }
   .parent-wrapper {
     width: 400px;
@@ -607,8 +607,8 @@ p#result4-5 {
   div.more-links p {
     font-size: 1rem;
   }
-  .list-inline > li,
-  .list-inline li a {
+  .social-links > li,
+  .social-links li a {
     text-align: center;
     font-size: 1.2rem;
   }
@@ -624,11 +624,11 @@ p#result4-5 {
     font-size: 1.4rem;
   }
   .background-img {
-    background: var(--color-1);
-    max-height: none;
-    overflow: visible;
+    min-height: 800px;
   }
-  .image-container {
-    display: block;
+  
+  .social-links li a i {
+      font-size: 2rem;
+      padding-left: 1rem;
   }
 }

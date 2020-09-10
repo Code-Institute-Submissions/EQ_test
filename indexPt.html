@@ -43,7 +43,7 @@
             <div class="col callout-container" id="callout-container-1">
               <div class="row">
                 <!--Headers-->
-                <div class="col-7 col-md-12" id="callout-1-headers">
+                <div class="col-7" id="callout-1-headers">
                   <h6>Teste a sua</h6>
                   <h3>inteligência Emocional</h3>
                   <hr class="hr-home d-none d-md-block" id="hr-1" />
@@ -51,14 +51,14 @@
               </div>
               <div class="row">
                 <!--description of Emotional Intelligence-->
-                <div class="col-7 col-md-12" id="callout-1-p1">
+                <div class="col-7" id="callout-1-p1">
                   <p>
                     Inteligência emocional (Q.E. ou I.E.) é a capacidade de
                     compreender e gerenciar as nossas próprias emoções, e as das
                     pessoas ao nosso redor.
                   </p>
                 </div>
-                <div class="d-none d-md-block col-md-12" id="callout-1-p2">
+                <div class="d-none d-md-block col-md-7" id="callout-1-p2">
                   <p>
                     Para os líderes, ter inteligência emocional é essencial para
                     obter sucesso. Afinal, quem tem mais chances de sucesso - um
@@ -76,18 +76,6 @@
               <button class="test-button hvr-grow-shadow" id="myBtn">
                 Qual é o meu Q.E.?
               </button>
-            </div>
-          </div>
-
-          <!--Image below callout box for medium size devices and above 
-          (hidden for small devices, same picture appearing as callout background instead-->
-          <div class="row mb-5">
-            <div class="d-none d-md-block col-md-12 image-container">
-              <img
-                src="assets/images/men_1436x700.jpg"
-                class="img-fluid"
-                alt="Responsive image"
-              />
             </div>
           </div>
         </div>
@@ -184,11 +172,14 @@
     <!--footer-->
     <footer>
       <div class="container-fluid">
-        <div class="row py-3">
-          <div class="col-3 copyright">
+        <div class="row py-2 px-2">
+          <div class="col copyright">
             <p>&copy; Vera Leitao</p>
           </div>
-          <div class="col-5 more-links">
+        </div>
+
+        <div class="row pb-3 px-2">
+          <div class="col-7 more-links">
             <p>Leia mais sobre Q.E.:</p>
             <ul>
               <li>
@@ -207,22 +198,33 @@
               </li>
             </ul>
           </div>
-          <div class="col-4 social-links">
+          <div class="col-5 social-links">
             <ul class="list-inline social-links text-center">
               <li class="list-inline-item">
-                <a target="_blank" href="https://www.instagram.com/explore/tags/inteligenciaemocional/">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/explore/tags/inteligenciaemocional/"
+                >
                   <i class="fa fa-instagram" aria-hidden="true"></i>
                   <span class="sr-only">Instagram inteligencia emocional</span>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a target="_blank" href="https://www.youtube.com/results?search_query=inteligencia+emocional">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/results?search_query=inteligencia+emocional"
+                >
                   <i class="fa fa-youtube" aria-hidden="true"></i>
-                  <span class="sr-only">YouTube pesquisa inteligencia emocional</span>
+                  <span class="sr-only"
+                    >YouTube pesquisa inteligencia emocional</span
+                  >
                 </a>
               </li>
               <li class="list-inline-item">
-                <a target="_blank" href="https://twitter.com/hashtag/inteligenciaemocional?lang=pt">
+                <a
+                  target="_blank"
+                  href="https://twitter.com/hashtag/inteligenciaemocional?lang=pt"
+                >
                   <i class="fa fa-twitter" aria-hidden="true"></i>
                   <span class="sr-only">Twitter inteligencia emocional</span>
                 </a>
@@ -238,35 +240,43 @@
       <div class="modal-content modal-md-lg mx-auto">
         <div class="close confirm"><a href="index.html">+</a></div>
         <div id="questionContainer">
-          <div id="myCompetencyType" class="mb-2"></div>
+          <div id="myCompetencyType" class="my-2"></div>
           <hr />
           <div class="mb-3">
             <h6 id="myQuestion"></h6>
             <p id="descriptionMyQuestion"></p>
           </div>
           <div id="answerButtons" class="container">
-            <div class="input-group mb-3" id="testForm">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect01"
-                  >Escolha</label
-                >
-              </div>
-              <select class="custom-select" id="inputGroupSelect01">
-                <option selected disabled>--</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-            </div>
-            <div id="submitAlert" class="mb-3">
-              <i class="far fa-thumbs-up"></i>
+            <div class="wrap" id="testForm">
+              <form action="">
+                <ul class="likert" id="inputGroupSelect01">
+                  <li>
+                    <input type="radio" name="likert" value="1" /><label
+                      >Discordo Totalmente</label
+                    >
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="2" /><label
+                      >Discordo</label
+                    >
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="3" /><label
+                      >Neutro</label
+                    >
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="4" /><label
+                      >Concordo</label
+                    >
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="5" /><label
+                      >Concordo Totalmente</label
+                    >
+                  </li>
+                </ul>
+              </form>
             </div>
           </div>
         </div>
@@ -288,13 +298,14 @@
           <button class="mb-3" id="moreBtn">Mais informações</button>
           <p id="more">
             Após responder a última pergunta, clique no botão "resultados" e uma
-            nova janela com seus resultados aparecerá. Vai mostrar um gráfico
-            com suas respostas que você pode salvar para consultar em um estágio
-            posterior e o resultado médio com sua interpretação. <br />
-            Se a qualquer momento durante o teste você clicar no "x" no topo
-            canto direito, você retornará à página inicial do site e ao as
-            perguntas que você respondeu anteriormente serão apagadas. Assim o O
-            teste está pronto para ser repetido!
+            nova janela com seus resultados aparecerá. Ele mostrará um pie chart
+            com a frequência de suas respostas que pode salvar para consultar em
+            fase posterior. Pode também encontrar uma descrição de seu QE atual.
+            <br />
+            Se a qualquer momento durante o teste você clicar no "x" no canto
+            superior direito, você retornará à página inicial do site e as
+            perguntas que você respondeu anteriormente serão apagadas, prontas
+            para começar de novo!
           </p>
         </div>
 
@@ -318,26 +329,17 @@
       <div class="row mt-5">
         <div class="col-1"></div>
         <div class="col-10">
+          <h2>O seu resultado é:</h2>
           <figure class="highcharts-figure">
-            <div id="container" class="mb-2"></div>
-            <ul class="highcharts-description">
-              <li>1-2: Sem consciência emocional;</li>
-              <li>3-4: Parcialmente ciente das próprias emoções;</li>
-              <li>5-6: Identifica emoções e é capaz de racionaliza-las;</li>
-              <li>
-                7-8: Capaz de compreender emoções complexas e como mudam de um
-                estágio para outro;
-              </li>
-              <li>
-                9-10: você entende emoções complexas e tem capacidade de gerir
-                as suas emoções e de outras pessoas.
-              </li>
-            </ul>
-            <h4 id="averageScore"></h4>
-            <p id="descriptionOfScore"></p>
+            <div id="container"></div>
+            <p class="highcharts-description">
+              Este pie chart oferece uma relação visual da frequência das suas
+              respostas.
+            </p>
           </figure>
-          <div id="resultsDescriptionTable" class="px-2 text-center">
-            <p id="result1-4" class="text-center">
+
+          <div id="resultsDescriptionTable" class="px-2 text-left">
+            <p id="result1-2" class="text-left">
               Você precisa trabalhar sua inteligência emocional. Você pode achar
               que você se sente oprimido por suas emoções, especialmente em
               situações stressantes; ou, pode evitar o conflito porque pensa que
@@ -347,7 +349,7 @@
               fortes de trabalho. Não se preocupe - há várias formas em como
               você pode construir inteligência emocional.
             </p>
-            <p id="result5-7">
+            <p id="result3">
               Seu nível de inteligência emocional é ... OK. Você provavelmente
               tem bom relacionamentos com alguns dos seus colegas, mas outros
               podem ser mais difícil. <br />
@@ -355,18 +357,19 @@
               os seus relações de trabalho significativamente. Leia mais sobre
               como impulsionar seu Q.E.
             </p>
-            <p id="result8-10">
+            <p id="result4-5">
               Ótimo! Você é uma pessoa emocionalmente inteligente. Você tem
               ótimos relacionamentos, e provavelmente você descobrirá que as
               pessoas se aproximam de si para obter conselho. <br />
               No entanto, quando tantas pessoas admiram as suas capacidades
-              pessoais, é fácil para perder de vista as suas próprias necessidades.
-              Os pesquisadores descobriram que pessoas emocionalmente
-              inteligentes tendem a ter grande potencial de liderança. Perceba esse
-              potencial, buscando oportunidades para melhorar ainda mais.
+              pessoais, é fácil para perder de vista as suas próprias
+              necessidades. Os pesquisadores descobriram que pessoas
+              emocionalmente inteligentes tendem a ter grande potencial de
+              liderança. Perceba esse potencial, buscando oportunidades para
+              melhorar ainda mais.
             </p>
             <p class="linkHomePage pb-3">
-              <a href="index.html">Regresse para a página inicial.</a>
+              <a href="indexPt.html">Regresse para a página inicial.</a>
             </p>
           </div>
         </div>
@@ -380,8 +383,8 @@
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-    <script  src="assets/js/mainPt.js"></script>
-     <script src="assets/js/subscribePt.js"></script>
+    <script src="assets/js/mainPt.js"></script>
+    <script src="assets/js/subscribePt.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -391,7 +394,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
+   <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
