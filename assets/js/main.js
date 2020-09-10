@@ -372,7 +372,7 @@ $(document).ready(function () {
       $("#result3").show();
     }
     if (intNumber >= 4) {
-      console.log("iintNumber >= 4 condition was fired");
+      console.log("intNumber >= 4 condition was fired");
       $("#result4-5").show();
     }
   });

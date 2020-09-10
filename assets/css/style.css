@@ -276,7 +276,6 @@ h4 #confirmationMessage {
 h6 #myQuestion {
     content: "";
 }
-
 /*---------footer area--*/
 footer {
   background-color: var(--color-3);
@@ -463,6 +462,10 @@ form .likert li label {
 
 form .likert li label:hover {
   text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+#inputGroupSelect02 div label {
+    margin-left: 8px;
 }
 
 form .buttons {

@@ -250,7 +250,7 @@
           </div>
           <div id="answerButtons" class="container">
             <div class="wrap" id="testForm">
-              <form>
+              <form class="d-none d-md-block">
                 <ul class="likert" id="inputGroupSelect01">
                   <li>
                     <input type="radio" name="likert" value="1" /><label
@@ -278,6 +278,35 @@
                     >
                   </li>
                 </ul>
+              </form>
+              <form class="d-block d-md-none">
+                <div class="likert" id="inputGroupSelect02">
+                  <div>
+                    <input type="radio" name="likert" value="1" /><label
+                      >Strongly disagree</label
+                    >
+                  </div>
+                  <div>
+                    <input type="radio" name="likert" value="2" /><label
+                      >Disagree</label
+                    >
+                  </div>
+                  <div>
+                    <input type="radio" name="likert" value="3" /><label
+                      >Neutral</label
+                    >
+                  </div>
+                  <div>
+                    <input type="radio" name="likert" value="4" /><label
+                      >Agree</label
+                    >
+                  </div>
+                  <div>
+                    <input type="radio" name="likert" value="5" /><label
+                      >Strongly Agree</label
+                    >
+                  </div>
+                </div>
               </form>
             </div>
           </div>
@@ -335,14 +364,14 @@
         <div class="col-12 col-md-6">
           <figure class="highcharts-figure mb-3">
             <div id="container"></div>
-            <p class="highcharts-description px-2">
+            <p class="highcharts-description px-3">
               This pie chart offers a visual relation of the frequency of the
               answers.
             </p>
           </figure>
         </div>
         <div class="col-12 col-md-6">
-          <div id="resultsDescriptionTable" class="px-2 text-left">
+          <div id="resultsDescriptionTable" class="px-3 text-left">
             <p id="result1-2" class="text-left">
               <strong>You need to work on your emotional intelligence.</strong
               ><br />
