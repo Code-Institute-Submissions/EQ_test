@@ -327,9 +327,13 @@
     <!--Results Container-->
     <div class="container-fluid" id="resultsContainer">
       <div class="row mt-5">
-        <div class="col-1"></div>
-        <div class="col-10">
-          <h2>O seu resultado é:</h2>
+        <div class="col-12 col-md-10">
+          <h1>O seu resultado é:</h1>
+          <hr class="hr-home hr-results" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6">
           <figure class="highcharts-figure">
             <div id="container"></div>
             <p class="highcharts-description">
@@ -337,7 +341,8 @@
               respostas.
             </p>
           </figure>
-
+        </div>
+        <div class="col-12 col-md-6">
           <div id="resultsDescriptionTable" class="px-2 text-left">
             <p id="result1-2" class="text-left">
               Você precisa trabalhar sua inteligência emocional. Você pode achar
@@ -368,12 +373,11 @@
               liderança. Perceba esse potencial, buscando oportunidades para
               melhorar ainda mais.
             </p>
-            <p class="linkHomePage pb-3">
-              <a href="indexPt.html">Regresse para a página inicial.</a>
-            </p>
           </div>
         </div>
-        <div class="col-1"></div>
+        <p class="linkHomePage pb-3">
+          <a href="indexPt.html">Regresse para a página inicial.</a>
+        </p>
       </div>
     </div>
 
@@ -394,7 +398,7 @@
       crossorigin="anonymous"
     ></script>
 
-   <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>

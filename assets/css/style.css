@@ -487,8 +487,7 @@ div#resultsContainer {
   width: 100%;
   height: 100%;
   display: none;
-  background-color: var(--color-3);
-  color: var(--color-2);
+  background-color: var(--color-6);
   position: fixed;
   top: 0;
   justify-content: center;
@@ -496,12 +495,27 @@ div#resultsContainer {
   overflow-y: scroll;
 }
 
-#resultContainer h2 {
+div#resultsContainer h1 {
   font-family: "Exo", sans-serif;
+  text-align: center;
+  color: var(--color-1);
+}
+hr.hr-results {
+  border-color: var(--color-1);
+  width: 50%;
+  margin:20px auto;
+  
+}
+
+.highcharts-linked-description {
+  font-size: 12px;
+  margin: 12px;
 }
 
 #container {
-  height: 400px;
+  height: 250px;
+  width: 280px;
+  background: var(--color-6);
 }
 
 .highcharts-figure,
@@ -536,7 +550,7 @@ div#resultsContainer {
 }
 .highcharts-data-table thead tr,
 .highcharts-data-table tr:nth-child(even) {
-  background: #f8f8f8;
+  background: var(--color-6);
 }
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
@@ -555,12 +569,17 @@ p#result4-5 {
 
 .linkHomePage,
 .linkHomePage a {
-  color: var(--color-5);
+  color: var(--color-1);
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
+.linkHomePage:hover,
+.linkHomePage a:hover {
+  color: var(--color-11);
+  text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+}
 /* Small devices (landscape phones, more than 576px)*/
 @media (min-width: 576px) {
   html {
@@ -586,6 +605,7 @@ p#result4-5 {
     left: 50%;
     margin-left: -6px;
   }
+}
 }
 
 /* Medium devices (tablets, more than 768px)*/
@@ -617,7 +637,7 @@ p#result4-5 {
     font-size: 0.8rem;
   }
   #myCompetencyType {
-      font-size: 1.6rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -629,10 +649,10 @@ p#result4-5 {
   .background-img {
     min-height: 800px;
   }
-  
+
   .social-links li a i {
-      font-size: 2rem;
-      padding-left: 1rem;
+    font-size: 2rem;
+    padding-left: 1rem;
   }
 }
 /*Large devices (desktops, more than 1400px)*/
@@ -643,9 +663,9 @@ p#result4-5 {
   .background-img {
     min-height: 800px;
   }
-  
+
   .social-links li a i {
-      font-size: 2.2rem;
-      padding-left: 1.5rem;
+    font-size: 2.2rem;
+    padding-left: 1.5rem;
   }
 }
