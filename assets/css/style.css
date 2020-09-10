@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap");
 
 * {
@@ -274,25 +274,26 @@ footer {
   background-color: var(--color-3);
   color: var(--color-1);
 }
-
-div.col-3.copyright {
-  font-size: 0.4rem;
+.more-links p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 .more-links a {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   color: var(--color-1);
   line-height: 0.9rem;
 }
 
-.list-inline > li,
-.list-inline li a {
+.social-links > li,
+.social-links li a {
   display: inline;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: var(--color-1);
 }
 
-.more-links p {
-  font-size: 0.6rem;
+.copyright p {
+  font-size: 0.5rem;
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -300,8 +301,14 @@ div.col-3.copyright {
 footer ul {
   list-style-type: none;
 }
+.more-links li a:hover,
+.social-links li a:hover {
+  color: var(--color-10);
+  text-shadow: 0px 0px 50px 5px var(--color-11);
+}
 
-/*--EQ test Modals--*/
+/*-----------------------------*/
+/*--EQ test Modals-------------*/
 
 .bg-modal {
   width: 100%;
@@ -396,7 +403,9 @@ form#testAnswer {
 /*--radio buttons, a codepen https://codepen.io/veraleitaodev/pen/gOrerwY adapted for this project*/
 
 .wrap {
-  font: 12px Arial, san-serif;
+  font: 16px, "Exo" san-serif;
+  color: var(--color-9);
+  font-weight: 500;
 }
 h1.likert-header {
   padding-left: 4.25%;
@@ -421,31 +430,32 @@ form .likert:last-of-type {
   border-bottom: 0;
 }
 form .likert:before {
+  display: none;
   content: "";
   position: relative;
   top: 11px;
   left: 9.5%;
-  display: block;
   background-color: #efefef;
   height: 4px;
   width: 78%;
 }
 form .likert li {
-  display: inline-block;
   width: 19%;
   text-align: center;
   vertical-align: top;
 }
 form .likert li input[type="radio"] {
   display: block;
-  position: relative;
-  top: 0;
-  left: 50%;
-  margin-left: -6px;
+  text-align: center;
 }
 form .likert li label {
   width: 100%;
 }
+
+form .likert li label:hover {
+  text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
 form .buttons {
   margin: 30px 0;
   padding: 0 4.25%;
@@ -563,6 +573,19 @@ p#result4-5 {
   .more-links {
     text-align: center;
   }
+  form .likert:before {
+    display: block;
+  }
+  form .likert li {
+    display: inline-block;
+  }
+  form .likert li input[type="radio"] {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -6px;
+  }
 }
 
 /* Medium devices (tablets, more than 768px)*/
@@ -570,13 +593,9 @@ p#result4-5 {
   html {
     font-size: 1.3rem;
   }
+
   .background-img {
-    background: var(--color-1);
-    max-height: none;
-    overflow: visible;
-  }
-  .image-container {
-    display: block;
+    max-height: 600px;
   }
   .parent-wrapper {
     width: 400px;
@@ -603,5 +622,13 @@ p#result4-5 {
 @media (min-width: 1024px) {
   html {
     font-size: 1.4rem;
+  }
+  .background-img {
+    background: var(--color-1);
+    max-height: none;
+    overflow: visible;
+  }
+  .image-container {
+    display: block;
   }
 }

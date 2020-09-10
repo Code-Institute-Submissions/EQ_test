@@ -16,8 +16,8 @@
         <div class="mb-3" id="header-callout-image-container">
           <!--NAVBAR with dropdown button-->
           <div class="row pt-2justify-content-end">
-            <div class="col-8 col-md-9 col-lg-10"></div>
-            <div class="col-4 col-md-3 col-lg-2">
+            <div class="col-8  col-lg-10"></div>
+            <div class="col-4  col-lg-2">
               <!--dropdown button-->
               <div class="dropdown">
                 <button
@@ -76,18 +76,6 @@
               <button class="test-button hvr-grow-shadow" id="myBtn">
                 What is my EQ?
               </button>
-            </div>
-          </div>
-
-          <!--Image below callout box for medium size devices and above 
-          (hidden for small devices, same picture appearing as callout background instead-->
-          <div class="row mb-5">
-            <div class="d-none d-md-block col-md-12 image-container">
-              <img
-                src="assets/images/men_1436x700.jpg"
-                class="img-fluid"
-                alt="Responsive image"
-              />
             </div>
           </div>
         </div>
@@ -186,11 +174,15 @@
     <!--footer-->
     <footer>
       <div class="container-fluid">
-        <div class="row py-3">
-          <div class="col-3 copyright">
+        <div class="row py-2">
+        <div class="col copyright">
             <p>&copy;Vera Leitao</p>
           </div>
-          <div class="col-5 more-links">
+        </div>
+        
+        <div class="row pb-3">
+          
+          <div class="col-7 more-links">
             <p>Read More About EQ:</p>
             <ul>
               <li>
@@ -209,7 +201,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-4 social-links">
+          <div class="col-5 social-links">
             <ul class="list-inline social-links text-center">
               <li class="list-inline-item">
                 <a
@@ -251,7 +243,7 @@
       <div class="modal-content modal-md-lg mx-auto">
         <div class="close confirm"><a href="index.html">+</a></div>
         <div id="questionContainer">
-          <div id="myCompetencyType" class="mb-2"></div>
+          <div id="myCompetencyType" class="my-2"></div>
           <hr />
           <div class="mb-3">
             <h6 id="myQuestion"></h6>
@@ -262,24 +254,29 @@
               <form action="">
                 <ul class="likert" id="inputGroupSelect01">
                   <li>
-                    <input type="radio" name="likert" value="1" />
-                    <label>Strongly disagree</label>
+                    <input type="radio" name="likert" value="1" /><label
+                      >Strongly disagree</label
+                    >
                   </li>
                   <li>
-                    <input type="radio" name="likert" value="2" />
-                    <label>Disagree</label>
+                    <input type="radio" name="likert" value="2" /><label
+                      >Disagree</label
+                    >
                   </li>
                   <li>
-                    <input type="radio" name="likert" value="3" />
-                    <label>Neutral</label>
+                    <input type="radio" name="likert" value="3" /><label
+                      >Neutral</label
+                    >
                   </li>
                   <li>
-                    <input type="radio" name="likert" value="4" />
-                    <label>Agree</label>
+                    <input type="radio" name="likert" value="4" /><label
+                      >Agree</label
+                    >
                   </li>
                   <li>
-                    <input type="radio" name="likert" value="5" />
-                    <label>Strongly Agree</label>
+                    <input type="radio" name="likert" value="5" /><label
+                      >Strongly Agree</label
+                    >
                   </li>
                 </ul>
               </form>
@@ -331,7 +328,7 @@
       <div class="row mt-5">
         <div class="col-1"></div>
         <div class="col-10">
-        <h2>Your results are:</h2>
+          <h2>Your results are:</h2>
           <figure class="highcharts-figure">
             <div id="container"></div>
             <p class="highcharts-description">
