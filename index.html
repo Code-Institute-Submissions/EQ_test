@@ -111,7 +111,11 @@
         <div class="row">
           <!--profile foto-->
           <div class="d-none d-md-block col-md-4 container-fluid">
-            <img src="assets/images/brain-white.jpg" alt="brain image" id="profile-img" />
+            <img
+              src="assets/images/brain-white.jpg"
+              alt="brain image"
+              id="profile-img"
+            />
 
             <!--second callout text-->
             <blockquote class="blockquote">
@@ -125,8 +129,7 @@
           <div class="more-text-EQ col-md-4 mb-2">
             <p>
               Unlike IQ, which does not change significantly over a lifetime,
-              our EQ can progress throughout life as we learn and
-              grow.<br />
+              our EQ can progress throughout life as we learn and grow.<br />
               Our brains are programmed to react in certain situations but we
               can re-program them by reprogramming habits, beliefs and with
               repeated practice and application.
@@ -209,19 +212,30 @@
           <div class="col-4 social-links">
             <ul class="list-inline social-links text-center">
               <li class="list-inline-item">
-                <a target="_blank" href="https://www.instagram.com/explore/tags/emotionalinteligence/">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/explore/tags/emotionalinteligence/"
+                >
                   <i class="fa fa-instagram" aria-hidden="true"></i>
                   <span class="sr-only">Instagram emotional intelligence</span>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a target="_blank" href="https://www.youtube.com/results?search_query=emotional+intelligence">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/results?search_query=emotional+intelligence"
+                >
                   <i class="fa fa-youtube" aria-hidden="true"></i>
-                  <span class="sr-only">YouTube search emotional intelligence</span>
+                  <span class="sr-only"
+                    >YouTube search emotional intelligence</span
+                  >
                 </a>
               </li>
               <li class="list-inline-item">
-                <a target="_blank" href="https://twitter.com/hashtag/emotionalintelligence/">
+                <a
+                  target="_blank"
+                  href="https://twitter.com/hashtag/emotionalintelligence/"
+                >
                   <i class="fa fa-twitter" aria-hidden="true"></i>
                   <span class="sr-only">Twitter emotional intelligence</span>
                 </a>
@@ -244,12 +258,10 @@
             <p id="descriptionMyQuestion"></p>
           </div>
           <div id="answerButtons" class="container">
-            <div class="input-group mb-3" id="testForm">
+            <!--<div class="input-group mb-3" id="testForm">
               <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect01"
-                  >Choose</label
-                >
-              </div>
+                <label class="input-group-text" for="inputGroupSelect01">Choose</label>
+                </div>
               <select class="custom-select" id="inputGroupSelect01">
                 <option selected disabled>--</option>
                 <option value="1">1</option>
@@ -263,9 +275,32 @@
                 <option value="9">9</option>
                 <option value="10">10</option>
               </select>
-            </div>
-            <div id="submitAlert" class="mb-3">
-              <i class="far fa-thumbs-up"></i>
+            </div-->
+            <div class="wrap" id="testForm">
+              <form action="">
+                <ul class="likert" id="inputGroupSelect01">
+                  <li>
+                    <input type="radio" name="likert" value="1" />
+                    <label>Strongly disagree</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="2" />
+                    <label>Disagree</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="3" />
+                    <label>Neutral</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="4" />
+                    <label>Agree</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="5" />
+                    <label>Strongly Agree</label>
+                  </li>
+                </ul>
+              </form>
             </div>
           </div>
         </div>
@@ -275,12 +310,15 @@
           <h4>How It Works</h4>
           <hr />
           <p>
-            There are 18 questions in total:<br /> 
-            9 related to <strong>Personal competencies</strong><br /> 
+            There are 18 questions in total:<br />
+            9 related to <strong>Personal competencies</strong><br />
             9 related to <strong>Social competencies</strong>.<br />
-            When you press the <em>start button</em>, the first question will appear.<br />
-            In order to progress to the next question, you need to choose a number from 1 to 10,
-            where <strong>1 means the sentence is NOT</strong> how you are, and <strong>10 totally you</strong>.<br />
+            When you press the <em>start button</em>, the first question will
+            appear.<br />
+            In order to progress to the next question, you need to choose a
+            number from 1 to 10, where
+            <strong>1 means the sentence is NOT</strong> how you are, and
+            <strong>10 totally you</strong>.<br />
           </p>
           <button class="mb-3" id="moreBtn">More info</button>
           <p id="more">

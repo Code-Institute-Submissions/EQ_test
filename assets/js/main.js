@@ -1,6 +1,4 @@
 
-
-
 $(document).ready(function () {
 var questions = [
   {
@@ -131,7 +129,6 @@ var currentQuestionNumber = questions[i].questionNumber;
 var currentQuestionP1 = questions[i].questionP1;
 var currentQuestionP2 = questions[i].questionP2;
 var resultArray = [];
-
 resultArray;
 
   //--Test Button Clicked from home page to open modal---------
@@ -140,12 +137,13 @@ resultArray;
     console.log("home button was clicked, it works!");
 
     $(".bg-modal").show();
+    $("#rulesContainer").show();
+    $("#startBtn").show();
     $("#nextBtn").hide();
     $("#resultsBtn").hide();
     $("#questionContainer").hide();
-    $("#submitAlert").hide();
-    $("#rulesContainer").show();
-    $("#startBtn").show();
+    
+    
   });
 
   //click "read more" button to expand the rules' text
@@ -178,7 +176,7 @@ resultArray;
     $("#startBtn").hide();
     $("#nextBtn").show();
     $("#testForm").show();
-    $("#inputGroupSelect01").val("");
+    
 
     document.getElementById(
       "myCompetencyType"
@@ -190,88 +188,61 @@ resultArray;
     ).innerHTML = currentQuestionP2;
   });
 
-  //when a value is selected on #testForm
-  $("select").change(function () {
-    console.log("a value has been selected");
-
-    var stringSelected = $("#inputGroupSelect01").val();
-    var valSelected = parseInt(stringSelected);
-    console.log(valSelected);
-
-    resultArray.push(valSelected); //selected values from each question are pushed onto an array
-    console.log(resultArray);
-
-    i++; //added 1 to the value of i which is going to select next question
-    console.log("i = ", i);
-
-    $("#testForm").hide();
-    $("#submitAlert").show();
-    $("#nextBtn").removeAttr("disabled");
-    $("#resultsBtn").removeAttr("disabled");
-  });
 
   //---------On clicking Next button function----------------
   //---------------------------------------------------------
+  /*On clicking Next, display the next question
+                with next button or results button (on last question)*/
   $("#nextBtn").click(function () {
     console.log("next button clicked, it works!");
+    var stringSelected = $("input:radio[name=likert]:checked").val()
+    var valSelected = parseInt(stringSelected);
+    console.log("next button " + valSelected);
 
+
+    if (isNaN (valSelected)) {
+      alert("Ops! You need to select a value first.");
+      
+    } else {
+
+    i++; //added 1 to the value of i which is going to select next question
+    console.log("i = ", i);
     var currentCompetencyType = questions[i].competence;
     var currentQuestionNumber = questions[i].questionNumber;
     var currentQuestionP1 = questions[i].questionP1;
     var currentQuestionP2 = questions[i].questionP2;
-    var stringSelected = $("#inputGroupSelect01").val();
-    var valSelected = parseInt(stringSelected);
-    console.log(valSelected);
-    console.log(currentCompetencyType);
-    console.log(currentQuestionNumber);
-    console.log(currentQuestionP1);
-    console.log(currentQuestionP2);
+    
+   
+    document.getElementById(
+          "myCompetencyType"
+        ).innerHTML = currentCompetencyType;
+        document.getElementById("myQuestion").innerHTML =
+          currentQuestionNumber + ".  " + currentQuestionP1;
+        document.getElementById(
+          "descriptionMyQuestion"
+        ).innerHTML = currentQuestionP2;
 
-    if (valSelected >= 1) {
-      console.log("if condition valSelected >= 1 was triggered");
-
-      /*On clicking Next, display the next question
-                with next button or results button (on last question)*/
+     
       if (i < 17) {
         console.log("the if i<17 condition was fired; i = ", i);
 
+        resultArray.push(valSelected); //selected values from each question are pushed onto an array
+        console.log(resultArray);
         $("#testForm").show();
-        $("#submitAlert").hide();
-        $("#inputGroupSelect01").val("");
-
-        document.getElementById(
-          "myCompetencyType"
-        ).innerHTML = currentCompetencyType;
-        document.getElementById("myQuestion").innerHTML =
-          currentQuestionNumber + ".  " + currentQuestionP1;
-        document.getElementById(
-          "descriptionMyQuestion"
-        ).innerHTML = currentQuestionP2;
+        
       }
       if (i == 17) {
         console.log("This is the very last question...");
-
+        
+        resultArray.push(valSelected); //selected values from each question are pushed onto an array
+        console.log(resultArray);
         $("#nextBtn").hide();
         $("#resultsBtn").show();
-        $("#testForm").show();
-        $("#submitAlert").hide();
-        $("#inputGroupSelect01").val("");
-
-        document.getElementById(
-          "myCompetencyType"
-        ).innerHTML = currentCompetencyType;
-        document.getElementById("myQuestion").innerHTML =
-          currentQuestionNumber + ".  " + currentQuestionP1;
-        document.getElementById(
-          "descriptionMyQuestion"
-        ).innerHTML = currentQuestionP2;
+          
       }
-    } else {
-      alert("Ops! You need to select a value first.");
-      disableNextBtn();
-      disableResultsBtn();
-    }
-    //change question every time next button is pressed
+    } 
+    $('input[name="likert"]').prop('checked', false);
+    
   });
 
   //display result;
@@ -393,15 +364,7 @@ resultArray;
     }
   });
 
-  //-------------------next button disabled function
-  function disableNextBtn() {
-    $("#nextBtn").attr("disabled", "disabled");
-  }
-
-  //-------------------results button disabled function
-  function disableResultsBtn() {
-    $("#resultsBtn").attr("disabled", "disabled");
-  }
+  
 
   console.log(currentCompetencyType);
   console.log(currentQuestionNumber);
