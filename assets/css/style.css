@@ -616,9 +616,12 @@ p#result4-5 {
   div.more-links li a {
     font-size: 0.8rem;
   }
+  #myCompetencyType {
+      font-size: 1.6rem;
+  }
 }
 
-/*Large devices (desktops, more than 1200px)*/
+/*Large devices (desktops, more than 1024px)*/
 @media (min-width: 1024px) {
   html {
     font-size: 1.4rem;
@@ -630,5 +633,19 @@ p#result4-5 {
   .social-links li a i {
       font-size: 2rem;
       padding-left: 1rem;
+  }
+}
+/*Large devices (desktops, more than 1400px)*/
+@media (min-width: 1400px) {
+  html {
+    font-size: 1.6rem;
+  }
+  .background-img {
+    min-height: 800px;
+  }
+  
+  .social-links li a i {
+      font-size: 2.2rem;
+      padding-left: 1.5rem;
   }
 }
