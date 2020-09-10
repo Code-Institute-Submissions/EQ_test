@@ -421,7 +421,7 @@ h1.likert-header {
 }
 form .statement {
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   padding: 30px 0 0 4.25%;
   margin-bottom: 10px;
@@ -465,7 +465,7 @@ form .likert li label:hover {
 }
 
 #inputGroupSelect02 div label {
-    margin-left: 8px;
+    margin-left: 4px;
 }
 
 form .buttons {
@@ -528,6 +528,7 @@ hr.hr-results {
   height: 250px;
   width: 280px;
   background: var(--color-6);
+  margin: auto;
 }
 
 .highcharts-figure,

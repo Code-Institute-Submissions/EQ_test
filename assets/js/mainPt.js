@@ -199,7 +199,7 @@ $(document).ready(function () {
     console.log("when next btn clicked i = " + i);
 
     if (isNaN(valSelected)) {
-      alert("Ops! You need to select a value first.");
+      alert("Ops! Precisa selecionar um valor primeiro.");
     } else {
       i++;
       console.log("when else condition if fired i = " + i);
