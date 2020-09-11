@@ -78,6 +78,7 @@ ___
 ___
 
 ## 3.Technologies and Libraries
+
         * HTML5 
            HTML5 is a markup language used for structuring and presenting content on the World Wide Web.
         
@@ -96,7 +97,9 @@ ___
         * Google Fonts
            Font catalogue with more than 135 languages and more than 1000 font families accessible to use on CSS via API
 
-        
+        * JQuery
+           Is a javascript library written in a simplified way "write less do more" style. version 3.5.1 used
+
 
 ___
 
