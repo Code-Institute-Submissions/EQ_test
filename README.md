@@ -1,4 +1,4 @@
-<img src="assets/images/multiple-devices.jpeg" style="margin: 0;">
+<img src="assets/images/multiple-devices2.jpeg" style="margin: 0;">
 
 [website link](https://veraleitaodev.github.io/EQ_test/)
 
@@ -85,27 +85,42 @@ ___
         * CSS3
            Cascading Style Sheets (CSS) is a style sheet language used for presentation of a markup language like HTML. (version 3)
         
-        * Font Awesome 5. 
+        * [Font Awesome](https://fontawesome.com/) 
            CSS font and icon library kit. version 5 used
         
-        * Highcharts
+        * [Highcharts](https://www.highcharts.com/)
            Highcharts, a javascript based software library for charts
 
-        * Bootstrap 4
+        * [Bootstrap 4](https://getbootstrap.com/)
            Free and open-source CSS framework for mobile first front-end web development
 
-        * Google Fonts
+        * [Google Fonts](https://fonts.google.com/)
            Font catalogue with more than 135 languages and more than 1000 font families accessible to use on CSS via API
 
-        * JQuery
+        * [JQuery](https://jquery.com/)
            Is a javascript library written in a simplified way "write less do more" style. version 3.5.1 used
+        
+        * [Github](https://github.com/)
+           A host for software development and version control using Git.
 
-
+        * [Git](https://git-scm.com/)
+           A version-control system during software development that enables tracking changes in source code
+          
 ___
 
 ## 4.Resources and Tools
+        * [Unsplash](https://unsplash.com/)
+           Used photos obtained on [Unsplash](https://unsplash.com/) for this project:
+            credit to Valentin Salja for the [background photo](https://unsplash.com/photos/0aX51h4WvAk) used
+            credit to Alina Grubnyak for the [profile photo of a brain](https://unsplash.com/photos/tEVGmMaPFXk) 
 
+        * [Dreamstime](https://dreamstime.com/)
+           Obtained sketch image iq + eq from dreasmstime
 
+        * [ami.responsivedesign.is](http://ami.responsivedesign.is/)
+           used for mockup on top of readme page chowing website in different devices
+
+        
 ___
 
 ## 5.Tests
