@@ -12,10 +12,9 @@
   - [2.2.Scope](#2.2.Scope)
     - [2.2.1.Current Features](#2.2.1.Current-Features)
     - [2.2.2.Future Features](#2.2.2.Future-Features)
-    - [2.2.3.Ongoing Features](#2.2.3.Ongoing-Features)
-  - [2.4.Structure](#2.4.Structure)
-  - [2.5.Skeleton](#2.5.Skeleton)
-  - [2.6.Surface](#2.6.Surface)
+  - [2.3.Structure](#2.4.Structure)
+  - [2.4.Skeleton](#2.5.Skeleton)
+  - [2.5.Surface](#2.6.Surface)
 - [3.Technologies and Libraries](#3.Technologies-and-Libraries)
 - [4.Resources and Tools](#4.Resources-and-Tools)
 - [5.Tests](#5.Tests)
@@ -26,12 +25,15 @@
 
 ---
 
+
 ## 1.Project Summary
 
 I wanted to create more awareness to the importance of Emotional intelligenge.
 A quizz would be, in my eyes, a good way to create engagement with the user. This site offers a brief introduction to what it is EQ and offers a quiz to create awareness on current EQ.
 EQ test is a test to your Emotional Intelligence. Emotional Intelligence is as relevant or more than IQ for a successful, happy life.
 This test is based on Daniel Goleman work about brain and behavioral sciences. The test had been replicated from Paulo Vieira books as he uses it to access the EQ before and after the subject of his books and course materials.
+
+___
 
 ## 2.UX
 
@@ -47,6 +49,8 @@ This test is based on Daniel Goleman work about brain and behavioral sciences. T
 
 #### 2.2.1.Current Features
 
+
+        * Home page - to welcome user and provide a button to redirect to quiz
         * Responsive navigation - the site allows quality and uniform display in a vast range of screen sizes
         * On the top right corner it can be found a dropdown menu with the option of English and Portuguese language
         * Background image positioned to highlight headings and test button. 
@@ -56,25 +60,56 @@ This test is based on Daniel Goleman work about brain and behavioral sciences. T
         * Subscribing card, although no back end, it provides the place for the user to submit email address in order to receive newsletter;
         * Footer with links for further reading
         * Social media icons with links directing to social media discussion the EQ topic
+
+
 #### 2.2.2.Future Features
 
-#### 2.2.3.Ongoing Features
 
+        * Add backend to subscribe card
+        * Add media to modal during questionaire to make it more interesting
+        * Add on results section, areas that require improvement based on answers
+        * Add useful links on results
 ### 2.3.Structure
 
 ### 2.4.Skeleton
 
 ### 2.5.Surface
 
-## 3.Resources and Tools
+___
 
-## 4.Technologies Applied
+## 3.Technologies and Libraries
+        * HTML5 
+           HTML5 is a markup language used for structuring and presenting content on the World Wide Web.
+        
+        * CSS3
+           Cascading Style Sheets (CSS) is a style sheet language used for presentation of a markup language like HTML. (version 3)
+        
+        * Font Awesome 5. 
+           CSS font and icon library kit. version 5 used
+        
+        * Highcharts
+           Highcharts, a javascript based software library for charts
+
+        * Bootstrap 4
+           Free and open-source CSS framework for mobile first front-end web development
+
+        * Google Fonts
+           Font catalogue with more than 135 languages and more than 1000 font families accessible to use on CSS via API
+
+        
+
+___
+
+## 4.Resources and Tools
+
+
+___
 
 ## 5.Tests
 
 ### 5.1.Validation
 
-### 5.2.Testing
+### 5.2.Manual Testing
 
     -- used inspect tool from google chrome and firefox web engines as both allow to inspect different size devices
     -- used simple function in main.js to determine if page was working $(document).ready(function() {
@@ -88,9 +123,11 @@ This test is based on Daniel Goleman work about brain and behavioral sciences. T
 
         • home page margins and overflow of background image colour and footer ...
         • first used grid for modal buttons layout but it was not responsive so changes to rows and columns classes to take advantage of bootstrap responsive layout.
-
+___
 
 ### 5. [Deployment](#deployment)
+
+___
 
 ### 6. [Credits](#credits)
 
