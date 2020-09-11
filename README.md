@@ -110,10 +110,8 @@ ___
 
 ## 4.Resources and Tools
         * [Unsplash](https://unsplash.com/)
-           Used photos obtained on [Unsplash](https://unsplash.com/) for this project:
-            credit to Valentin Salja for the [background photo](https://unsplash.com/photos/0aX51h4WvAk) used
-            credit to Alina Grubnyak for the [profile photo of a brain](https://unsplash.com/photos/tEVGmMaPFXk) 
-
+           Used photos obtained on [Unsplash](https://unsplash.com/) for this project, background photo on home page and profile image of a brain
+           
         * [Dreamstime](https://dreamstime.com/)
            Obtained sketch image iq + eq from dreasmstime
 
@@ -160,3 +158,5 @@ list of websites used for inspiration:
 --result text obtained from https://www.mindtools.com/pages/article/ei-quiz.htm and "manual do realizador" manual from Paulo Vieira;
 --[ami.responsivdesign.is](http://ami.responsivedesign.is) - multiple devices image in README.md file
 --https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript - code to validate an email address
+--credit to Valentin Salja for the [background photo](https://unsplash.com/photos/0aX51h4WvAk) used
+--credit to Alina Grubnyak for the [profile photo of a brain](https://unsplash.com/photos/tEVGmMaPFXk) 
