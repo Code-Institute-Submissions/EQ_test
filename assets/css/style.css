@@ -407,8 +407,8 @@ form#testAnswer {
   width: 30px;
 }
 
-/*--radio buttons, a codepen https://codepen.io/veraleitaodev/pen/gOrerwY adapted for this project*/
-
+/*--radio buttons, a codepen 
+https://codepen.io/veraleitaodev/pen/gOrerwY adapted for this project*/
 .wrap {
   font-family: "Exo", sans-serif;
   font-size: 16px;
@@ -493,7 +493,7 @@ form .buttons .submit:hover {
 }
 
 /*----results container---*/
-/* Chart - copied from highcharts dual axis, line and column and adapted to this project */
+/* Chart - copied from highcharts and adapted to this project */
 
 div#resultsContainer {
   width: 100%;

@@ -13,8 +13,6 @@
     - [2.2.1.Current Features](#2.2.1.Current-Features)
     - [2.2.2.Future Features](#2.2.2.Future-Features)
   - [2.3.Structure](#2.4.Structure)
-  - [2.4.Skeleton](#2.5.Skeleton)
-  - [2.5.Surface](#2.6.Surface)
 - [3.Technologies and Libraries](#3.Technologies-and-Libraries)
 - [4.Resources and Tools](#4.Resources-and-Tools)
 - [5.Tests](#5.Tests)
@@ -25,18 +23,20 @@
 
 ---
 
-## 1.Project Summary
-
-I wanted to create more awareness to the importance of Emotional intelligenge.
-A quizz would be, in my eyes, a good way to create engagement with the user. This site offers a brief introduction to what it is EQ and offers a quiz to create awareness on current EQ.
-EQ test is a test to your Emotional Intelligence. Emotional Intelligence is as relevant or more than IQ for a successful, happy life.
-This test is based on Daniel Goleman work about brain and behavioral sciences. The test had been replicated from Paulo Vieira books as he uses it to access the EQ before and after the subject of his books and course materials.
+## 1.Project Background
+This project is thought with the user in mind. A user that is looking to improve one's life. Current education system favours IQ and promotes the idea that having a successful academic life will lead to a successful career.
+Although partially true, it is not the whole reality. Success in a career and in life is achieved through learning, implementing and relating with the social environment while growing as a person. 
+EQ brings light to the need to be aware and manage owns emotions and interact with others. Many time associated with softskills, a buzzword in the jobs and recruitment setting.
 
 ---
 
 ## 2.UX
 
 ### 2.1.Strategy
+The user wants to know how to improve one's life. Becomes curious on how to develop EQ though taking the eq quiz.
+The user is a single person, not a business, hence clear message with appealing images are important. 
+
+This test is based on Daniel Goleman work about brain and behavioral sciences. The test had been replicated from Paulo Vieira books as he uses it to access the EQ before and after the subject of his books and course materials.
 
 #### color theme
 
@@ -47,6 +47,16 @@ After chosing the images for the home page, I used Adobe Color to extract colour
 <img src="assets/images/colorScheme.jpeg">
 
 ### 2.2.Scope
+- the important points to in this project included a quiz - a good way to create engagement with the user. 
+This site offers a brief introduction to what it is EQ and offers a quiz to create awareness on current EQ. reduced text in smaller devices is necessary, not to croud the page.
+Clear appealing images included. on the homepage will include:
+ - dropdown language menu for Portuguese / English options
+ - Clear concise information about EQ
+ - Button leading to modal
+    - modal with quiz with likert radio buttons (initially was a dropdown with 1-10 as answer)
+    - modal quiz concluded in results presenting description and a chart, also a link to return to homepage
+ - Subscription to Newsletter card to allow to submit email address to subscribe
+ - Footer with further reading links and social media links
 
 #### 2.2.1.Current Features
 
@@ -75,10 +85,6 @@ On the to right corner there is a minimal dropdown button with option of English
 Image serves as background to a callout text and test button that that want to compell the user to become inquisitive regards own EQ level and engage in the quiz.
 In the middle of the page there is additional information regards EQ and a section to subscribe to Newsletter that does not have back end code at the moment (future feature)
 At the bottom of the page there are links for further information on the subject and links to social media.
-
-### 2.4.Skeleton
-
-### 2.5.Surface
 
 ---
 
@@ -182,8 +188,13 @@ To clone the project and edit it locally on a computer do the following steps:
 - https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript - provided code to validate an email address
 - credit to Valentin Salja for the [background photo](https://unsplash.com/photos/0aX51h4WvAk) used
 - credit to Alina Grubnyak for the [profile photo of a brain](https://unsplash.com/photos/tEVGmMaPFXk)
+- the code for subscrition section was creation of Hugo Carneiro (https://codepen.io/hugguh/pen/LZRRRX) and modified for this project
+- button animation for test button was created by Juan Salazar at (https://codepen.io/juanedsa/pen/EyZQqb?editors=1100) and modified to be used on the project's main button
+- radio buttons were designed and a criation found at (https://codepen.io/veraleitaodev/pen/gOrerwY )used for medium and wider sizes but for small devices the buttons appear in a vertical alignment to improve display.
+- pie chart obtained at [Highcharts](https://www.highcharts.com/)
 
 ### Acknowledgements
 
 I have received inspiration for this project after reading about emotional inteligence and observed the work of motivational speakers.
-Furthermore, I have received very precious help from my tutor Rhey Ann Magcalas and received great feedback from Malia Havlicek through slack, #peer review group. I would like to aknowledge the crucial knowledge shared by tutors and colleagues in slack environment. I had found this project incredibly hard as it was hard to grasp concepts around Javascript and Slack platform was a key source of knowledge and important tips.
+Furthermore, I have received very precious help from my tutor Rhey Ann Magcalas and received great feedback from Malia Havlicek through slack, #peer review group. I would like to aknowledge the crucial knowledge shared by tutors and colleagues in slack environment. 
+I had found this project incredibly hard as it was hard to grasp concepts around Javascript and Slack platform was a key source of knowledge and important tips.
